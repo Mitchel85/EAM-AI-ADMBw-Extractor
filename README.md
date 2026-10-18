@@ -1,13 +1,13 @@
-# ADMBw-Extraktor v6.0
+# EAM-AI-ADMBw-Extractor
 
 ![Status](https://img.shields.io/badge/Status-Active-success)
-![Standard](https://img.shields.io/badge/Standard-ADMBw%20v2025.10-blue)
-![Framework](https://img.shields.io/badge/Framework-NAFv4-orange)
-![Plattform](https://img.shields.io/badge/Platform-OpenWebUI-purple)
+![Standard](https://img.shields.io/badge/Standard-ADMBw%2FNAFv4-blue)
+![MDG](https://img.shields.io/badge/Regelbasis-MDG%202026.05-orange)
+![Plattform](https://img.shields.io/badge/Platform-OpenWebUI%20%2F%20jedes%20LLM-purple)
 
-KI-gestützter Assistent zur Extraktion von Stereotypen, Beziehungen und Viewpoints aus natürlichsprachlichen Dokumenten gemäß **ADMBw v2025.10** (NAFv4).
+**KI-gestützter Assistent, der aus natürlichsprachlichen Architekturtexten ADMBw-konforme Stereotype, Beziehungen und Viewpoints extrahiert** — als Mermaid-Diagramme und Mapping-Tabellen zum Nachmodellieren in Sparx EA.
 
-> ⚠️ **Keine importierbaren Dateien.** Der Output dient als Modellierungshilfe zum manuellen Nachmodellieren in Sparx EA.
+> ⚠️ **Keine importierbaren Dateien.** Der Output ist eine Modellierungshilfe für das manuelle Nachmodellieren in Sparx EA.
 
 ---
 
@@ -26,16 +26,18 @@ Die KI wählt den jeweils besten Mermaid-Diagrammtyp selbst (`classDiagram`, `gr
 
 ---
 
-## 📚 Wissensbasis
+## 📚 Wissensbasis (automatisch aus der offiziellen MDG)
 
-Vier Knowledge-Dateien (in OpenWebUI als RAG-Wissen eingebunden):
+Vier Knowledge-Dateien, erzeugt vom [EAM-ADMBw-MDG-Parser](https://github.com/Mitchel85/EAM-ADMBw-MDG-Parser) aus der offiziellen MDG-Technologie der Bundeswehr (Stand **2026.05**):
 
 | Datei | Inhalt |
 |-------|--------|
-| `ADMBw-Knowledge-Stereotypes.md` | 317 Stereotype mit AppliesTo |
-| `ADMBw-Knowledge-Viewpoints.md` | 53 Viewpoints mit erlaubten Elementen |
-| `ADMBw-Knowledge-Topology.md` | Source → Connector → Target Regeln |
-| `ADMBw-Knowledge-Connectors.md` | EA-Metatypen + Connector-Übersicht |
+| `ADMBw-Knowledge-Stereotypes.md` | **443 eindeutige Stereotype** mit AppliesTo |
+| `ADMBw-Knowledge-Viewpoints.md` | **53 Viewpoints** mit Properties |
+| `ADMBw-Knowledge-Topology.md` | **203 Beziehungsregeln** (Source → Connector → Target) |
+| `ADMBw-Knowledge-Connectors.md` | EA-Metatypen + Connector-Übersicht (kuratiert) |
+
+> Bei einem MDG-Update der Bundeswehr werden diese Dateien neu generiert — nicht von Hand gepflegt.
 
 ---
 
@@ -60,13 +62,15 @@ Jeder Output wird gegen alle vier Knowledge-Dateien geprüft:
 
 ---
 
-## 🔧 Einrichtung (OpenWebUI)
+## 🔧 Einfache Anleitung (Open-WebUI)
 
-1. **Modell anlegen** → Inhalt von `system_prompt.md` ins Feld **System Prompt**
-2. **Knowledge** → Vier `ADMBw-Knowledge-*.md`-Dateien hochladen und mit Modell verknüpfen
-3. Fertig.
+1. **Modell anlegen:** Inhalt von `system_prompt.md` ins Feld **System Prompt** kopieren.
+2. **Knowledge einbinden:** Die vier `ADMBw-Knowledge-*.md`-Dateien hochladen und mit dem Modell verknüpfen.
+3. **Prosa eingeben:** Deinen Architekturtext (z. B. Dokument, Textauszug, Stichpunkte) an das Modell schicken.
+4. **Option wählen:** Auf die eine Einstiegsfrage antworten (Viewpoints / ADMBw-Modell / Metamodell / Stakeholder-Concern).
+5. **Ergebnis prüfen:** Mermaid-Diagramme + Mapping-Tabellen auf Vollständigkeit und Korrektheit gegenprüfen, dann in Sparx EA nachmodellieren.
 
-> 💡 Die PDF nicht in Knowledge laden — die MD-Dateien sind token-effizienter.
+> 💡 Die beiliegende PDF-Dokumentation **nicht** in Knowledge laden — die MD-Dateien sind token-effizienter und inhaltlich identisch.
 
 ---
 
@@ -74,12 +78,13 @@ Jeder Output wird gegen alle vier Knowledge-Dateien geprüft:
 
 | Datei | Zweck |
 |-------|-------|
-| `system_prompt.md` | System-Prompt (Kernlogik) |
-| `ADMBw-Knowledge-Stereotypes.md` | Stereotyp-Katalog |
-| `ADMBw-Knowledge-Viewpoints.md` | Viewpoint-Regeln |
-| `ADMBw-Knowledge-Topology.md` | Topologie-Regeln |
-| `ADMBw-Knowledge-Connectors.md` | Konnektor-Regeln |
+| `system_prompt.md` | System-Prompt (Kernlogik, 4 Modi + 8 Validierungs-Checks) |
+| `ADMBw-Knowledge-Stereotypes.md` | Stereotyp-Katalog (MDG-generiert) |
+| `ADMBw-Knowledge-Viewpoints.md` | Viewpoint-Regeln (MDG-generiert) |
+| `ADMBw-Knowledge-Topology.md` | Topologie-Regeln (MDG-generiert) |
+| `ADMBw-Knowledge-Connectors.md` | Konnektor-Regeln (kuratiert) |
+| `Dokumentation-ADMBw-v2025.10.pdf` | Offizielle Bw-Dokumentation (Referenz) |
 
 ---
 
-**Autor:** Michael Estel (mit KI-Agent)
+**Autor:** Michael Estel (mit KI-Agent) · Teil der **EAM-Toolfamilie** — [github.com/Mitchel85](https://github.com/Mitchel85)
