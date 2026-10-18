@@ -1,301 +1,216 @@
-# ADMBw Knowledge: Metamodell-Topologie pro Viewpoint
+# ADMBw-Topologie-Regeln (MDG-Metaconstraints)
 
-> **Gerichtete Kanten (Source→Connector→Target) für jeden Viewpoint.**
-> Extrahiert aus `NAFv4-ADMBw-MDG-2025.10.xml` (`<metaconstraints>`).
-> Querverweis: `ADMBw-Knowledge-Viewpoints.md` (erlaubte Elemente).
+> Quelle: `/tmp/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-18 21:50 UTC
+> 203 Stereotype mit Beziehungsregeln (Metaconstraints)
 
-| Feld | Bedeutung |
-|------|-----------|
-| Source | client/source — der Ausgangspunkt des Pfeils |
-| Connector | Der NAF-Konnektor-Stereotyp |
-| Target | supplier/target — das Ziel des Pfeils |
-| `;` | Trenner für mehrere erlaubte Typen (ODER) |
+## Lesart
 
-## 🏛️ Concept
+- **Erlaubte Ziele (client):** Der Stereotype darf nur als Quelle einer Beziehung zu den gelisteten Ziel-Stereotypen stehen.
+- **Erlaubte Quellen (supplier):** Nur die gelisteten Stereotype dürfen als Ziel auf diesen Stereotype zeigen.
+- **Weitere Rollen:** zusätzliche Metamodell-Beschränkungen (Rollennamen direkt aus der MDG).
 
-### C1 – Capability Taxonomy
-- `Capability` → **CapabilityGeneralization** → `Capability`
-- `MeasurableElement` → **OwnsMeasurement** → `Measurement; MeasurementType`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### C2 – Enterprise Vision
-- `Capability` → **CapabilityForTask** → `ActualEnduringTask; EnduringTask`
-- `Exhibits` → **EnvironmentalCondition** → `Environment`
-- `CapableElement` → **Exhibits** → `Capability`
-- `ActualEnterprisePhase` → **GoalForActualEnterprisePhase** → `EnterpriseGoal`
-- `ActualEnterprisePhase` → **OperationalArchitectureOfEnterprisePhase** → `OperationalArchitecture`
-- `ActualEnterprisePhase` → **PhysicalArchitectureOfEnterprisePhase** → `ResourceArchitecture`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-- `ActualEnterprisePhase` → **StatementTask** → `ActualEnduringTask`
-- `ActualEnterprisePhase` → **VisionForActualEnterprisePhase** → `EnterpriseVision`
-
-### C3 – Capability Dependencies
-- `Capability` → **CapabilityDependency** → `Capability`
-- `Capability` → **CapabilityGeneralization** → `Capability`
-- `CapabilityRole` → **CapabilityRoleDependency** → `CapabilityRole`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### C4 – Standard Processes
-- `Capability` → **CapabilityForTask** → `ActualEnduringTask; EnduringTask`
-- `BusinessProcess` → **MapsToCapability** → `Capability`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### C5 – Effects
-- `Achiever` → **AchievedEffect** → `ActualState`
-- `Desirer` → **DesiredEffect** → `ActualState`
-- `Exhibits` → **EnvironmentalCondition** → `Environment`
-- `CapableElement` → **Exhibits** → `Capability`
-- `AchievedEffect` → **RealizedDesiredEffect** → `DesiredEffect`
-- `DesiredEffect` → **RealizingAchievedEffect** → `AchievedEffect`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### C7 – Performance Parameters
-- `MeasurableElement` → **OwnsMeasurement** → `Measurement; MeasurementType`
-
-### C8 – Planning Assumption
-- `ActualProject` → **ActualProjectDependency** → `ActualProject`
-- `ActualResource` → **ActualResourceNeededByActualProjectMilestone** → `ActualProjectMilestone`
-- `ActualResource` → **ActualResourceToActualProjectMilestone** → `ActualProjectMilestone`
-- `Exhibits` → **EnvironmentalCondition** → `Environment`
-- `CapableElement` → **Exhibits** → `Capability`
-- `DataElement; Function; InformationElement; OperationalActivity; OperationalActivityAction; OperationalConstraint; ResourceConnector; ResourceConstraint; ResourceExchange; ResourceInterface; ResourcePerformer; ResourceRole; ServicePolicy` → **Implements** → `ActualEnduringTask; InformationElement; OperationalActivity; OperationalActivityAction; OperationalAgent; OperationalConnector; OperationalConstraint; OperationalExchange; OperationalInterface; OperationalRole; ResourceConnector; ServiceFunction; ServiceInterface; ServicePolicy; StrategicConstraint`
-- `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint` → **JustifiedBy** → `Reference`
-- `ActualProjectMilestone` → **MilestoneDependency** → `ActualProjectMilestone`
-- `ActualProject` → **OwnedMilestone** → `ActualProjectMilestone`
-- `ProjectMilestone` → **ProjectMilestoneToProjectTheme** → `ProjectTheme`
-- `ActualProject` → **ProjectSequence** → `ActualProject`
-- `ProjectMilestone` → **RequiredResource** → `ResourcePerformer`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-- `ActualProjectMilestone` → **VersionReleased** → `VersionedElement`
-- `ActualProjectMilestone` → **VersionWithdrawn** → `VersionedElement`
-
-## 🏛️ Service
-
-### S1 – Service Taxonomy
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-- `ServiceSpecification` → **ServiceClassification** → `ServiceSpecification`
-- `ServiceSpecification` → **ServiceSpecificationGeneralization** → `ServiceSpecification`
-
-### S2 – Service Structure
-- `Organization` → **IsAccountableFor** → `ActualProject; ResourcePerformer; ServiceSpecification`
-- `Organization` → **IsResponsibleFor** → `ActualProject; ResourcePerformer; ServiceSpecification`
-- `ServiceInterface` → **ProvidesServiceFunction** → `ServiceFunction`
-- `ServiceSpecification` → **ServiceDependency** → `OperationalAgent; ResourcePerformer; ServiceSpecification`
-
-### S3 – Service Interfaces
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### S4 – Service Functions
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### S6 – Service Interactions
-- `OperationalActivity` → **OperationalExchange** → `OperationalActivity`
-
-### S7 – Service Interface Parameters
-- `ServiceInterface` → **ProvidesServiceFunction** → `ServiceFunction`
-
-### S8 – Service Policy
-- `ActualProject` → **ActualProjectDependency** → `ActualProject`
-- `Exhibits` → **EnvironmentalCondition** → `Environment`
-- `CapableElement` → **Exhibits** → `Capability`
-- `DataElement; Function; InformationElement; OperationalActivity; OperationalActivityAction; OperationalConstraint; ResourceConnector; ResourceConstraint; ResourceExchange; ResourceInterface; ResourcePerformer; ResourceRole; ServicePolicy` → **Implements** → `ActualEnduringTask; InformationElement; OperationalActivity; OperationalActivityAction; OperationalAgent; OperationalConnector; OperationalConstraint; OperationalExchange; OperationalInterface; OperationalRole; ResourceConnector; ServiceFunction; ServiceInterface; ServicePolicy; StrategicConstraint`
-- `Organization` → **IsAccountableFor** → `ActualProject; ResourcePerformer; ServiceSpecification`
-- `Organization` → **IsResponsibleFor** → `ActualProject; ResourcePerformer; ServiceSpecification`
-- `ActualProjectMilestone` → **MilestoneDependency** → `ActualProjectMilestone`
-- `ActualProject` → **NeedsService** → `ServiceSpecification; ServiceSpecificationRole`
-- `ActualProject` → **OwnedMilestone** → `ActualProjectMilestone`
-- `ProjectMilestone` → **ProjectMilestoneToProjectTheme** → `ProjectTheme`
-- `ActualProject` → **ProjectSequence** → `ActualProject`
-- `ProjectMilestone` → **RequiredResource** → `ResourcePerformer`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-- `ActualProjectMilestone` → **VersionReleased** → `VersionedElement`
-- `ActualProjectMilestone` → **VersionWithdrawn** → `VersionedElement`
-
-## 🏛️ Logical
-
-### L1 – Node Types
-- `Exhibits` → **EnvironmentalCondition** → `Environment`
-- `CapableElement` → **Exhibits** → `Capability`
-- `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint` → **JustifiedBy** → `Reference`
-- `BusinessProcess` → **MapsToCapability** → `Capability`
-- `MeasurableElement` → **OwnsMeasurement** → `Measurement; MeasurementType`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### L2 – Logical Scenario
-- `ServiceSpecification; ServiceSpecificationRole` → **ConsumedBy** → `OperationalPerformer; OperationalRole`
-- `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint` → **JustifiedBy** → `Reference`
-- `LocationHolder` → **LocationHolder** → `Location`
-- `OperationalActivity` → **OperationalExchange** → `OperationalActivity`
-- `MeasurableElement` → **OwnsMeasurement** → `Measurement; MeasurementType`
-- `LocationHolder` → **PhysicalLocation** → `ActualLocation`
-- `OperationalPerformer; OperationalRole` → **Provides** → `ServiceSpecification; ServiceSpecificationRole`
-- `LocationHolder` → **RequiredEnvironment** → `ActualEnvironment`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### L3 – Node Interaction
-- `ServiceSpecification; ServiceSpecificationRole` → **ConsumedBy** → `OperationalPerformer; OperationalRole`
-- `OperationalActivity` → **OperationalExchange** → `OperationalActivity`
-- `MeasurableElement` → **OwnsMeasurement** → `Measurement; MeasurementType`
-- `OperationalPerformer; OperationalRole` → **Provides** → `ServiceSpecification; ServiceSpecificationRole`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### L4 – Logical Activities
-- `BusinessProcess` → **ActivityPerformableUnderCondition** → `ActualCondition`
-- `OperationalActivity` → **ActivitySupportsService** → `ServiceSpecification`
-- `OperationalActivity; OperationalActivityAction` → **ActsUpon** → `OperationalExchangeItem; PaperForm`
-- `OperationalExchangeItem` → **AffectedActivity** → `OperationalActivity`
-- `OperationalActivity` → **AffectedResource** → `OperationalExchangeItem`
-- `OperationalActivity; OperationalActivityAction` → **Consumes** → `ActualService; ServiceSpecification`
-- `DataElement; Function; InformationElement; OperationalActivity; OperationalActivityAction; OperationalConstraint; ResourceConnector; ResourceConstraint; ResourceExchange; ResourceInterface; ResourcePerformer; ResourceRole; ServicePolicy` → **Implements** → `ActualEnduringTask; InformationElement; OperationalActivity; OperationalActivityAction; OperationalAgent; OperationalConnector; OperationalConstraint; OperationalExchange; OperationalInterface; OperationalRole; ResourceConnector; ServiceFunction; ServiceInterface; ServicePolicy; StrategicConstraint`
-- `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint` → **JustifiedBy** → `Reference`
-- `OperationalActivity` → **OperationalExchange** → `OperationalActivity`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### L6 – Logical Sequence
-- `OperationalActivity` → **OperationalExchange** → `OperationalActivity`
-
-### L7 – Information Model
-- `ArchitecturalDescription; DataElement; DocumentReference; InformationElement; ServiceSpecification` → **Classified** → `Classification`
-- `DataElement; Function; InformationElement; OperationalActivity; OperationalActivityAction; OperationalConstraint; ResourceConnector; ResourceConstraint; ResourceExchange; ResourceInterface; ResourcePerformer; ResourceRole; ServicePolicy` → **Implements** → `ActualEnduringTask; InformationElement; OperationalActivity; OperationalActivityAction; OperationalAgent; OperationalConnector; OperationalConstraint; OperationalExchange; OperationalInterface; OperationalRole; ResourceConnector; ServiceFunction; ServiceInterface; ServicePolicy; StrategicConstraint`
-- `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint` → **JustifiedBy** → `Reference`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### L8 – Logical Constraints
-- `ActualProject` → **ActualProjectConsults** → `Organization`
-- `ActualProject` → **ActualProjectDependency** → `ActualProject`
-- `ActualProject` → **ActualProjectInforms** → `Organization`
-- `ConceptRole` → **ArbitraryConnector** → `ConceptRole`
-- `ActualProject; ActualProjectMilestone` → **ArchitectureForProject** → `ArchitecturalDescription`
-- `DataElement; Function; InformationElement; OperationalActivity; OperationalActivityAction; OperationalConstraint; ResourceConnector; ResourceConstraint; ResourceExchange; ResourceInterface; ResourcePerformer; ResourceRole; ServicePolicy` → **Implements** → `ActualEnduringTask; InformationElement; OperationalActivity; OperationalActivityAction; OperationalAgent; OperationalConnector; OperationalConstraint; OperationalExchange; OperationalInterface; OperationalRole; ResourceConnector; ServiceFunction; ServiceInterface; ServicePolicy; StrategicConstraint`
-- `Organization` → **IsAccountableFor** → `ActualProject; ResourcePerformer; ServiceSpecification`
-- `Organization` → **IsResponsibleFor** → `ActualProject; ResourcePerformer; ServiceSpecification`
-- `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint` → **JustifiedBy** → `Reference`
-- `ActualProjectMilestone` → **MilestoneDependency** → `ActualProjectMilestone`
-- `OperationalActivity` → **OperationalExchange** → `OperationalActivity`
-- `ActualProject` → **OwnedMilestone** → `ActualProjectMilestone`
-- `ProjectMilestone` → **ProjectMilestoneToProjectTheme** → `ProjectTheme`
-- `ActualProject` → **ProjectSequence** → `ActualProject`
-- `ProjectMilestone` → **RequiredResource** → `ResourcePerformer`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-- `ActualProjectMilestone` → **VersionReleased** → `VersionedElement`
-- `ActualProjectMilestone` → **VersionWithdrawn** → `VersionedElement`
-
-## 🏛️ Physical
-
-### P1 – Resource Types
-- `DataElement` → **DataElementStoredIn** → `ResourcePerformer; ResourceRole`
-- `SubjectOfForecast` → **Forecast** → `SubjectOfForecast`
-- `Forecast` → **ForecastPeriod** → `ActualEnterprisePhase`
-- `PaperForm` → **FormStoredIn** → `Software`
-- `DataElement; Function; InformationElement; OperationalActivity; OperationalActivityAction; OperationalConstraint; ResourceConnector; ResourceConstraint; ResourceExchange; ResourceInterface; ResourcePerformer; ResourceRole; ServicePolicy` → **Implements** → `ActualEnduringTask; InformationElement; OperationalActivity; OperationalActivityAction; OperationalAgent; OperationalConnector; OperationalConstraint; OperationalExchange; OperationalInterface; OperationalRole; ResourceConnector; ServiceFunction; ServiceInterface; ServicePolicy; StrategicConstraint`
-- `MeasurableElement` → **OwnsMeasurement** → `Measurement; MeasurementType`
-- `OrganizationalResource` → **RequiresCompetence** → `Competence`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-- `ActualResource; ResourcePerformer; ResourceRole` → **ServiceProvision** → `ActualService; ServiceSpecification; ServiceSpecificationRole`
-
-### P2 – Resource Structure
-- `ActualProject` → **ActualProjectConsults** → `Organization`
-- `ActualProject` → **ActualProjectInforms** → `Organization`
-- `ResourceRole` → **CompetenceForRole** → `Competence`
-- `ResourceArchitecture; ResourceArtifact; ResourceRole` → **HostedOn** → `ResourceArchitecture; ResourceArtifact; ResourceRole`
-- `DataElement; Function; InformationElement; OperationalActivity; OperationalActivityAction; OperationalConstraint; ResourceConnector; ResourceConstraint; ResourceExchange; ResourceInterface; ResourcePerformer; ResourceRole; ServicePolicy` → **Implements** → `ActualEnduringTask; InformationElement; OperationalActivity; OperationalActivityAction; OperationalAgent; OperationalConnector; OperationalConstraint; OperationalExchange; OperationalInterface; OperationalRole; ResourceConnector; ServiceFunction; ServiceInterface; ServicePolicy; StrategicConstraint`
-- `Organization` → **IsAccountableFor** → `ActualProject; ResourcePerformer; ServiceSpecification`
-- `Organization` → **IsResponsibleFor** → `ActualProject; ResourcePerformer; ServiceSpecification`
-- `LocationHolder` → **LocationHolder** → `Location`
-- `ActualProject` → **NeedsModificationOf** → `PhysicalResource; ResourceArchitecture; ResourceRole`
-- `ActualProject` → **NeedsResource** → `PhysicalResource; ResourceArchitecture; ResourceRole`
-- `LocationHolder` → **PhysicalLocation** → `ActualLocation`
-- `ActualProject` → **ProjectProvidesFunction** → `Function`
-- `ActualProject` → **ProjectSupportActivity** → `OperationalActivity`
-- `LocationHolder` → **RequiredEnvironment** → `ActualEnvironment`
-- `ResourcePerformer; ResourcePort; ResourceRole` → **ResourceDependency** → `ResourcePerformer; ResourcePort; ResourceRole`
-- `ResourcePerformer; ResourceRole` → **ResourceToServiceDependency** → `ServiceSpecification; ServiceSpecificationRole`
-- `ActualProject` → **Responsible** → `PhysicalResource; ResourceArchitecture; ResourceRole; ServiceSpecification`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-- `ActualResource; ResourcePerformer; ResourceRole` → **ServiceProvision** → `ActualService; ServiceSpecification; ServiceSpecificationRole`
-
-### P3 – Resource Connectivity
-- `ProtocolImplementation` → **ImplementsProtocol** → `Protocol`
-- `MeasurableElement` → **OwnsMeasurement** → `Measurement; MeasurementType`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### P4 – Resource Functions
-- `ResourceExchangeItem` → **AffectedFunctions** → `Function`
-- `Function` → **FunctionSubject** → `ResourceExchangeItem`
-- `DataElement; Function; InformationElement; OperationalActivity; OperationalActivityAction; OperationalConstraint; ResourceConnector; ResourceConstraint; ResourceExchange; ResourceInterface; ResourcePerformer; ResourceRole; ServicePolicy` → **Implements** → `ActualEnduringTask; InformationElement; OperationalActivity; OperationalActivityAction; OperationalAgent; OperationalConnector; OperationalConstraint; OperationalExchange; OperationalInterface; OperationalRole; ResourceConnector; ServiceFunction; ServiceInterface; ServicePolicy; StrategicConstraint`
-- `MeasurableElement` → **OwnsMeasurement** → `Measurement; MeasurementType`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### P7 – Data Model
-- `ArchitecturalDescription; DataElement; DocumentReference; InformationElement; ServiceSpecification` → **Classified** → `Classification`
-- `DataElement; Function; InformationElement; OperationalActivity; OperationalActivityAction; OperationalConstraint; ResourceConnector; ResourceConstraint; ResourceExchange; ResourceInterface; ResourcePerformer; ResourceRole; ServicePolicy` → **Implements** → `ActualEnduringTask; InformationElement; OperationalActivity; OperationalActivityAction; OperationalAgent; OperationalConnector; OperationalConstraint; OperationalExchange; OperationalInterface; OperationalRole; ResourceConnector; ServiceFunction; ServiceInterface; ServicePolicy; StrategicConstraint`
-- `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint` → **JustifiedBy** → `Reference`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-
-### P8 – Resource Constraints
-- `ActualProject` → **ActualProjectDependency** → `ActualProject`
-- `ActualPerson` → **FillsPost** → `ActualPost`
-- `DataElement; Function; InformationElement; OperationalActivity; OperationalActivityAction; OperationalConstraint; ResourceConnector; ResourceConstraint; ResourceExchange; ResourceInterface; ResourcePerformer; ResourceRole; ServicePolicy` → **Implements** → `ActualEnduringTask; InformationElement; OperationalActivity; OperationalActivityAction; OperationalAgent; OperationalConnector; OperationalConstraint; OperationalExchange; OperationalInterface; OperationalRole; ResourceConnector; ServiceFunction; ServiceInterface; ServicePolicy; StrategicConstraint`
-- `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint` → **JustifiedBy** → `Reference`
-- `ActualProjectMilestone` → **MilestoneDependency** → `ActualProjectMilestone`
-- `ActualProject` → **OwnedMilestone** → `ActualProjectMilestone`
-- `ProjectMilestone` → **ProjectMilestoneToProjectTheme** → `ProjectTheme`
-- `ActualProject` → **ProjectSequence** → `ActualProject`
-- `ProjectMilestone` → **RequiredResource** → `ResourcePerformer`
-- `Capability; OperationalActivityAction; ServiceSpecification; SubjectOfOperationalConstraint; SubjectOfResourceConstraint` → **Satisfy** → `OperationalConstraint; ResourceConstraint; ServicePolicy; StrategicConstraint`
-- `ResourcePerformer; ServiceSpecification; Standard` → **SuccessorOf** → `ResourcePerformer; ServiceSpecification; Standard`
-- `ActualProjectMilestone` → **VersionReleased** → `VersionedElement`
-- `VersionOfConfiguration` → **VersionSuccession** → `VersionOfConfiguration`
-- `ActualProjectMilestone` → **VersionWithdrawn** → `VersionedElement`
-
-## 🏛️ Architecture
-
-### A1 – Meta-Data Definitions
-- `ActualProject; ActualProjectMilestone` → **ArchitectureForProject** → `ArchitecturalDescription`
-- `ArchitecturalDescription; DataElement; DocumentReference; InformationElement; ServiceSpecification` → **Classified** → `Classification`
-- `Architecture` → **DescribedBy** → `ArchitecturalDescription`
-- `Architecture` → **Expresses** → `ArchitecturalDescription`
-
-### A2 – Architecture Products
-- `View` → **CompliesViewpoint** → `Viewpoint`
-- `ActualEnterprisePhase` → **ConcernForActualEnterprisePhase** → `Concern`
-- `View` → **ConcernForView** → `Concern`
-- `Viewpoint` → **ConcernForViewpoint** → `Concern`
-- `Viewpoint` → **ViewpointToStakeholder** → `Stakeholder`
-- `ArchitecturalDescription` → **ViewpointsInArchitecturalDescription** → `Viewpoint`
-- `ArchitecturalDescription` → **ViewsInArchitecturalDescription** → `View`
-
-### A3 – Architecture Correspondence
-- `ArchitecturalDescription` → **ArchitecturalReference** → `ArchitecturalDescription`
-
-### A6 – Architecture Versions
-- `ArchitecturalDescription` → **ArchitecturalSequence** → `ArchitecturalDescription`
-
-### A7 – Architecture Compliance
-- `Software; UAFElement` → **SameAs** → `Software; UAFElement`
-
-### A8 – Standards
-- `ArchitecturalDescription` → **ArchitecturalSequence** → `ArchitecturalDescription`
-- `ActualOrganization` → **RatifiedStandards** → `Standard`
-
-## 🏛️ Requirements
-
-### R2 – Requirement Catalogue
-- `RequirementCategory` → **PartOfCatalogue** → `RequirementCatalogue`
-- `BWRequirement; RequirementCategory` → **PartOfCategory** → `RequirementCategory`
-
-### R3 – Requirement Dependencies
-- `BWRequirement` → **ConflictsWith** → `BWRequirement`
-- `BWRequirement` → **IsDuplicateOf** → `BWRequirement`
-- `BWRequirement` → **Refines** → `BWRequirement`
-- `BWRequirement` → **Replaces** → `BWRequirement`
-- `BWRequirement` → **Requires** → `BWRequirement`
-- `BWRequirement` → **StemsFrom** → `BWRequirement`
-
-### R7 – Requirement Derivation
-- `BWRequirement` → **DerivedFrom** → `UAFElement`
-- `BWRequirement` → **ToBeRealizedBy** → `DataElement; Function; Measurement; MeasurementType; Protocol; Protocolstack; ResourcePerformer; ResourcePort; ResourceRole; ServiceFunction; ServiceInterface; ServiceSpecification; ServiceSpecificationRole; Standard`
-
-### R8 – Requirement Fulfilment
-- `FulfilmentCriterion` → **Evaluates** → `FitCriterion`
-- `DataElement; Function; Measurement; MeasurementType; Protocol; Protocolstack; ResourcePerformer; ResourcePort; ResourceRole; ServiceFunction; ServiceInterface; ServiceSpecification; ServiceSpecificationRole; Standard` → **RealiseRequirement** → `BWRequirement`
+| Stereotype | Erlaubte Ziele (client) | Erlaubte Quellen (supplier) | Weitere Rollen |
+|---|---|---|---|
+| AchievedEffect | Achiever | ActualState |  |
+| ActivityPerformableUnderCondition | BusinessProcess | ActualCondition |  |
+| ActivitySupportsService | OperationalActivity | ServiceSpecification |  |
+| ActsUpon | OperationalActivityAction | PaperForm |  |
+| ActualCondition |  |  | classifier → Condition |
+| ActualConditionToActualResource | ActualResource | ActualCondition |  |
+| ActualEnduringTask |  |  | classifier → EnduringTask |
+| ActualEnterprisePhase |  |  | classifier → EnterprisePhase |
+| ActualEnvironment |  |  | classifier → Environment |
+| ActualLocation |  |  | classifier → Location |
+| ActualMeasurement |  |  | definingFeature → Measurement, owningInstance → ActualPropertySet |
+| ActualMeasurementSetAppliesFor | ActualMeasurementSet | MeasurableElement |  |
+| ActualOrganization |  |  | classifier → Organization |
+| ActualOrganizationRole |  |  | definingFeature → SubOrganization, owningInstance → ActualOrganization |
+| ActualPerson |  |  | classifier → Person |
+| ActualPost |  |  | classifier → Post |
+| ActualProject |  |  | classifier → Project, definingFeature → ProjectRole |
+| ActualProjectConsults | ActualProject | Organization |  |
+| ActualProjectDependency | ActualProject | ActualProject |  |
+| ActualProjectInforms | ActualProject | Organization |  |
+| ActualProjectMilestone |  |  | classifier → ProjectMilestone |
+| ActualProjectMilestoneRole |  |  | definingFeature → ProjectMilestoneRole, owningInstance → ActualProject, value.instance → ActualProjectMilestone |
+| ActualPropertySet |  |  | classifier → PropertySet |
+| ActualResource |  |  | classifier → ResourcePerformer |
+| ActualResourceNeededByActualProjectMilestone | ActualResource | ActualProjectMilestone |  |
+| ActualResourceRelationship |  |  | informationSource → ActualResource, informationTarget → ActualResource, realizes → ResourceExchange |
+| ActualResourceRole |  |  | definingFeature → ResourceRole, owningInstance → ActualResource |
+| ActualResourceToActualProjectMilestone | ActualResource | ActualProjectMilestone |  |
+| ActualService |  |  | classifier → ServiceSpecification |
+| ActualServiceSpecificationRole |  |  | definingFeature → ServiceSpecificationRole, owningInstance → ActualService |
+| AffectedActivity | OperationalExchangeItem | OperationalActivity |  |
+| AffectedFunctions | ResourceExchangeItem | Function |  |
+| AffectedResource | OperationalActivity | OperationalExchangeItem |  |
+| AlignsWithGoal | ServiceSpecification | EnterpriseGoal |  |
+| ArbitraryConnector | ConceptRole | ConceptRole |  |
+| ArchitecturalReference | ArchitecturalDescription | ArchitecturalDescription |  |
+| ArchitecturalSequence | ArchitecturalDescription | ArchitecturalDescription |  |
+| ArchitectureForProject | ActualProjectMilestone | ArchitecturalDescription |  |
+| ArchitectureMetadata |  |  | annotatedElement → ArchitecturalDescription |
+| BoundaryCondition | ResourceConnector | Environment |  |
+| CapabilityDependency | Capability | Capability |  |
+| CapabilityForTask | Capability | EnduringTask |  |
+| CapabilityGeneralization |  |  | source → Capability, target → Capability |
+| CapabilityRole |  |  | class → Capability, type → Capability |
+| CapabilityRoleDependency | CapabilityRole | CapabilityRole |  |
+| Checks | FitCriterion | BWRequirement |  |
+| Classified | ServiceSpecification | Classification |  |
+| Command |  |  | conveyed → DataElement, informationSource → ResourceRole, informationTarget → ResourceRole |
+| CompetenceForRole | ResourceRole | Competence |  |
+| CompliesViewpoint | View | Viewpoint |  |
+| ConceptRole |  |  | class → HighLevelOperationalConcept, type → ConceptItem |
+| ConcernForActualEnterprisePhase | ActualEnterprisePhase | Concern |  |
+| ConcernForView | View | Concern |  |
+| ConcernForViewpoint | Viewpoint | Concern |  |
+| ConflictsWith | BWRequirement | BWRequirement |  |
+| ConformsTo | UAFElement | Standard |  |
+| ConsumedBy | ServiceSpecificationRole | OperationalRole |  |
+| Consumes | OperationalActivityAction | ServiceSpecification |  |
+| Control |  |  | conveyed → DataElement, informationSource → ResourceRole, informationTarget → ResourceRole |
+| DataElement |  |  | owner → DataModel |
+| DataElementStoredIn | DataElement | ResourceRole |  |
+| DataRole |  |  | class → ResourceAsset, type → DataElement |
+| DerivedFrom | BWRequirement | UAFElement |  |
+| DescribedBy | Architecture | ArchitecturalDescription |  |
+| DesiredEffect | Desirer | ActualState |  |
+| EnvironmentalCondition | Exhibits | Environment |  |
+| EnvironmentalContext | Measurement | ActualCondition |  |
+| EnvironmentProperty |  |  | class → Environment, type → Condition |
+| Evaluates | FulfilmentCriterion | FitCriterion |  |
+| Exhibits | CapableElement | Capability |  |
+| Expresses | Architecture | ArchitecturalDescription |  |
+| FieldedCapability |  |  | classifier → CapabilityConfiguration |
+| FillsPost | ActualPerson | ActualPost |  |
+| Forecast | SubjectOfForecast | SubjectOfForecast |  |
+| ForecastPeriod | Forecast | ActualEnterprisePhase |  |
+| FormStoredIn | PaperForm | Software |  |
+| FunctionAction |  |  | activity → Function, behavior → Function |
+| FunctionControlFlow |  |  | source → FunctionAction;JoinNode;MergeNode, target → FunctionAction;JoinNode;MergeNode |
+| FunctionEdge |  |  | owner → Function |
+| FunctionObjectFlow |  |  | source → FunctionAction;JoinNode;MergeNode, target → FunctionAction;JoinNode;MergeNode |
+| FunctionSubject | Function | ResourceExchangeItem |  |
+| GoalForActualEnterprisePhase | ActualEnterprisePhase | EnterpriseGoal |  |
+| HostedOn | ResourceRole | ResourceRole |  |
+| Implements | StrategicConstraint | StrategicConstraint |  |
+| ImplementsProtocol | ProtocolImplementation | Protocol |  |
+| Information |  |  | annotatedElement → UAFElement |
+| InformationElement |  |  | owner → DataModel |
+| InformationRole |  |  | class → OperationalAsset, type → InformationElement |
+| IsAccountableFor | Organization | ServiceSpecification |  |
+| IsCapableToPerform | ServiceSpecification | ServiceFunctionAction |  |
+| IsDuplicateOf | BWRequirement | BWRequirement |  |
+| IsEquivalentToStandardElement | UAFElement | UAFElement |  |
+| IsResponsibleFor | Organization | ServiceSpecification |  |
+| JustifiedBy | StrategicConstraint | Reference |  |
+| LocationType | LocationHolder | Location |  |
+| MapsToCapability | BusinessProcess | Capability |  |
+| Measurement |  |  | class → PropertySet, type → MeasurementType |
+| Metadata |  |  | annotatedElement → UAFElement |
+| MilestoneDependency | ActualProjectMilestone | ActualProjectMilestone |  |
+| NeedsModificationOf | ActualProject | ResourceRole |  |
+| NeedsResource | ActualProject | ResourceRole |  |
+| NeedsService | ActualProject | ServiceSpecificationRole |  |
+| OperationalActivity |  |  | ownedParameter → OperationalParameter |
+| OperationalActivityAction |  |  | activity → OperationalActivity, behavior → OperationalActivity |
+| OperationalActivityEdge |  |  | owner → OperationalActivity |
+| OperationalAgent |  |  | ownedOperation → OperationalMethod, ownedPort → OperationalPort |
+| OperationalArchitectureOfEnterprisePhase | ActualEnterprisePhase | OperationalArchitecture |  |
+| OperationalConnector |  |  | end[0].role → OperationalRole, end[1].role → OperationalRole |
+| OperationalControlFlow |  |  | source → OperationalActivityAction, target → OperationalActivityAction |
+| OperationalExchange | OperationalActivity | OperationalActivity | conveyed → OperationalExchangeItem, informationSource → ServiceSpecification, informationTarget → ServiceSpecification, realizingActivityEdge → OperationalActivityEdge, realizingConnector → OperationalConnector, realizingMessage → OperationalMessage |
+| OperationalMessage |  |  | receiveEvent.event.operation → OperationalMethod |
+| OperationalMessageFlow |  |  | source → OperationalActivityAction, target → OperationalActivityAction |
+| OperationalMethod |  |  | method → OperationalActivity, ownedOperation → OperationalInterface, ownedParameter → OperationalParameter |
+| OperationalObjectFlow |  |  | source → OperationalActivityAction, target → OperationalActivityAction |
+| OperationalParameter |  |  | type → OperationalExchangeItem |
+| OperationalPort |  |  | class → OperationalAgent, type → OperationalInterface |
+| OperationalRole |  |  | class → OperationalPerformer, type → OperationalPerformer |
+| OperationalSignalProperty |  |  | class → OperationalSignal, type → OperationalExchangeItem |
+| OperationalStateDescription |  |  | owner → OperationalAgent |
+| OriginatesFrom | UAFElement | Reference |  |
+| OwnedMilestone | ActualProject | ActualProjectMilestone |  |
+| OwnsActualMeasurementSet | MeasurableElement | ActualMeasurementSet |  |
+| OwnsMeasurement | MeasurableElement | MeasurementType |  |
+| OwnsProcess | ActualOrganizationalResource | OperationalActivity |  |
+| PartOfCatalogue |  |  | source → RequirementCategory, target → RequirementCatalogue |
+| PartOfCategory |  |  | source → RequirementCategory, target → RequirementCategory |
+| PerformsInContext | ServiceSpecificationRole | ServiceFunctionAction |  |
+| PhysicalArchitectureOfEnterprisePhase | ActualEnterprisePhase | ResourceArchitecture |  |
+| PhysicalLocation | LocationHolder | ActualLocation |  |
+| PostRole |  |  | class → Post, type → Post |
+| ProblemDomain |  |  | class → OperationalArchitecture, type → OperationalPerformer |
+| ProcessGeneralization |  |  | source → BusinessProcess, target → BusinessProcess |
+| ProjectMilestoneRole |  |  | class → Project, type → ProjectMilestone |
+| ProjectMilestoneToProjectTheme | ProjectMilestone | ProjectTheme |  |
+| ProjectProvidesFunction | ActualProject | Function |  |
+| ProjectRole |  |  | class → Project, type → Project |
+| ProjectSequence | ActualProject | ActualProject |  |
+| ProjectStatus |  |  | definingFeature → ProjectTheme |
+| ProjectSupportActivity | ActualProject | OperationalActivity |  |
+| PropertySetGeneralization |  |  | source → System, target → System |
+| ProtocolLayer |  |  | class → Protocolstack, type → Protocol |
+| Provides | OperationalRole | ServiceSpecificationRole |  |
+| ProvidesCompetence | ActualOrganizationalResource | Competence |  |
+| ProvidesServiceFunction | ServiceInterface | ServiceFunction |  |
+| RatifiedStandards | ActualOrganization | Standard |  |
+| RealiseRequirement | Standard | BWRequirement |  |
+| RealizedDesiredEffect | AchievedEffect | DesiredEffect |  |
+| RealizesRecommendation | UAFElement | Recommendation |  |
+| RealizingAchievedEffect | DesiredEffect | AchievedEffect |  |
+| RefersTo | Recommendation | Finding |  |
+| Refines | BWRequirement | BWRequirement |  |
+| Replaces | BWRequirement | BWRequirement |  |
+| ReplaceStandardElement | UAFElement | UAFElement |  |
+| RequiredEnvironment | LocationHolder | ActualEnvironment |  |
+| RequiredResource | ProjectMilestone | ResourcePerformer |  |
+| Requires | BWRequirement | BWRequirement |  |
+| RequiresCompetence | OrganizationalResource | Competence |  |
+| ResourceConnector |  |  | end[0].role → ResourceRole, end[1].role → ResourceRole |
+| ResourceDependency | ResourceRole | ResourceRole |  |
+| ResourceExchange |  |  | conveyed → ResourceExchangeItem, informationSource → ServiceSpecificationRole, informationTarget → ServiceSpecificationRole, realizingActivityEdge → FunctionEdge, realizingConnector → ResourceConnector, realizingMessage → ResourceMessage |
+| ResourceMessage |  |  | Connector → ResourceConnector, receiveEvent.event.operation → ResourceMethod |
+| ResourceMethod |  |  | method → Function, ownedOperation → ResourcePerformer, ownedParameter → ResourceParameter |
+| ResourceParameter |  |  | ownedParameter → Function, type → ResourceExchangeItem |
+| ResourcePerformer |  |  | ownedPort → ResourcePort |
+| ResourcePort |  |  | class → ResourcePerformer, type → ResourceInterface |
+| ResourceRole |  |  | class → ResourcePerformer, type → ResourcePerformer |
+| ResourceSignalProperty |  |  | class → ResourceSignal, type → ResourceExchangeItem |
+| ResourceStateDescription |  |  | owner → ResourcePerformer |
+| ResourceToServiceDependency | ResourceRole | ServiceSpecificationRole |  |
+| Responsible | ActualProject | ServiceSpecification |  |
+| ResultsFrom | Finding | UAFElement |  |
+| SameAs | UAFElement | UAFElement |  |
+| Satisfy | SubjectOfResourceConstraint | StrategicConstraint |  |
+| SecurityConstraint |  |  | constrainedElement → SubjectOfSecurityConstraint |
+| ServiceConnector |  |  | end[0].role → ServiceSpecificationRole, end[1].role → ServiceSpecificationRole |
+| ServiceDependency | ServiceSpecification | ServiceSpecification |  |
+| ServiceExchange |  |  | realizingConnector → ServiceConnector, realizingMessage → ServiceMessage, source → ServiceSpecification, target → ServiceSpecification |
+| ServiceFunction |  |  | ownedParameter → ServiceParameter |
+| ServiceFunctionAction |  |  | activity → ServiceFunction, behavior → ServiceFunction |
+| ServiceGeneralization |  |  | source → ServiceSpecification, target → ServiceSpecification |
+| ServiceInterface |  |  | ownedOperation → ServiceMethod |
+| ServiceMethod |  |  | method → ServiceFunction, ownedParameter → ServiceParameter, receiveEvent.event.operation → ServiceMessage |
+| ServiceParameter |  |  | type → OperationalExchangeItem |
+| ServicePort |  |  | class → ServiceSpecification, type → ServiceInterface |
+| ServiceProvision | ResourceRole | ServiceSpecificationRole |  |
+| ServiceSpecification |  |  | ownedOperation → ServiceMethod, ownedPort → ServicePort |
+| ServiceSpecificationRole |  |  | class → ServiceSpecification, type → ServiceSpecification |
+| ServiceStateDescription |  |  | owner → ServiceSpecification |
+| StakeholderConcern | Stakeholder | Concern |  |
+| StatementTask | ActualEnterprisePhase | ActualEnduringTask |  |
+| StemsFrom | BWRequirement | BWRequirement |  |
+| SubOrganization |  |  | class → Organization, type → Organization |
+| SuccessorOf | Standard | Standard |  |
+| TemporalPart |  |  | class → EnterprisePhase, type → EnterprisePhase |
+| ToBeRealizedBy | BWRequirement | Standard |  |
+| VersionOfConfiguration |  |  | class → WholeLifeConfiguration, type → VersionedElement |
+| VersionReleased | ActualProjectMilestone | VersionedElement |  |
+| VersionSuccession | VersionOfConfiguration | VersionOfConfiguration |  |
+| VersionWithdrawn | ActualProjectMilestone | VersionedElement |  |
+| ViewpointsInArchitecturalDescription | ArchitecturalDescription | Viewpoint |  |
+| ViewpointToStakeholder | Viewpoint | Stakeholder |  |
+| ViewsInArchitecturalDescription | ArchitecturalDescription | View |  |
+| VisionForActualEnterprisePhase | ActualEnterprisePhase | EnterpriseVision |  |
