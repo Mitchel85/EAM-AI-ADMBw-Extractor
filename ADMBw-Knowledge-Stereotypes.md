@@ -1,7 +1,7 @@
 # ADMBw-Stereotype (MDG-extrahiert)
 
-> Quelle: `/tmp/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-18 21:50 UTC
-> 642 Stereotype · Version: NAFv4-ADMBw-MDG-2026.05.xml
+> Quelle: `/tmp/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-18 22:15 UTC
+> 443 Stereotype · Version: NAFv4-ADMBw-MDG-2026.05.xml
 
 | Stereotype | Metatype | Vererbung | AppliesTo | Beschreibung |
 |---|---|---|---|---|
@@ -323,59 +323,6 @@
 | VisionForActualEnterprisePhase | VisionForActualEnterprisePhase |  | Dependency | A relationship that expresses which actual enterprisephase implements an enterprisevision. |
 | WholeLifeConfiguration | WholeLifeConfiguration | PropertySet | Class | A set of VersionedElements. |
 | WholeLifeEnterprise | WholeLifeEnterprise | EnterprisePhase | Class | A WholeLifeEnterprise is a purposeful endeavor of any size involving people, organizations and supporting systems. It is made up of TemporalParts and Structural |
-| A1 - Meta-Data Definitions |  |  | Diagram_Custom | Architectures, particularly large ones, usually require meta-data tags to aid with searching and discovery. |
-| A2 - Architecture Products |  |  | Diagram_Custom | The A2 Viewpoint specifies the structure of an architecture, and the products that describe the architecture. Each product may correspond to an architecture vie |
-| A3 - Architecture Correspondence |  |  | Diagram_Custom | ISO/IEC/IEEE42010 introduces the idea of architecture correspondence and correspondence rules. Quoting from ISO/IEC/IEEE 42010; “A correspondence defines a rela |
-| A4 - Methodology Used |  |  | Diagram_Custom | The A4 Viewpoint specifies the methodology used for the architecting activities. This methodology is described in NAFv4 Chapter 2. The content of the A4 viewpoi |
-| A5 - Architecture Status |  |  | Diagram_Custom | Since NAFv3.0, it has been possible to assign version numbers to views and specify their approval dates. In NAFv4.0, this is integrated with the meta-model’s ge |
-| A6 - Architecture Version |  |  | Diagram_Custom | Where the A5 Viewpoint shows the current version number and approval status for the architecture, the A6 Viewpoint shows the complete history of the architectur |
-| A7 - Architecture Compliance |  |  | Diagram_Custom | The A7 Viewpoint gives the overall specification of architecture meta-data. |
-| A8 - Standards |  |  | Diagram_Custom | The A8 Viewpoint encompasses both technical and non-technical standards. The standards specified in the A8 view can be applied across the architecture to a vari |
-| Ar - Architecture Roadmap |  |  | Diagram_Custom | The Ar Viewpoint shows the history of the architecture project as well as its future direction. |
-| C1 - Capability Taxonomy |  |  | Diagram_Custom | The C1 Viewpoint specifies all the capabilities that are referenced throughout one or more architectures – i.e. one C1 may provide the definitive list of capabi |
-| C2 - Enterprise Vision |  |  | Diagram_Custom | The purpose of the C2 Viewpoint is to provide a strategic context for the capabilities described in the architecture and to specify the scope for the architectu |
-| C3 - Capability Dependencies |  |  | Diagram_Custom | The C3 Viewpoint is intended to provide a means of analysing the dependencies between capabilities and between capability clusters. The composition of capabilit |
-| C4 - Standard Processes |  |  | Diagram_Custom | The C4 Viewpoint specifies Standard Operational Activities that can be re-used across multiple logical architectures (e.g. in L4, Logical Activities). |
-| C5 - Effects |  |  | Diagram_Custom | The purpose of the C5 Viewpoint is to describe the operational effect of the capabilities, activities and services according to the expected goals. The C5 Viewp |
-| C7 - Performance Parameters |  |  | Diagram_Custom | In the C7 Viewpoint the capability requirements (and existing capabilities) can be expressed in terms of Measures of Effectiveness (MoEs). These are high-level  |
-| C8 - Planning Assumptions |  |  | Diagram_Custom | The C8 Viewpoint is concerned with identification and description of assumptions that have been made for the implementation of capabilities. Assumptions can be  |
-| Cr - Capability Roadmap |  |  | Diagram_Custom | The Cr Viewpont supports the Capability Audit process by providing a method to identify gaps or duplications in capability provision. Cr indicates capability in |
-| Business Process |  |  | Diagram_Analysis |  |
-| L1 - Node Types |  |  | Diagram_Custom | The L1 Viewpoint defines all of the Nodes that will appear in a Logical Architecture. Nodes are elements of capability assembled and orchestrated in the Logical |
-| L2 - Logical Scenario |  |  | Diagram_Custom | The L2 Viewpoint specifies Nodes (elements of capability) in context of each other. The context is usually expressed in terms of the information that flows betw |
-| L3 - Node Interactions |  |  | Diagram_Custom | L3 is used to provide further detail of the interoperability requirements associated with the operational capability of interest. The focus is on logical flows  |
-| L4 - Logical Activities |  |  | Diagram_Custom | The L4 Viewpoint describes the operational activities that are being conducted within the mission or scenario. These activities are defined at a logical, soluti |
-| L5 - Logical States |  |  | Diagram_Custom | The L5 Viewpoint specifies the typical states a node may have and the possible transitions between those states (i.e. changes of state). Triggers for state chan |
-| L6 - Logical Sequence |  |  | Diagram_Sequence | Operational Event-Trace Descriptions, sometimes called sequence diagrams, event scenarios or timing diagrams, allow the tracing of interactions between nodes in |
-| L7 - Information Model |  |  | Diagram_Custom | The L7 Viewpoint is used to document the business information. It describes the information that can be exchanged along the logical flows in the architecture, s |
-| L8 - Logical Constraints |  |  | Diagram_Custom | The L8 Viewpoint is used to constrain the logical architecture without forcing a particular solution. L8 is used for rules which are not expressed as behavioura |
-| Lr - Lines of Development |  |  | Diagram_Custom | The Lr Viewpoint is primarily intended to support the acquisition process across multiple projects or programmes, highlighting dependencies the logical dependen |
-| L2-L3 - Logical Concept |  |  | Diagram_Custom | The L2-L3 Viewpoint is concerned with providing an executive level, scenario-based communication of the architecture purpose, scope and content. |
-| P1 - Resource Types |  |  | Diagram_Custom | The P1 Viewpoint collects together all the Resource Types in the architecture together with a depiction of their performance characteristics. P1 also provides a |
-| P2 - Resource Structure |  |  | Diagram_Custom | The P2 Viewpoint links together the operational and physical architecture viewpoints by depicting how types of Resource are structured and interact to realize t |
-| P3 - Resource Connectivity |  |  | Diagram_Custom | The networks and pathways documented in a P3 Viewpoint represent the physical implementation of the logical flows identified in a L2, Logical Scenario, or L3, N |
-| P4 - Resource Functions |  |  | Diagram_Custom | The Functionality Description provides detailed information regarding the allocation of functions to resources, and flows between Resource Functions. The P4 Vie |
-| P5 - Resource States |  |  | Diagram_Custom | The P5 Viewpoint identifies the states a Resource can be, the allowable changes between those states, and the stimuli (e.g. triggers and events) that cause the  |
-| P6 - Resource Sequence |  |  | Diagram_Sequence | The P6 Viewpoint is valuable for moving to the next level of detail from the initial solution design, to help define a sequence of functions and Resource Intera |
-| P7 - Data Model |  |  | Diagram_Custom | The P7 Viewpoint is one of the architectural products closest to actual system design in the NAF. It is used to describe how the information represented in the  |
-| P8 - Resource Constraints |  |  | Diagram_Custom | The P8 Viewpoint describes constraints on the Resources, Resource Functions, data and communications that make up a Physical Architecture. |
-| Pr - Configuration Management |  |  | Diagram_Custom | The Pr Viewpoint provides an overview of how Resource Assets change over time (note that NAF v3.1 only allowed for Capability Configurations whereas now this is |
-| L4-P4 - Activity To Function Mapping |  |  | Diagram_Custom | The L4-P4 Viewpoint depicts the mapping of Resource Functions (and optionally, the resources that provide them) to operational activities and/or service functio |
-| R2 - Requirement Catalogue |  |  | Diagram_Custom | The R2 represents a catalog of requirements in the architectural model. For this purpose, categories can be created in which the functional and non-functional r |
-| R3 - Requirement Dependencies |  |  | Diagram_Custom | The R3 is used to show dependencies between different requirements. |
-| R7 - Requirement Derivation |  |  | Diagram_Custom | The R7 assigns functional and non-functional requirements to the demanding architectural elements. In addition, information about the planned realization can be |
-| R8 - Requirement Fulfilment |  |  | Diagram_Custom | The R8 is used to determine and map acceptance and evaluation criteria for the individual functional and non-functional requirements. |
-| Rr - Requirement Realization |  |  | Diagram_Custom | In the Rr, requirements are assigned to the realizing architectural elements. |
-| S1 - Service Taxonomy |  |  | Diagram_Custom | The purpose of the S1 Viewpoint is to provide a governance structure for a Service-Oriented Architecture. Along with S3, Service Interfaces, it specifies a stan |
-| S2 - Service Structure |  |  | Diagram_Custom | The S2 Viewpoint is concerned with identification and description of how services are structured to create a higher-aggregated service. To provide highlevel vie |
-| S3 - Service Interfaces |  |  | Diagram_Custom | The S3 Viewpoint is concerned with the identification and definition of service interfaces. |
-| S4 - Service Functions |  |  | Diagram_Custom | The S4 Viewpoint is the key behavioural specification for services. Equivalent in nature to L4, Logical Activities and P4, Resources Functions, it specifies a s |
-| S5 - Service States |  |  | Diagram_Custom | The S5 Viewpoint is a specification of the allowable states of a service, and the possible transitions between them. This specification constrains how implement |
-| S6 - Service Interactions |  |  | Diagram_Sequence | Service Interaction Descriptions, sometimes called sequence diagrams, event scenarios or timing diagrams, allow the tracing of interactions between services in  |
-| S7 - Service Interface Parameters |  |  | Diagram_Custom | Specifies the interfaces that a service provides and uses, defines which services are compatible with which other services. |
-| S8 - Service Policy |  |  | Diagram_Custom | The S8 Viewpoint specifies constraints against services to which implementations must conform. |
-| Sr - Service Roadmap |  |  | Diagram_Custom | The Sr Viewpoint supports the Service Audit process by providing a method to identify gaps or duplications in service provision. Sr indicates service lifetime e |
-| C1-S1 - Capability to Service Mapping |  |  | Diagram_Custom | A C1-S1 Viewpoint presents a simple mapping of services to capabilities, showing which services contribute to which capability. |
 | Foundation-Elements |  |  | ToolboxPage |  |
 | Project for Architecture |  |  | ToolboxPage |  |
 | Conforms To Standard |  |  | ToolboxPage |  |
@@ -383,267 +330,121 @@
 | A2-Concerns && Viewpoints |  |  | ToolboxPage |  |
 | A2-Stakeholders |  |  | ToolboxPage |  |
 | A2-Enterprise |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | A3-Elements && Relationships |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | Architecural Sequence && Roadmap |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | A7-Elements && Relationships |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | A8-Elements |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | All Stereotypes |  |  | ToolboxPage |  |
 | Ar-Elements && Relationships |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | NAFv4-ADMBw-BusinessProcess-Toolbox::hidden |  |  | ToolboxPage |  |
 | Process modeling |  |  | ToolboxPage |  |
 | assign to Operational Agents / Service |  |  | ToolboxPage |  |
 | Operational Constraints |  |  | ToolboxPage |  |
 | ActsUpon  |  |  | ToolboxPage |  |
 | Implement |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | C1-S1-Elements && Relationships |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | C1-Elements && Relationships |  |  | ToolboxPage |  |
 | Measurements |  |  | ToolboxPage |  |
 | Strategic Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | C2-EnduringTask |  |  | ToolboxPage |  |
 | C2-Enterprise |  |  | ToolboxPage |  |
 | C2-Exhibits |  |  | ToolboxPage |  |
-| Strategic Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
 | Physical Architecture Of Enterprise Phase |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | C3-Capability |  |  | ToolboxPage |  |
 | C3-CapabilityRole |  |  | ToolboxPage |  |
-| Strategic Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | C4-Maps To Capability |  |  | ToolboxPage |  |
 | C4-EnduringTask |  |  | ToolboxPage |  |
-| Strategic Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | C5-Desirer |  |  | ToolboxPage |  |
 | C5-Actual State |  |  | ToolboxPage |  |
 | C5-Relationships |  |  | ToolboxPage |  |
-| Strategic Constraints |  |  | ToolboxPage |  |
 | C5-Achiever |  |  | ToolboxPage |  |
 | C5-Achiever Types |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | C7-Measurements |  |  | ToolboxPage |  |
-| Strategic Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
-| Strategic Constraints |  |  | ToolboxPage |  |
 | Implements Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | Catalogue management |  |  | ToolboxPage |  |
 | Cr-Capability && Configuration |  |  | ToolboxPage |  |
 | Cr-Project |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | L1-Elements |  |  | ToolboxPage |  |
 | L1-Relationships |  |  | ToolboxPage |  |
-| Measurements |  |  | ToolboxPage |  |
-| Operational Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | L2-L3-Elements |  |  | ToolboxPage |  |
 | L2-L3-Relationships |  |  | ToolboxPage |  |
 | L2-L3-Types |  |  | ToolboxPage |  |
-| Measurements |  |  | ToolboxPage |  |
-| Operational Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | L2-Elements |  |  | ToolboxPage |  |
 | L2-Relationships |  |  | ToolboxPage |  |
-| Measurements |  |  | ToolboxPage |  |
 | Condition, Environment && Location |  |  | ToolboxPage |  |
 | L2-Operational Exchange Items |  |  | ToolboxPage |  |
 | L2-Operational Constraints |  |  |  |  |
-| Operational Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | L3-Nodes |  |  | ToolboxPage |  |
 | L3-Node Relationships |  |  | ToolboxPage |  |
 | L3-Activities |  |  | ToolboxPage |  |
 | L3-OperationalExchangeItems |  |  | ToolboxPage |  |
 | L3-Services |  |  | ToolboxPage |  |
-| Condition, Environment && Location |  |  | ToolboxPage |  |
-| Measurements |  |  | ToolboxPage |  |
-| Operational Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | L4-P4-Relationships |  |  | ToolboxPage |  |
 | Resource Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | L4-OperationalElements |  |  | ToolboxPage |  |
 | L4-Relationships |  |  | ToolboxPage |  |
 | L4-ActsUpon |  |  | ToolboxPage |  |
 | L4-Service |  |  | ToolboxPage |  |
 | L4-Conditions |  |  | ToolboxPage |  |
-| Operational Constraints |  |  | ToolboxPage |  |
 | References |  |  | ToolboxPage |  |
-| Implement |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | L5-Elements |  |  | ToolboxPage |  |
-| Operational Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | L6-Elements && Relationships |  |  | ToolboxPage |  |
 | L6-Interaction |  |  | ToolboxPage |  |
-| Operational Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | L7-Elements && Relationships |  |  | ToolboxPage |  |
-| Operational Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
-| Operational Constraints |  |  | ToolboxPage |  |
-| Implements Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | Lr-Actual Projects |  |  | ToolboxPage |  |
 | Lr-Project Definition |  |  | ToolboxPage |  |
 | Architecture for Project |  |  | ToolboxPage |  |
-| Operational Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | P1-Elements && Relationships |  |  | ToolboxPage |  |
 | P1-Forecast |  |  | ToolboxPage |  |
 | P1-Organizations |  |  | ToolboxPage |  |
 | P1-StoredIn |  |  | ToolboxPage |  |
 | P1-Implements |  |  | ToolboxPage |  |
 | P1-Services |  |  | ToolboxPage |  |
-| Measurements |  |  | ToolboxPage |  |
-| Resource Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | P2-Elements && Relationships |  |  | ToolboxPage |  |
 | P2-Resource Exchange  |  |  | ToolboxPage |  |
 | P2-Organizations |  |  | ToolboxPage |  |
 | P2-Services |  |  | ToolboxPage |  |
 | P2-Project && Resource |  |  | ToolboxPage |  |
 | P2-Implements |  |  | ToolboxPage |  |
-| Measurements |  |  | ToolboxPage |  |
 | Environment && Location |  |  | ToolboxPage |  |
-| Resource Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | P3-Elements && Dependency |  |  | ToolboxPage |  |
 | P3-Connector && ResourcePort |  |  | ToolboxPage |  |
 | P3-Protocols |  |  | ToolboxPage |  |
 | P3-Exchanges |  |  | ToolboxPage |  |
-| Resource Constraints |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
-| Measurements |  |  | ToolboxPage |  |
 | P4-Functions |  |  | ToolboxPage |  |
 | P4-Resource Function Mapping |  |  | ToolboxPage |  |
-| Measurements |  |  | ToolboxPage |  |
-| Resource Constraints |  |  | ToolboxPage |  |
 | Affecte && Subject |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | P5-Elements |  |  | ToolboxPage |  |
-| Resource Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | P6-Elements |  |  | ToolboxPage |  |
 | P6-Interaction |  |  | ToolboxPage |  |
-| Resource Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | P7-Elements && Relationships |  |  | ToolboxPage |  |
-| Resource Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | P8-Personnel |  |  | ToolboxPage |  |
-| Resource Constraints |  |  | ToolboxPage |  |
-| Implements Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | Successor of |  |  | ToolboxPage |  |
 | Pr-Configuration Management |  |  | ToolboxPage |  |
 | Pr-Project Management |  |  | ToolboxPage |  |
-| Resource Constraints |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | R2-Elements && Relationships |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | R3-Elements && Relationships |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | R7-Elements && Relationships |  |  | ToolboxPage |  |
 | Constraints && References |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | R8-Elements && Relationships |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | Rr-Realise |  |  | ToolboxPage |  |
 | Rr-Realizing Service |  |  | ToolboxPage |  |
 | Rr-Realizing Resources |  |  | ToolboxPage |  |
 | Rr-Realizing Organizations |  |  | ToolboxPage |  |
 | Rr-Realizing Standards |  |  | ToolboxPage |  |
 | Rr-Realizing Measurement |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | S1-Elements && Relationships |  |  | ToolboxPage |  |
-| Measurements |  |  | ToolboxPage |  |
 | Service Policy |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | S2-Service |  |  | ToolboxPage |  |
 | S2-Dependency to Operational Agent |  |  | ToolboxPage |  |
 | S2-Dependency to Resources |  |  | ToolboxPage |  |
 | S2-Interface |  |  | ToolboxPage |  |
 | S2-ServiceFunction |  |  | ToolboxPage |  |
-| Measurements |  |  | ToolboxPage |  |
-| Service Policy |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | S3-Elements && Relationships |  |  | ToolboxPage |  |
-| Service Policy |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | S4-Elements && Relationships |  |  | ToolboxPage |  |
-| Service Policy |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | S5-Elements |  |  | ToolboxPage |  |
-| Service Policy |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | S6-Elements && Relationships |  |  | ToolboxPage |  |
 | S6-Interaction |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | S7-Elements && Relationships |  |  | ToolboxPage |  |
-| Service Policy |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
-| Service Policy |  |  | ToolboxPage |  |
-| Implements Constraints |  |  | ToolboxPage |  |
-| Measurements |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |
 | Sr-Project |  |  | ToolboxPage |  |
 | Sr-Services |  |  | ToolboxPage |  |
-| Conforms To Standard |  |  | ToolboxPage |  |
-| Findings && Recommendations |  |  | ToolboxPage |  |

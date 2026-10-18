@@ -1,6 +1,6 @@
 # ADMBw-Topologie-Regeln (MDG-Metaconstraints)
 
-> Quelle: `/tmp/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-18 21:50 UTC
+> Quelle: `/tmp/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-18 22:15 UTC
 > 203 Stereotype mit Beziehungsregeln (Metaconstraints)
 
 ## Lesart

@@ -1,6 +1,6 @@
 # ADMBw-Viewpoints (MDG-DiagramProfile)
 
-> Quelle: `/tmp/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-18 21:50 UTC
+> Quelle: `/tmp/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-18 22:15 UTC
 > 53 Viewpoints
 
 ## A1 - Meta-Data Definitions
