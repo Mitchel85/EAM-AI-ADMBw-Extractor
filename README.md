@@ -40,7 +40,7 @@ Vier MDG-generierte Knowledge-Dateien, erzeugt vom [EAM-ADMBw-MDG-Parser](https:
 
 > Bei einem MDG-Update der Bundeswehr werden diese Dateien neu generiert — nicht von Hand gepflegt.
 >
-> **KB-Sync-Status (2026-10-19): aktuell.** Neu erzeugt aus `eam-mdg-parser` (`b906f51`), identisch in Extractor und Batch; Hashes in `checks/deterministic-checks.json`.
+> **KB-Sync-Status (2026-10-19): aktuell.** Vier MDG-Dateien neu erzeugt aus `eam-mdg-parser` (`9470931`), identisch in Extractor und Batch; Tag-Typen und Hashes in `checks/deterministic-checks.json`.
 
 ---
 
