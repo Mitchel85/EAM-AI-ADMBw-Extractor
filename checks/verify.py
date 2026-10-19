@@ -54,6 +54,7 @@ def main():
     st_text = (ROOT / "ADMBw-Knowledge-Stereotypes.md").read_text(encoding="utf-8")
     tp_text = (ROOT / "ADMBw-Knowledge-Topology.md").read_text(encoding="utf-8")
     vp_text = (ROOT / "ADMBw-Knowledge-Viewpoints.md").read_text(encoding="utf-8")
+    tt_text = (ROOT / "ADMBw-Knowledge-TagTypes.md").read_text(encoding="utf-8")
     co_text = (ROOT / "ADMBw-Knowledge-Connectors.md").read_text(encoding="utf-8")
 
     # ---------- 1. KB-Statistiken ----------
@@ -84,6 +85,10 @@ def main():
     check("Viewpoints: 52 Überschriften", len(vp_headings) == 52, f"ist {len(vp_headings)}")
     check("Viewpoints: 'Business Process'-Artefakt entfernt",
           not any("Business Process" in h for h in vp_headings))
+
+    tt_rows = [l for l in tt_text.splitlines() if l.startswith("|")][2:]
+    check("TagTypes: 27 Property-Typen", len(tt_rows) == 27, f"ist {len(tt_rows)}")
+    check("TagTypes: Header nennt 27 Property-Typen", "27 Property-Typen" in tt_text)
 
     check("Connectors: Dependency (100)", "**Dependency** (100)" in co_text)
     check("Connectors: Class (68)", "**Class** (68)" in co_text)

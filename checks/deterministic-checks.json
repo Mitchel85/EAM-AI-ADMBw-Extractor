@@ -19,8 +19,8 @@
         "bytes": 56812
       },
       "ADMBw-Knowledge-Topology.md": {
-        "sha256": "fe030babbb706c9253f52c351e9d88a64e6d07ee483e9f5325d33e1d32e0bd3f",
-        "bytes": 19079
+        "sha256": "e02a48d70b8d61f0a7198bfd893e855b4bff67591a08b19de4cd2cfe16d65862",
+        "bytes": 18919
       },
       "ADMBw-Knowledge-Viewpoints.md": {
         "sha256": "a662c656c41002c5d86fa245355f48d4cf950d956b40d0f11e873c25bef24b8b",
@@ -95,6 +95,16 @@
     },
     {
       "name": "Viewpoints: 'Business Process'-Artefakt entfernt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "TagTypes: 27 Property-Typen",
+      "ok": true,
+      "detail": "ist 27"
+    },
+    {
+      "name": "TagTypes: Header nennt 27 Property-Typen",
       "ok": true,
       "detail": ""
     },

@@ -1,14 +1,14 @@
 # ADMBw-Topologie-Regeln (MDG-Metaconstraints)
 
 > Quelle: `/root/hermes-workspace/architektur-mate-ki/tools/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-19 05:34 UTC
-> 203 Stereotype mit Metaconstraints · 133 vollständig (Quelle+Ziel) · 70 nur Rollen-Beschränkungen
+> 203 Stereotype mit Beziehungsregeln (Metaconstraints) · 133 vollständig (Quelle und Ziel)
 
 ## Lesart
 
 - **Quelle:** client, source, end[0].role oder informationSource — je nach UML-Metaklasse.
 - **Ziel:** supplier, target, end[1].role oder informationTarget — je nach UML-Metaklasse.
-- **Nur Zeilen mit beiden Enden sind Kanten-Regeln.** Zeilen mit leeren Quellen-/Zielspalten enthalten ausschließlich Rollen-/Metamodell-Beschränkungen — sie definieren KEINE erlaubte Kante.
-- **Exakter Namens-Match:** Source- und Target-Stereotype müssen stringgleich mit den Quellen-/Zielspalten übereinstimmen. Abstrakte Basisklassen (🔒) gelten nicht als konkreter Nachweis — die Kante ist dann FAIL.
+- **Weitere Rollen:** zusätzliche Metamodell-Beschränkungen (Rollennamen direkt aus der MDG).
+- **Vollständigkeit:** Nur Regeln mit Quelle **und** Ziel (133 von 203) sind maschinell prüfbar; Regeln mit ausschließlich „Weiteren Rollen“ dienen als Referenz.
 
 | Stereotype | Erlaubte Quellen (client/source/end[0]) | Erlaubte Ziele (supplier/target/end[1]) | Weitere Rollen |
 |---|---|---|---|

@@ -28,13 +28,14 @@ Die KI wählt den jeweils besten Mermaid-Diagrammtyp selbst (`classDiagram`, `gr
 
 ## 📚 Wissensbasis (automatisch aus der offiziellen MDG)
 
-Vier Knowledge-Dateien, erzeugt vom [EAM-ADMBw-MDG-Parser](https://github.com/Mitchel85/EAM-ADMBw-MDG-Parser) aus der offiziellen MDG-Technologie der Bundeswehr (Stand **2026.05**):
+Vier MDG-generierte Knowledge-Dateien, erzeugt vom [EAM-ADMBw-MDG-Parser](https://github.com/Mitchel85/EAM-ADMBw-MDG-Parser) aus der offiziellen MDG-Technologie der Bundeswehr (Stand **2026.05**), plus eine kuratierte Connector-Übersicht:
 
 | Datei | Inhalt |
 |-------|--------|
 | `ADMBw-Knowledge-Stereotypes.md` | **318 Katalog-Stereotype** (293 nutzbar · 25 abstrakt 🔒); Toolboxen/Artefakte sind nicht enthalten |
 | `ADMBw-Knowledge-Viewpoints.md` | **52 Viewpoints** mit MDG-Beschreibung (keine erfundenen Properties) |
 | `ADMBw-Knowledge-Topology.md` | **133 vollständige Kanten-Regeln** (Quelle/Ziel über client/source/end[0] bzw. supplier/target/end[1]) + 70 reine Rollen-Beschränkungen |
+| `ADMBw-Knowledge-TagTypes.md` | **27 Property-Typen** (Tagged-Value-Definitionen) |
 | `ADMBw-Knowledge-Connectors.md` | EA-Metatypen + Connector-Übersicht (kuratiert) |
 
 > Bei einem MDG-Update der Bundeswehr werden diese Dateien neu generiert — nicht von Hand gepflegt.
@@ -65,7 +66,7 @@ Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt p
 ## 🔧 Einfache Anleitung (Open-WebUI)
 
 1. **Modell anlegen:** Inhalt von `system_prompt.md` ins Feld **System Prompt** kopieren.
-2. **Knowledge einbinden:** Die vier `ADMBw-Knowledge-*.md`-Dateien hochladen und mit dem Modell verknüpfen.
+2. **Knowledge einbinden:** Die vier MDG-generierten `ADMBw-Knowledge-*.md`-Dateien plus `ADMBw-Knowledge-Connectors.md` hochladen und mit dem Modell verknüpfen.
 3. **Prosa eingeben:** Deinen Architekturtext (z. B. Dokument, Textauszug, Stichpunkte) an das Modell schicken.
 4. **Option wählen:** Auf die eine Einstiegsfrage antworten (Viewpoints / ADMBw-Modell / Metamodell / Stakeholder-Concern).
 5. **Ergebnis prüfen:** Mermaid-Diagramme + Mapping-Tabellen auf Vollständigkeit und Korrektheit gegenprüfen, dann in Sparx EA nachmodellieren.
@@ -78,7 +79,7 @@ Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt p
 
 `python3 checks/verify.py` prüft ohne LLM:
 
-- KB-Statistiken (318/293/25/133/70/52) und SHA-256-Hashes der vier KB-Dateien
+- KB-Statistiken (318/293/25/133/70/52/27) und SHA-256-Hashes der vier MDG-KB-Dateien
 - Topologie-Lesart („client = Quelle") und 🔒-Markierungen vorhanden
 - Prompt/README enthalten die korrigierten Zahlen (keine 443/203/53-Reste)
 
@@ -92,6 +93,7 @@ Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt p
 | `ADMBw-Knowledge-Stereotypes.md` | Stereotyp-Katalog (MDG-generiert) |
 | `ADMBw-Knowledge-Viewpoints.md` | Viewpoint-Regeln (MDG-generiert) |
 | `ADMBw-Knowledge-Topology.md` | Topologie-Regeln (MDG-generiert) |
+| `ADMBw-Knowledge-TagTypes.md` | Property-Typen (MDG-generiert) |
 | `ADMBw-Knowledge-Connectors.md` | Konnektor-Regeln (kuratiert) |
 | `checks/verify.py` | Deterministische Prüfungen (ohne LLM) |
 | `Dokumentation-ADMBw-v2025.10.pdf` | Offizielle Bw-Dokumentation, Version 2025.10 (Referenz) |
