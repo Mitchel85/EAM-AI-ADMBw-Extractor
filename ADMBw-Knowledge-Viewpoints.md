@@ -1,8 +1,7 @@
 # ADMBw-Viewpoints (MDG-DiagramProfile)
 
-> Quelle: `/tmp/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-18 22:15 UTC
-> 52 Viewpoints (Parser-Extrakt enthielt 53 Überschriften; "Business Process" ist ein Parser-Artefakt und wurde entfernt)
-> ⚠️ Handkorrektur 2026-10-19. Properties/erlaubte Elemente je Viewpoint: Parser-Nachlieferung ausstehend (KB-Sync pending).
+> Quelle: `/root/hermes-workspace/architektur-mate-ki/tools/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-19 05:30 UTC
+> 52 Viewpoints (Diagramm-Artefakt „Business Process" entfernt)
 
 ## A1 - Meta-Data Definitions
 Architectures, particularly large ones, usually require meta-data tags to aid with searching and discovery.

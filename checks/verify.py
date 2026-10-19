@@ -62,10 +62,10 @@ def main():
     abstract = [r for r in st if "🔒" in r[4]]
     junk = [r for r in st if r[0] == "L2-Operational Constraints"]
     usable = [r for r in st if r[3] not in ("", "ToolboxPage")]
-    check("Stereotypes: 443 Tabellenzeilen", len(st) == 443, f"ist {len(st)}")
-    check("Stereotypes: 124 ToolboxPage-Einträge", len(toolbox) == 124, f"ist {len(toolbox)}")
+    check("Stereotypes: 318 Tabellenzeilen", len(st) == 318, f"ist {len(st)}")
+    check("Stereotypes: 0 ToolboxPage-Einträge", len(toolbox) == 0, f"ist {len(toolbox)}")
     check("Stereotypes: 25 abstrakte Basisklassen (🔒)", len(abstract) == 25, f"ist {len(abstract)}")
-    check("Stereotypes: 1 Nicht-Stereotyp (L2-Operational Constraints)", len(junk) == 1)
+    check("Stereotypes: 0 Nicht-Stereotype/Artefakte", len(junk) == 0, f"ist {len(junk)}")
     check("Stereotypes: 293 nutzbare", len(usable) == 293, f"ist {len(usable)}")
     check("Stereotypes: Header nennt 318 Katalog", "318 Katalog-Stereotype" in st_text)
 
@@ -120,7 +120,8 @@ def main():
     check("ANLEITUNG: korrigierte Zahlen", "114 vollständige Topologie-Regeln, 52 Viewpoints" in anleitung)
     check("README: PDF-Version von MDG getrennt",
           ("Version 2025.10" in readme) and ("MDG 2026.05" in readme) and ("nicht** inhaltsgleich" in readme))
-    check("README: KB-Sync als PENDING dokumentiert", "KB-Sync-Status (2026-10-19): PENDING" in readme)
+    check("README: KB-Sync auf Parserstand 2026-10-19", "KB-Sync-Status (2026-10-19): PENDING" not in readme)
+    check("README: keine PENDING-Formulierung", "Parser-Nachlieferung ausstehend" not in (readme + anleitung + prompt))
 
     # ---------- Ergebnis ----------
     report = {

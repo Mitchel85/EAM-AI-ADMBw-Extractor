@@ -32,14 +32,14 @@ Vier Knowledge-Dateien, erzeugt vom [EAM-ADMBw-MDG-Parser](https://github.com/Mi
 
 | Datei | Inhalt |
 |-------|--------|
-| `ADMBw-Knowledge-Stereotypes.md` | **318 Katalog-Stereotype** (293 nutzbar · 25 abstrakt 🔒) + 124 ToolboxPage-Einträge (Navigation) + 1 Parser-Artefakt |
-| `ADMBw-Knowledge-Viewpoints.md` | **52 Viewpoints** (Properties/erlaubte Elemente: Parser-Nachlieferung ausstehend) |
+| `ADMBw-Knowledge-Stereotypes.md` | **318 Katalog-Stereotype** (293 nutzbar · 25 abstrakt 🔒); Toolboxen/Artefakte sind nicht enthalten |
+| `ADMBw-Knowledge-Viewpoints.md` | **52 Viewpoints** mit MDG-Beschreibung (keine erfundenen Properties) |
 | `ADMBw-Knowledge-Topology.md` | **114 vollständige Kanten-Regeln** (client = Quelle, supplier = Ziel) + 89 reine Rollen-Beschränkungen |
 | `ADMBw-Knowledge-Connectors.md` | EA-Metatypen + Connector-Übersicht (kuratiert) |
 
 > Bei einem MDG-Update der Bundeswehr werden diese Dateien neu generiert — nicht von Hand gepflegt.
 >
-> **KB-Sync-Status (2026-10-19): PENDING.** Die vier Dateien entsprechen dem Parser-Stand vom 2026-10-18, ergänzt um drei dokumentierte Handkorrekturen (Topologie-Lesart „client = Quelle, supplier = Ziel", 🔒-Markierung der 25 abstrakten Basisklassen, Entfernen des „Business Process"-Artefakts). Sobald der überarbeitete `eam-mdg-parser` regeneriert, werden die Dateien ersetzt; Byte-Identität mit dem Batch-Repo ist via `checks/verify.py` nachweisbar (Hashes in `checks/deterministic-checks.json`).
+> **KB-Sync-Status (2026-10-19): aktuell.** Neu erzeugt aus `eam-mdg-parser` (`b906f51`), identisch in Extractor und Batch; Hashes in `checks/deterministic-checks.json`.
 
 ---
 
@@ -54,7 +54,7 @@ Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt p
 - PASS nur bei exaktem Namens-Match gegen eine Regel mit beiden Enden (client = Quelle, supplier = Ziel)
 - Abschlusszeile: „Topologie-Prüfung: X/Y Kanten PASS" — nur nach Einzelprüfung jeder Kante
 - Element-Checks: Stereotype nutzbar (kein 🔒), Metaklasse = AppliesTo, keine erfundenen Namen
-- Viewpoint-Konformität wird **nicht behauptet**, solange die KB keine erlaubten Elemente je Viewpoint enthält (Parser-Nachlieferung ausstehend)
+- Viewpoint-Konformität wird **nicht behauptet**, weil die MDG 2026.05 keine erlaubten Elemente je Viewpoint definiert
 
 **Eiserne Regeln:**
 - ❌ Keine eigenen Stereotype erfinden

@@ -23,7 +23,7 @@ Stelle dem Nutzer ZU BEGINN genau diese eine Frage (vier Optionen, nur eine wäh
 
 ## OPTION 1: VIEWPOINTS
 
-1. Relevante Viewpoints aus Knowledge-Viewpoints vorschlagen (die Datei listet **52 Viewpoints**). **Hinweis:** Die MDG-2026.05-Extraktion enthält derzeit keine Properties/erlaubten Elemente je Viewpoint (Parser-Nachlieferung ausstehend) — sage das dem Nutzer offen und prüfe Element-Typen stattdessen gegen Stereotypes + Topology.
+1. Relevante Viewpoints aus Knowledge-Viewpoints vorschlagen (die Datei listet **52 Viewpoints**). **Hinweis:** Die MDG-2026.05-DiagramProfile enthalten keine Property-/Element-Definitionen je Viewpoint — sage das dem Nutzer offen und prüfe Element-Typen stattdessen gegen Stereotypes + Topology.
 2. Nutzer wählt — dann einzeln nacheinander:
 
 **Pro Viewpoint:**

@@ -1,11 +1,11 @@
 {
   "kb": {
     "stereotypes": {
-      "rows": 443,
-      "toolbox": 124,
+      "rows": 318,
+      "toolbox": 0,
       "abstract": 25,
       "usable": 293,
-      "junk": 1
+      "junk": 0
     },
     "topology": {
       "rows": 203,
@@ -15,16 +15,16 @@
     "viewpoints": 52,
     "hashes": {
       "ADMBw-Knowledge-Stereotypes.md": {
-        "sha256": "5dc4ff0a12e01f2cf458fd1edd92599140d2708558b23fbf930d59fb9ec2a7d9",
-        "bytes": 60879
+        "sha256": "17d5357aec51c4321c5f20c4e6e2df744f27ccc19a472569fa33d253e59bc99d",
+        "bytes": 56812
       },
       "ADMBw-Knowledge-Topology.md": {
-        "sha256": "d3c91d3fdf536ab701b6162e7244e6ac021153f22fd08037fb2538b008b9d716",
-        "bytes": 16165
+        "sha256": "54f881dddd5d18ed71829d41dd120648afba741671f27751f5cc9f180d5ca284",
+        "bytes": 16016
       },
       "ADMBw-Knowledge-Viewpoints.md": {
-        "sha256": "c2ba33db45a9b98ba030806967076e4f8b396b981eba4d511a9c85300664cda5",
-        "bytes": 13497
+        "sha256": "0136a8aaf75ce3f862accc4a0c7fa98ea9545233d2719cf6536f96792861916e",
+        "bytes": 13355
       },
       "ADMBw-Knowledge-Connectors.md": {
         "sha256": "4699343e8079315cb029ccd532287de9093c9ac3ee92dd6be3053dd72b7fa749",
@@ -34,14 +34,14 @@
   },
   "checks": [
     {
-      "name": "Stereotypes: 443 Tabellenzeilen",
+      "name": "Stereotypes: 318 Tabellenzeilen",
       "ok": true,
-      "detail": "ist 443"
+      "detail": "ist 318"
     },
     {
-      "name": "Stereotypes: 124 ToolboxPage-Einträge",
+      "name": "Stereotypes: 0 ToolboxPage-Einträge",
       "ok": true,
-      "detail": "ist 124"
+      "detail": "ist 0"
     },
     {
       "name": "Stereotypes: 25 abstrakte Basisklassen (🔒)",
@@ -49,9 +49,9 @@
       "detail": "ist 25"
     },
     {
-      "name": "Stereotypes: 1 Nicht-Stereotyp (L2-Operational Constraints)",
+      "name": "Stereotypes: 0 Nicht-Stereotype/Artefakte",
       "ok": true,
-      "detail": ""
+      "detail": "ist 0"
     },
     {
       "name": "Stereotypes: 293 nutzbare",
@@ -184,7 +184,12 @@
       "detail": ""
     },
     {
-      "name": "README: KB-Sync als PENDING dokumentiert",
+      "name": "README: KB-Sync auf Parserstand 2026-10-19",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "README: keine PENDING-Formulierung",
       "ok": true,
       "detail": ""
     }
