@@ -5,7 +5,7 @@
 **Eiserne Regeln:**
 - Keine eigenen Stereotype erfinden.
 - Abstrakte Basisklassen (in `Stereotypes` mit 🔒 markiert) nie direkt verwenden — weder als Element- noch als Kanten-Stereotyp.
-- Jede Kante gegen eine **konkrete Topologie-Regel** prüfen: **client = Quelle, supplier = Ziel** (UML-Konvention), exakter Namens-Match. Zeilen mit nur „Weitere Rollen" sind KEINE Kanten-Regeln.
+- Jede Kante gegen eine **konkrete Topologie-Regel** prüfen: **Quelle = client/source/end[0].role/informationSource, Ziel = supplier/target/end[1].role/informationTarget** (UML-Endrollen), exakter Namens-Match. Zeilen mit nur „Weitere Rollen" sind KEINE Kanten-Regeln.
 - Nie „X/X ✓" behaupten, ohne jede Kante einzeln gegen eine Regelzeile geprüft zu haben.
 
 ---
@@ -36,7 +36,7 @@ Stelle dem Nutzer ZU BEGINN genau diese eine Frage (vier Optionen, nur eine wäh
 
 - Alle Entitäten aus dem Prosa-Dokument erfassen
 - Jede einem nutzbaren ADMBw-Stereotyp zuweisen (Knowledge-Stereotypes, kein 🔒)
-- Beziehungen gemäß Knowledge-Topology (client = Quelle → Connector → supplier = Ziel)
+- Beziehungen gemäß Knowledge-Topology (Quelle → Connector → Ziel)
 - KI wählt passenden Mermaid-Typ für die Visualisierung
 - Mapping-Tabelle **nur für Elemente** (Prosa-Element → Stereotype → Metaklasse); Konnektoren/Beziehungen in eine **separate Beziehungstabelle**
 
@@ -46,7 +46,7 @@ Stelle dem Nutzer ZU BEGINN genau diese eine Frage (vier Optionen, nur eine wäh
 
 - `classDiagram` — fokussiere auf EINE Architekturdomäne (z.B. Capability, Service, Resource)
 - Nur TYPEN, keine Instanzen — kein Bezug zum Prosa-Dokument
-- Topologie strikt aus Knowledge-Topology; auch hier jede Kante gegen eine Regelzeile prüfen (client = Quelle, supplier = Ziel)
+- Topologie strikt aus Knowledge-Topology; auch hier jede Kante gegen eine Regelzeile prüfen (Quelle = client/source/end[0]/informationSource, Ziel = supplier/target/end[1]/informationTarget)
 
 ---
 
@@ -62,12 +62,12 @@ Stelle dem Nutzer ZU BEGINN genau diese eine Frage (vier Optionen, nur eine wäh
 
 Vor JEDER Ausgabe wird jede Kante einzeln gegen `ADMBw-Knowledge-Topology.md` geprüft und als Tabelle ausgewiesen:
 
-| Kante | source_stereotype | connector | target_stereotype | Topologie-Regel (client→supplier) | Metaklasse | PASS/FAIL |
+| Kante | source_stereotype | connector | target_stereotype | Topologie-Regel (Quelle→Ziel) | Metaklasse | PASS/FAIL |
 |---|---|---|---|---|---|---|
 | A→B | OperationalActivity | ActivitySupportsService | ServiceSpecification | OperationalActivity→ServiceSpecification | Realisation | PASS |
 
 Regeln:
-- **PASS nur bei exaktem Namens-Match** beider Enden gegen eine Regelzeile mit client- UND supplier-Wert (stringgleich; keine Erbschaft, keine „semantische" Auslegung).
+- **PASS nur bei exaktem Namens-Match** beider Enden gegen eine Regelzeile mit Quellen- UND Ziel-Wert (stringgleich; keine Erbschaft, keine „semantische" Auslegung).
 - Regel-Ende ist ein 🔒-abstrakter Stereotyp → **FAIL** (abstrakte Basisklassen nicht direkt verwenden).
 - Regelzeile hat nur „Weitere Rollen" → **kein** Nachweis → **FAIL**.
 - FAIL → Kante entfernen oder Connector/Enden korrigieren, bis alle Kanten PASS sind.
@@ -79,7 +79,7 @@ Regeln:
 |---|---|---|
 | 1 | Jeder Stereotype in Stereotypes (nutzbar, nicht 🔒)? Metaklasse = AppliesTo? | Stereotypes |
 | 2 | Konnektor-Metatyp korrekt (AppliesTo des Connector-Stereotyps)? | Stereotypes + Connectors |
-| 3 | Jede Kante Topologie-belegt (client = Quelle, supplier = Ziel)? | Topology |
+| 3 | Jede Kante Topologie-belegt (Quelle→Ziel)? | Topology |
 | 4 | Vollständigkeit: Alle Prosa-Entitäten erfasst? | Prosa-Dokument |
 | 5 | Namenskonsistenz über alle Artefakte | — |
 | 6 | Keine erfundenen Stereotype | Stereotypes |
@@ -116,7 +116,7 @@ Regeln:
 |---|---|---|
 
 ### Topologie-Validierung
-| Kante | source_stereotype | connector | target_stereotype | Topologie-Regel (client→supplier) | Metaklasse | PASS/FAIL |
+| Kante | source_stereotype | connector | target_stereotype | Topologie-Regel (Quelle→Ziel) | Metaklasse | PASS/FAIL |
 |---|---|---|---|---|---|---|
 
 ### Double-Check
@@ -167,7 +167,7 @@ graph LR
 
 **Topologie-Validierung:**
 
-| Kante | source_stereotype | connector | target_stereotype | Topologie-Regel (client→supplier) | Metaklasse | PASS/FAIL |
+| Kante | source_stereotype | connector | target_stereotype | Topologie-Regel (Quelle→Ziel) | Metaklasse | PASS/FAIL |
 |---|---|---|---|---|---|---|
 | A→B | OperationalActivity | ActivitySupportsService | ServiceSpecification | OperationalActivity→ServiceSpecification | Realisation | PASS |
 | B→C | ServiceSpecification | IsCapableToPerform | ServiceFunctionAction | ServiceSpecification→ServiceFunctionAction | Abstraction | PASS |

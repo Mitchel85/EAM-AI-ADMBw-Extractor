@@ -73,12 +73,12 @@ def main():
     complete = [r for r in tp if r[1] and r[2]]
     roles_only = [r for r in tp if not (r[1] and r[2])]
     check("Topology: 203 Zeilen", len(tp) == 203, f"ist {len(tp)}")
-    check("Topology: 114 Regeln mit beiden Enden", len(complete) == 114, f"ist {len(complete)}")
-    check("Topology: 89 reine Rollen-Zeilen", len(roles_only) == 89, f"ist {len(roles_only)}")
-    check("Topology: Lesart 'client = Quelle (Source), supplier = Ziel (Target)'",
-          "client = Quelle (Source), supplier = Ziel (Target)" in tp_text)
-    check("Topology: Spaltenköpfe korrigiert (Quellen(client)/Ziele(supplier))",
-          "| Stereotype | Erlaubte Quellen (client) | Erlaubte Ziele (supplier) | Weitere Rollen |" in tp_text)
+    check("Topology: 133 Regeln mit beiden Enden", len(complete) == 133, f"ist {len(complete)}")
+    check("Topology: 70 reine Rollen-Zeilen", len(roles_only) == 70, f"ist {len(roles_only)}")
+    check("Topology: Lesart 'Quelle = client/source/end[0]/informationSource'",
+          "client, source, end[0].role oder informationSource" in tp_text)
+    check("Topology: Spaltenköpfe Quelle/Ziel normalisiert",
+          "| Stereotype | Erlaubte Quellen (client/source/end[0]) | Erlaubte Ziele (supplier/target/end[1]) | Weitere Rollen |" in tp_text)
 
     vp_headings = [l for l in vp_text.splitlines() if l.startswith("## ")]
     check("Viewpoints: 52 Überschriften", len(vp_headings) == 52, f"ist {len(vp_headings)}")
@@ -108,16 +108,16 @@ def main():
     check("Doku: keine Alt-Behauptung '203 Beziehungsregeln'", "203 Beziehungsregeln" not in docs)
     check("Doku: keine Alt-Behauptung '53 Viewpoints'", "53 Viewpoints" not in docs)
     check("Doku: '8/8 ✓' entfernt", "8/8" not in prompt)
-    check("Prompt: Topologie-Lesart dokumentiert", "client = Quelle, supplier = Ziel" in prompt)
+    check("Prompt: Topologie-Lesart dokumentiert", "Quelle = client/source/end[0].role/informationSource" in prompt)
     check("Prompt: Kanten-Validierungstabelle (source_stereotype/connector/target_stereotype/PASS/FAIL)",
           all(k in prompt for k in ["source_stereotype", "connector", "target_stereotype", "PASS/FAIL"]))
     check("Prompt: Zählung 'X/Y Kanten PASS' statt Pauschal-Claim",
           "Topologie-Prüfung: **X/Y Kanten PASS**" in prompt)
     check("Prompt: Few-Shot enthalten", "FEW-SHOT" in prompt and "Topologie-Prüfung: 3/3 Kanten PASS" in prompt)
     check("Prompt: Leerinput-Regel enthalten", "LEERER / UNLESBARER INPUT" in prompt)
-    check("README: korrigierte Zahlen (318/293/114/52)",
-          all(k in readme for k in ["318 Katalog-Stereotype", "293 nutzbar", "114 vollständige", "52 Viewpoints"]))
-    check("ANLEITUNG: korrigierte Zahlen", "114 vollständige Topologie-Regeln, 52 Viewpoints" in anleitung)
+    check("README: korrigierte Zahlen (318/293/133/52)",
+          all(k in readme for k in ["318 Katalog-Stereotype", "293 nutzbar", "133 vollständige", "52 Viewpoints"]))
+    check("ANLEITUNG: korrigierte Zahlen", "133 vollständige Topologie-Regeln, 52 Viewpoints" in anleitung)
     check("README: PDF-Version von MDG getrennt",
           ("Version 2025.10" in readme) and ("MDG 2026.05" in readme) and ("nicht** inhaltsgleich" in readme))
     check("README: KB-Sync auf Parserstand 2026-10-19", "KB-Sync-Status (2026-10-19): PENDING" not in readme)

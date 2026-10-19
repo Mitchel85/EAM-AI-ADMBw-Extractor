@@ -1,6 +1,6 @@
 # ADMBw-Viewpoints (MDG-DiagramProfile)
 
-> Quelle: `/root/hermes-workspace/architektur-mate-ki/tools/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-19 05:30 UTC
+> Quelle: `/root/hermes-workspace/architektur-mate-ki/tools/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-19 05:34 UTC
 > 52 Viewpoints (Diagramm-Artefakt „Business Process" entfernt)
 
 ## A1 - Meta-Data Definitions

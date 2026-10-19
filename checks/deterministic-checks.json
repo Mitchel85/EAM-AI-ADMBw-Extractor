@@ -9,21 +9,21 @@
     },
     "topology": {
       "rows": 203,
-      "complete_rules": 114,
-      "roles_only": 89
+      "complete_rules": 133,
+      "roles_only": 70
     },
     "viewpoints": 52,
     "hashes": {
       "ADMBw-Knowledge-Stereotypes.md": {
-        "sha256": "17d5357aec51c4321c5f20c4e6e2df744f27ccc19a472569fa33d253e59bc99d",
+        "sha256": "3ede09ba833dcd4567d37066d3986a80a547d157e28ef0df813c6d28d93ea413",
         "bytes": 56812
       },
       "ADMBw-Knowledge-Topology.md": {
-        "sha256": "54f881dddd5d18ed71829d41dd120648afba741671f27751f5cc9f180d5ca284",
-        "bytes": 16016
+        "sha256": "fe030babbb706c9253f52c351e9d88a64e6d07ee483e9f5325d33e1d32e0bd3f",
+        "bytes": 19079
       },
       "ADMBw-Knowledge-Viewpoints.md": {
-        "sha256": "0136a8aaf75ce3f862accc4a0c7fa98ea9545233d2719cf6536f96792861916e",
+        "sha256": "a662c656c41002c5d86fa245355f48d4cf950d956b40d0f11e873c25bef24b8b",
         "bytes": 13355
       },
       "ADMBw-Knowledge-Connectors.md": {
@@ -69,22 +69,22 @@
       "detail": "ist 203"
     },
     {
-      "name": "Topology: 114 Regeln mit beiden Enden",
+      "name": "Topology: 133 Regeln mit beiden Enden",
       "ok": true,
-      "detail": "ist 114"
+      "detail": "ist 133"
     },
     {
-      "name": "Topology: 89 reine Rollen-Zeilen",
+      "name": "Topology: 70 reine Rollen-Zeilen",
       "ok": true,
-      "detail": "ist 89"
+      "detail": "ist 70"
     },
     {
-      "name": "Topology: Lesart 'client = Quelle (Source), supplier = Ziel (Target)'",
+      "name": "Topology: Lesart 'Quelle = client/source/end[0]/informationSource'",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "Topology: Spaltenköpfe korrigiert (Quellen(client)/Ziele(supplier))",
+      "name": "Topology: Spaltenköpfe Quelle/Ziel normalisiert",
       "ok": true,
       "detail": ""
     },
@@ -169,7 +169,7 @@
       "detail": ""
     },
     {
-      "name": "README: korrigierte Zahlen (318/293/114/52)",
+      "name": "README: korrigierte Zahlen (318/293/133/52)",
       "ok": true,
       "detail": ""
     },

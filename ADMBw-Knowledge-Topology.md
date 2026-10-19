@@ -1,20 +1,21 @@
 # ADMBw-Topologie-Regeln (MDG-Metaconstraints)
 
-> Quelle: `/root/hermes-workspace/architektur-mate-ki/tools/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-19 05:30 UTC
-> 203 Stereotype mit Metaconstraints · 114 vollständig (Quelle+Ziel) · 89 nur Rollen-Beschränkungen
+> Quelle: `/root/hermes-workspace/architektur-mate-ki/tools/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-19 05:34 UTC
+> 203 Stereotype mit Metaconstraints · 133 vollständig (Quelle+Ziel) · 70 nur Rollen-Beschränkungen
 
 ## Lesart
 
-- **client = Quelle (Source), supplier = Ziel (Target)** — UML-Konvention. Der Stereotype (Spalte 1) darf nur als Connector einer Kante **von** einem Stereotyp der client-Spalte **zu** einem Stereotyp der supplier-Spalte stehen.
-- **Nur Zeilen mit beiden Enden sind Kanten-Regeln.** Zeilen mit leeren client/supplier-Spalten enthalten ausschließlich Rollen-/Metamodell-Beschränkungen — sie definieren KEINE erlaubte Kante und dürfen nicht als Kanten-Nachweis dienen.
-- **Exakter Namens-Match:** Source- und Target-Stereotype müssen stringgleich mit client/supplier übereinstimmen. Abstrakte Basisklassen (🔒) gelten nicht als konkreter Nachweis — die Kante ist dann FAIL.
+- **Quelle:** client, source, end[0].role oder informationSource — je nach UML-Metaklasse.
+- **Ziel:** supplier, target, end[1].role oder informationTarget — je nach UML-Metaklasse.
+- **Nur Zeilen mit beiden Enden sind Kanten-Regeln.** Zeilen mit leeren Quellen-/Zielspalten enthalten ausschließlich Rollen-/Metamodell-Beschränkungen — sie definieren KEINE erlaubte Kante.
+- **Exakter Namens-Match:** Source- und Target-Stereotype müssen stringgleich mit den Quellen-/Zielspalten übereinstimmen. Abstrakte Basisklassen (🔒) gelten nicht als konkreter Nachweis — die Kante ist dann FAIL.
 
-| Stereotype | Erlaubte Quellen (client) | Erlaubte Ziele (supplier) | Weitere Rollen |
+| Stereotype | Erlaubte Quellen (client/source/end[0]) | Erlaubte Ziele (supplier/target/end[1]) | Weitere Rollen |
 |---|---|---|---|
 | AchievedEffect | Achiever | ActualState |  |
 | ActivityPerformableUnderCondition | BusinessProcess | ActualCondition |  |
 | ActivitySupportsService | OperationalActivity | ServiceSpecification |  |
-| ActsUpon | OperationalActivityAction | PaperForm |  |
+| ActsUpon | OperationalActivity, OperationalActivityAction | OperationalExchangeItem, PaperForm |  |
 | ActualCondition |  |  | classifier → Condition |
 | ActualConditionToActualResource | ActualResource | ActualCondition |  |
 | ActualEnduringTask |  |  | classifier → EnduringTask |
@@ -24,7 +25,7 @@
 | ActualMeasurement |  |  | definingFeature → Measurement, owningInstance → ActualPropertySet |
 | ActualMeasurementSetAppliesFor | ActualMeasurementSet | MeasurableElement |  |
 | ActualOrganization |  |  | classifier → Organization |
-| ActualOrganizationRole |  |  | definingFeature → SubOrganization, owningInstance → ActualOrganization |
+| ActualOrganizationRole |  |  | definingFeature → PostRole, definingFeature → SubOrganization, owningInstance → ActualOrganization |
 | ActualPerson |  |  | classifier → Person |
 | ActualPost |  |  | classifier → Post |
 | ActualProject |  |  | classifier → Project, definingFeature → ProjectRole |
@@ -36,7 +37,7 @@
 | ActualPropertySet |  |  | classifier → PropertySet |
 | ActualResource |  |  | classifier → ResourcePerformer |
 | ActualResourceNeededByActualProjectMilestone | ActualResource | ActualProjectMilestone |  |
-| ActualResourceRelationship |  |  | informationSource → ActualResource, informationTarget → ActualResource, realizes → ResourceExchange |
+| ActualResourceRelationship | ActualResource | ActualResource | realizes → ResourceExchange |
 | ActualResourceRole |  |  | definingFeature → ResourceRole, owningInstance → ActualResource |
 | ActualResourceToActualProjectMilestone | ActualResource | ActualProjectMilestone |  |
 | ActualService |  |  | classifier → ServiceSpecification |
@@ -44,21 +45,21 @@
 | AffectedActivity | OperationalExchangeItem | OperationalActivity |  |
 | AffectedFunctions | ResourceExchangeItem | Function |  |
 | AffectedResource | OperationalActivity | OperationalExchangeItem |  |
-| AlignsWithGoal | ServiceSpecification | EnterpriseGoal |  |
+| AlignsWithGoal | OperationalActivity, OperationalAgent, ResourcePerformer, ServiceSpecification | EnterpriseGoal |  |
 | ArbitraryConnector | ConceptRole | ConceptRole |  |
 | ArchitecturalReference | ArchitecturalDescription | ArchitecturalDescription |  |
 | ArchitecturalSequence | ArchitecturalDescription | ArchitecturalDescription |  |
-| ArchitectureForProject | ActualProjectMilestone | ArchitecturalDescription |  |
+| ArchitectureForProject | ActualProject, ActualProjectMilestone | ArchitecturalDescription |  |
 | ArchitectureMetadata |  |  | annotatedElement → ArchitecturalDescription |
 | BoundaryCondition | ResourceConnector | Environment |  |
 | CapabilityDependency | Capability | Capability |  |
-| CapabilityForTask | Capability | EnduringTask |  |
-| CapabilityGeneralization |  |  | source → Capability, target → Capability |
+| CapabilityForTask | Capability | ActualEnduringTask, EnduringTask |  |
+| CapabilityGeneralization | Capability | Capability |  |
 | CapabilityRole |  |  | class → Capability, type → Capability |
 | CapabilityRoleDependency | CapabilityRole | CapabilityRole |  |
 | Checks | FitCriterion | BWRequirement |  |
-| Classified | ServiceSpecification | Classification |  |
-| Command |  |  | conveyed → DataElement, informationSource → ResourceRole, informationTarget → ResourceRole |
+| Classified | ArchitecturalDescription, DataElement, DocumentReference, InformationElement, ServiceSpecification | Classification |  |
+| Command | OrganizationalResource, ResourceRole | OrganizationalResource, ResourceRole | conveyed → DataElement |
 | CompetenceForRole | ResourceRole | Competence |  |
 | CompliesViewpoint | View | Viewpoint |  |
 | ConceptRole |  |  | class → HighLevelOperationalConcept, type → ConceptItem |
@@ -67,11 +68,11 @@
 | ConcernForViewpoint | Viewpoint | Concern |  |
 | ConflictsWith | BWRequirement | BWRequirement |  |
 | ConformsTo | UAFElement | Standard |  |
-| ConsumedBy | ServiceSpecificationRole | OperationalRole |  |
-| Consumes | OperationalActivityAction | ServiceSpecification |  |
-| Control |  |  | conveyed → DataElement, informationSource → ResourceRole, informationTarget → ResourceRole |
+| ConsumedBy | ServiceSpecification, ServiceSpecificationRole | OperationalPerformer, OperationalRole |  |
+| Consumes | OperationalActivity, OperationalActivityAction | ActualService, ServiceSpecification |  |
+| Control | PhysicalResource, ResourceRole | PhysicalResource, ResourceRole | conveyed → DataElement |
 | DataElement |  |  | owner → DataModel |
-| DataElementStoredIn | DataElement | ResourceRole |  |
+| DataElementStoredIn | DataElement | ResourcePerformer, ResourceRole |  |
 | DataRole |  |  | class → ResourceAsset, type → DataElement |
 | DerivedFrom | BWRequirement | UAFElement |  |
 | DescribedBy | Architecture | ArchitecturalDescription |  |
@@ -88,61 +89,61 @@
 | ForecastPeriod | Forecast | ActualEnterprisePhase |  |
 | FormStoredIn | PaperForm | Software |  |
 | FunctionAction |  |  | activity → Function, behavior → Function |
-| FunctionControlFlow |  |  | source → FunctionAction;JoinNode;MergeNode, target → FunctionAction;JoinNode;MergeNode |
+| FunctionControlFlow | ActivityInitial, DecisionNode, ForkNode, FunctionAction, JoinNode, MergeNode | ActivityFinal, DecisionNode, FlowFinal, ForkNode, FunctionAction, JoinNode, MergeNode |  |
 | FunctionEdge |  |  | owner → Function |
-| FunctionObjectFlow |  |  | source → FunctionAction;JoinNode;MergeNode, target → FunctionAction;JoinNode;MergeNode |
+| FunctionObjectFlow | ActivityInitial, DecisionNode, ForkNode, FunctionAction, JoinNode, MergeNode | ActivityFinal, DecisionNode, FlowFinal, ForkNode, FunctionAction, JoinNode, MergeNode |  |
 | FunctionSubject | Function | ResourceExchangeItem |  |
 | GoalForActualEnterprisePhase | ActualEnterprisePhase | EnterpriseGoal |  |
-| HostedOn | ResourceRole | ResourceRole |  |
-| Implements | StrategicConstraint | StrategicConstraint |  |
+| HostedOn | ResourceArchitecture, ResourceArtifact, ResourceRole | ResourceArchitecture, ResourceArtifact, ResourceRole |  |
+| Implements | DataElement, Function, InformationElement, OperationalActivity, OperationalActivityAction, OperationalConstraint, ResourceConnector, ResourceConstraint, ResourceExchange, ResourceInterface, ResourcePerformer, ResourceRole, ServicePolicy, StrategicConstraint | ActualEnduringTask, InformationElement, OperationalActivity, OperationalActivityAction, OperationalAgent, OperationalConnector, OperationalConstraint, OperationalExchange, OperationalInterface, OperationalRole, ResourceConnector, ResourceConstraint, ServiceFunction, ServiceInterface, ServicePolicy, StrategicConstraint |  |
 | ImplementsProtocol | ProtocolImplementation | Protocol |  |
 | Information |  |  | annotatedElement → UAFElement |
 | InformationElement |  |  | owner → DataModel |
 | InformationRole |  |  | class → OperationalAsset, type → InformationElement |
-| IsAccountableFor | Organization | ServiceSpecification |  |
-| IsCapableToPerform | ServiceSpecification | ServiceFunctionAction |  |
+| IsAccountableFor | Organization | ActualProject, ResourcePerformer, ServiceSpecification |  |
+| IsCapableToPerform | OperationalAgent, ResourcePerformer, ServiceSpecification | Function, FunctionAction, Lane, OperationalActivity, OperationalActivityAction, Pool, ServiceFunction, ServiceFunctionAction |  |
 | IsDuplicateOf | BWRequirement | BWRequirement |  |
 | IsEquivalentToStandardElement | UAFElement | UAFElement |  |
-| IsResponsibleFor | Organization | ServiceSpecification |  |
-| JustifiedBy | StrategicConstraint | Reference |  |
+| IsResponsibleFor | Organization | ActualProject, ResourcePerformer, ServiceSpecification |  |
+| JustifiedBy | OperationalConstraint, ResourceConstraint, ServicePolicy, StrategicConstraint | Reference |  |
 | LocationType | LocationHolder | Location |  |
 | MapsToCapability | BusinessProcess | Capability |  |
 | Measurement |  |  | class → PropertySet, type → MeasurementType |
 | Metadata |  |  | annotatedElement → UAFElement |
 | MilestoneDependency | ActualProjectMilestone | ActualProjectMilestone |  |
-| NeedsModificationOf | ActualProject | ResourceRole |  |
-| NeedsResource | ActualProject | ResourceRole |  |
-| NeedsService | ActualProject | ServiceSpecificationRole |  |
+| NeedsModificationOf | ActualProject | PhysicalResource, ResourceArchitecture, ResourceRole |  |
+| NeedsResource | ActualProject | PhysicalResource, ResourceArchitecture, ResourceRole |  |
+| NeedsService | ActualProject | ServiceSpecification, ServiceSpecificationRole |  |
 | OperationalActivity |  |  | ownedParameter → OperationalParameter |
 | OperationalActivityAction |  |  | activity → OperationalActivity, behavior → OperationalActivity |
 | OperationalActivityEdge |  |  | owner → OperationalActivity |
 | OperationalAgent |  |  | ownedOperation → OperationalMethod, ownedPort → OperationalPort |
 | OperationalArchitectureOfEnterprisePhase | ActualEnterprisePhase | OperationalArchitecture |  |
-| OperationalConnector |  |  | end[0].role → OperationalRole, end[1].role → OperationalRole |
-| OperationalControlFlow |  |  | source → OperationalActivityAction, target → OperationalActivityAction |
-| OperationalExchange | OperationalActivity | OperationalActivity | conveyed → OperationalExchangeItem, informationSource → ServiceSpecification, informationTarget → ServiceSpecification, realizingActivityEdge → OperationalActivityEdge, realizingConnector → OperationalConnector, realizingMessage → OperationalMessage |
+| OperationalConnector | OperationalPort, OperationalRole | OperationalPort, OperationalRole |  |
+| OperationalControlFlow | Gateway, IntermediateEvent, OperationalActivityAction, StartEvent | EndEvent, Gateway, IntermediateEvent, OperationalActivityAction |  |
+| OperationalExchange | OperationalActivity, OperationalAgent, OperationalRole, ServiceSpecification | OperationalActivity, OperationalAgent, OperationalRole, ServiceSpecification | conveyed → OperationalExchangeItem, realizingActivityEdge → OperationalActivityEdge, realizingConnector → OperationalConnector, realizingMessage → OperationalMessage |
 | OperationalMessage |  |  | receiveEvent.event.operation → OperationalMethod |
-| OperationalMessageFlow |  |  | source → OperationalActivityAction, target → OperationalActivityAction |
+| OperationalMessageFlow | IntermediateEvent, Lane, OperationalActivityAction, Pool | IntermediateEvent, Lane, OperationalActivityAction, Pool |  |
 | OperationalMethod |  |  | method → OperationalActivity, ownedOperation → OperationalInterface, ownedParameter → OperationalParameter |
-| OperationalObjectFlow |  |  | source → OperationalActivityAction, target → OperationalActivityAction |
+| OperationalObjectFlow | Gateway, IntermediateEvent, OperationalActivityAction, StartEvent | EndEvent, Gateway, IntermediateEvent, OperationalActivityAction |  |
 | OperationalParameter |  |  | type → OperationalExchangeItem |
 | OperationalPort |  |  | class → OperationalAgent, type → OperationalInterface |
-| OperationalRole |  |  | class → OperationalPerformer, type → OperationalPerformer |
+| OperationalRole |  |  | class → OperationalAgent, class → OperationalArchitecture, class → OperationalPerformer, type → KnownResource, type → OperationalAgent, type → OperationalArchitecture, type → OperationalPerformer |
 | OperationalSignalProperty |  |  | class → OperationalSignal, type → OperationalExchangeItem |
 | OperationalStateDescription |  |  | owner → OperationalAgent |
 | OriginatesFrom | UAFElement | Reference |  |
 | OwnedMilestone | ActualProject | ActualProjectMilestone |  |
 | OwnsActualMeasurementSet | MeasurableElement | ActualMeasurementSet |  |
-| OwnsMeasurement | MeasurableElement | MeasurementType |  |
+| OwnsMeasurement | MeasurableElement | Measurement, MeasurementType |  |
 | OwnsProcess | ActualOrganizationalResource | OperationalActivity |  |
-| PartOfCatalogue |  |  | source → RequirementCategory, target → RequirementCatalogue |
-| PartOfCategory |  |  | source → RequirementCategory, target → RequirementCategory |
-| PerformsInContext | ServiceSpecificationRole | ServiceFunctionAction |  |
+| PartOfCatalogue | RequirementCategory | RequirementCatalogue |  |
+| PartOfCategory | BWRequirement, RequirementCategory | RequirementCategory |  |
+| PerformsInContext | OperationalRole, ResourceRole, ServiceSpecificationRole | Function, FunctionAction, Lane, OperationalActivity, OperationalActivityAction, Pool, ServiceFunction, ServiceFunctionAction |  |
 | PhysicalArchitectureOfEnterprisePhase | ActualEnterprisePhase | ResourceArchitecture |  |
 | PhysicalLocation | LocationHolder | ActualLocation |  |
-| PostRole |  |  | class → Post, type → Post |
+| PostRole |  |  | class → Organization, class → Post, type → Post |
 | ProblemDomain |  |  | class → OperationalArchitecture, type → OperationalPerformer |
-| ProcessGeneralization |  |  | source → BusinessProcess, target → BusinessProcess |
+| ProcessGeneralization | BusinessProcess | BusinessProcess |  |
 | ProjectMilestoneRole |  |  | class → Project, type → ProjectMilestone |
 | ProjectMilestoneToProjectTheme | ProjectMilestone | ProjectTheme |  |
 | ProjectProvidesFunction | ActualProject | Function |  |
@@ -150,52 +151,52 @@
 | ProjectSequence | ActualProject | ActualProject |  |
 | ProjectStatus |  |  | definingFeature → ProjectTheme |
 | ProjectSupportActivity | ActualProject | OperationalActivity |  |
-| PropertySetGeneralization |  |  | source → System, target → System |
+| PropertySetGeneralization | CapabilityConfiguration, PropertySet, System | CapabilityConfiguration, PropertySet, System |  |
 | ProtocolLayer |  |  | class → Protocolstack, type → Protocol |
-| Provides | OperationalRole | ServiceSpecificationRole |  |
+| Provides | OperationalPerformer, OperationalRole | ServiceSpecification, ServiceSpecificationRole |  |
 | ProvidesCompetence | ActualOrganizationalResource | Competence |  |
 | ProvidesServiceFunction | ServiceInterface | ServiceFunction |  |
 | RatifiedStandards | ActualOrganization | Standard |  |
-| RealiseRequirement | Standard | BWRequirement |  |
+| RealiseRequirement | DataElement, Function, Measurement, MeasurementType, Protocol, Protocolstack, ResourcePerformer, ResourcePort, ResourceRole, ServiceFunction, ServiceInterface, ServiceSpecification, ServiceSpecificationRole, Standard | BWRequirement |  |
 | RealizedDesiredEffect | AchievedEffect | DesiredEffect |  |
 | RealizesRecommendation | UAFElement | Recommendation |  |
 | RealizingAchievedEffect | DesiredEffect | AchievedEffect |  |
 | RefersTo | Recommendation | Finding |  |
 | Refines | BWRequirement | BWRequirement |  |
 | Replaces | BWRequirement | BWRequirement |  |
-| ReplaceStandardElement | UAFElement | UAFElement |  |
+| ReplaceStandardElement | Reference, UAFElement | Reference, UAFElement |  |
 | RequiredEnvironment | LocationHolder | ActualEnvironment |  |
 | RequiredResource | ProjectMilestone | ResourcePerformer |  |
 | Requires | BWRequirement | BWRequirement |  |
 | RequiresCompetence | OrganizationalResource | Competence |  |
-| ResourceConnector |  |  | end[0].role → ResourceRole, end[1].role → ResourceRole |
-| ResourceDependency | ResourceRole | ResourceRole |  |
-| ResourceExchange |  |  | conveyed → ResourceExchangeItem, informationSource → ServiceSpecificationRole, informationTarget → ServiceSpecificationRole, realizingActivityEdge → FunctionEdge, realizingConnector → ResourceConnector, realizingMessage → ResourceMessage |
+| ResourceConnector | ResourcePort, ResourceRole | ResourcePort, ResourceRole |  |
+| ResourceDependency | ResourcePerformer, ResourcePort, ResourceRole | ResourcePerformer, ResourcePort, ResourceRole |  |
+| ResourceExchange | ResourcePerformer, ResourceRole, ServiceSpecificationRole | ResourcePerformer, ResourceRole, ServiceSpecificationRole | conveyed → ResourceExchangeItem, realizingActivityEdge → FunctionEdge, realizingConnector → ResourceConnector, realizingMessage → ResourceMessage |
 | ResourceMessage |  |  | Connector → ResourceConnector, receiveEvent.event.operation → ResourceMethod |
-| ResourceMethod |  |  | method → Function, ownedOperation → ResourcePerformer, ownedParameter → ResourceParameter |
+| ResourceMethod |  |  | method → Function, ownedOperation → ResourceInterface, ownedOperation → ResourcePerformer, ownedParameter → ResourceParameter |
 | ResourceParameter |  |  | ownedParameter → Function, type → ResourceExchangeItem |
 | ResourcePerformer |  |  | ownedPort → ResourcePort |
 | ResourcePort |  |  | class → ResourcePerformer, type → ResourceInterface |
 | ResourceRole |  |  | class → ResourcePerformer, type → ResourcePerformer |
 | ResourceSignalProperty |  |  | class → ResourceSignal, type → ResourceExchangeItem |
 | ResourceStateDescription |  |  | owner → ResourcePerformer |
-| ResourceToServiceDependency | ResourceRole | ServiceSpecificationRole |  |
-| Responsible | ActualProject | ServiceSpecification |  |
-| ResultsFrom | Finding | UAFElement |  |
-| SameAs | UAFElement | UAFElement |  |
-| Satisfy | SubjectOfResourceConstraint | StrategicConstraint |  |
+| ResourceToServiceDependency | ResourcePerformer, ResourceRole | ServiceSpecification, ServiceSpecificationRole |  |
+| Responsible | ActualProject | PhysicalResource, ResourceArchitecture, ResourceRole, ServiceSpecification |  |
+| ResultsFrom | Finding | Classification, EndEvent, FitCriterion, FulfilmentCriterion, FunctionalRequirement, Gateway, IntermediateEvent, Lane, Measurement, MeasurementType, NonfunctionalRequirement, Pool, Reference, RequirementCatalogue, RequirementCategory, StartEvent, UAFElement |  |
+| SameAs | Software, UAFElement | Software, UAFElement |  |
+| Satisfy | Capability, OperationalActivityAction, ServiceSpecification, SubjectOfOperationalConstraint, SubjectOfResourceConstraint | OperationalConstraint, ResourceConstraint, ServicePolicy, StrategicConstraint |  |
 | SecurityConstraint |  |  | constrainedElement → SubjectOfSecurityConstraint |
-| ServiceConnector |  |  | end[0].role → ServiceSpecificationRole, end[1].role → ServiceSpecificationRole |
-| ServiceDependency | ServiceSpecification | ServiceSpecification |  |
-| ServiceExchange |  |  | realizingConnector → ServiceConnector, realizingMessage → ServiceMessage, source → ServiceSpecification, target → ServiceSpecification |
+| ServiceConnector | ServicePort, ServiceSpecificationRole | ServicePort, ServiceSpecificationRole |  |
+| ServiceDependency | ServiceSpecification | OperationalAgent, ResourcePerformer, ServiceSpecification |  |
+| ServiceExchange | ServiceSpecification | ServiceSpecification | realizingConnector → ServiceConnector, realizingMessage → ServiceMessage |
 | ServiceFunction |  |  | ownedParameter → ServiceParameter |
 | ServiceFunctionAction |  |  | activity → ServiceFunction, behavior → ServiceFunction |
-| ServiceGeneralization |  |  | source → ServiceSpecification, target → ServiceSpecification |
+| ServiceGeneralization | ServiceSpecification | ServiceSpecification |  |
 | ServiceInterface |  |  | ownedOperation → ServiceMethod |
 | ServiceMethod |  |  | method → ServiceFunction, ownedParameter → ServiceParameter, receiveEvent.event.operation → ServiceMessage |
 | ServiceParameter |  |  | type → OperationalExchangeItem |
 | ServicePort |  |  | class → ServiceSpecification, type → ServiceInterface |
-| ServiceProvision | ResourceRole | ServiceSpecificationRole |  |
+| ServiceProvision | ActualResource, ResourcePerformer, ResourceRole | ActualService, ServiceSpecification, ServiceSpecificationRole |  |
 | ServiceSpecification |  |  | ownedOperation → ServiceMethod, ownedPort → ServicePort |
 | ServiceSpecificationRole |  |  | class → ServiceSpecification, type → ServiceSpecification |
 | ServiceStateDescription |  |  | owner → ServiceSpecification |
@@ -203,9 +204,9 @@
 | StatementTask | ActualEnterprisePhase | ActualEnduringTask |  |
 | StemsFrom | BWRequirement | BWRequirement |  |
 | SubOrganization |  |  | class → Organization, type → Organization |
-| SuccessorOf | Standard | Standard |  |
+| SuccessorOf | ResourcePerformer, ServiceSpecification, Standard | ResourcePerformer, ServiceSpecification, Standard |  |
 | TemporalPart |  |  | class → EnterprisePhase, type → EnterprisePhase |
-| ToBeRealizedBy | BWRequirement | Standard |  |
+| ToBeRealizedBy | BWRequirement | DataElement, Function, Measurement, MeasurementType, Protocol, Protocolstack, ResourcePerformer, ResourcePort, ResourceRole, ServiceFunction, ServiceInterface, ServiceSpecification, ServiceSpecificationRole, Standard |  |
 | VersionOfConfiguration |  |  | class → WholeLifeConfiguration, type → VersionedElement |
 | VersionReleased | ActualProjectMilestone | VersionedElement |  |
 | VersionSuccession | VersionOfConfiguration | VersionOfConfiguration |  |

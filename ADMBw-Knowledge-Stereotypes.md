@@ -1,6 +1,6 @@
 # ADMBw-Stereotype (MDG-extrahiert)
 
-> Quelle: `/root/hermes-workspace/architektur-mate-ki/tools/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-19 05:30 UTC
+> Quelle: `/root/hermes-workspace/architektur-mate-ki/tools/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-19 05:34 UTC
 > 318 Katalog-Stereotype (nur UMLProfiles) · 293 nutzbar (mit AppliesTo) · 25 abstrakt 🔒 · 0 ToolboxPage-Einträge
 > Version: NAFv4-ADMBw-MDG-2026.05.xml
 

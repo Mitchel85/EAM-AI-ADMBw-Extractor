@@ -34,7 +34,7 @@ Vier Knowledge-Dateien, erzeugt vom [EAM-ADMBw-MDG-Parser](https://github.com/Mi
 |-------|--------|
 | `ADMBw-Knowledge-Stereotypes.md` | **318 Katalog-Stereotype** (293 nutzbar · 25 abstrakt 🔒); Toolboxen/Artefakte sind nicht enthalten |
 | `ADMBw-Knowledge-Viewpoints.md` | **52 Viewpoints** mit MDG-Beschreibung (keine erfundenen Properties) |
-| `ADMBw-Knowledge-Topology.md` | **114 vollständige Kanten-Regeln** (client = Quelle, supplier = Ziel) + 89 reine Rollen-Beschränkungen |
+| `ADMBw-Knowledge-Topology.md` | **133 vollständige Kanten-Regeln** (Quelle/Ziel über client/source/end[0] bzw. supplier/target/end[1]) + 70 reine Rollen-Beschränkungen |
 | `ADMBw-Knowledge-Connectors.md` | EA-Metatypen + Connector-Übersicht (kuratiert) |
 
 > Bei einem MDG-Update der Bundeswehr werden diese Dateien neu generiert — nicht von Hand gepflegt.
@@ -78,7 +78,7 @@ Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt p
 
 `python3 checks/verify.py` prüft ohne LLM:
 
-- KB-Statistiken (318/293/25/114/89/52) und SHA-256-Hashes der vier KB-Dateien
+- KB-Statistiken (318/293/25/133/70/52) und SHA-256-Hashes der vier KB-Dateien
 - Topologie-Lesart („client = Quelle") und 🔒-Markierungen vorhanden
 - Prompt/README enthalten die korrigierten Zahlen (keine 443/203/53-Reste)
 
