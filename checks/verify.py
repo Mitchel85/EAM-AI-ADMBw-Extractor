@@ -3,7 +3,7 @@
 
 Prüft ohne LLM-Aufruf:
  1. KB-Statistiken (Stereotypes/Topology/Viewpoints/Connectors) gegen die dokumentierten Zahlen
- 2. SHA-256-Hashes der vier KB-Dateien (für Cross-Repo-Vergleich mit dem Batch-Repo)
+ 2. SHA-256-Hashes der vier MDG-KB-Dateien (Stereotypes, Topology, Viewpoints, TagTypes)
  3. Topologie-Lesart korrigiert (client = Quelle, supplier = Ziel)
  4. 🔒-Markierungen der 25 abstrakten Basisklassen vorhanden
  5. Prompt/README/ANLEITUNG enthalten die korrigierten Zahlen; keine 443/203/53-Altbehauptungen
@@ -98,10 +98,10 @@ def main():
     # ---------- 2. Hashes ----------
     hashes = {}
     for f in ["ADMBw-Knowledge-Stereotypes.md", "ADMBw-Knowledge-Topology.md",
-              "ADMBw-Knowledge-Viewpoints.md", "ADMBw-Knowledge-Connectors.md"]:
+              "ADMBw-Knowledge-Viewpoints.md", "ADMBw-Knowledge-TagTypes.md"]:
         data = (ROOT / f).read_bytes()
         hashes[f] = {"sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data)}
-    check("Hashes: vier KB-Dateien berechnet", len(hashes) == 4)
+    check("Hashes: vier MDG-KB-Dateien berechnet", len(hashes) == 4)
 
     # ---------- 3.-6. Prompt & Doku ----------
     prompt = (ROOT / "system_prompt.md").read_text(encoding="utf-8")
