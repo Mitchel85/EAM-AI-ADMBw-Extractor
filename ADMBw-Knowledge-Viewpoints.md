@@ -1,7 +1,8 @@
 # ADMBw-Viewpoints (MDG-DiagramProfile)
 
 > Quelle: `/tmp/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-18 22:15 UTC
-> 53 Viewpoints
+> 52 Viewpoints (Parser-Extrakt enthielt 53 Überschriften; "Business Process" ist ein Parser-Artefakt und wurde entfernt)
+> ⚠️ Handkorrektur 2026-10-19. Properties/erlaubte Elemente je Viewpoint: Parser-Nachlieferung ausstehend (KB-Sync pending).
 
 ## A1 - Meta-Data Definitions
 Architectures, particularly large ones, usually require meta-data tags to aid with searching and discovery.
@@ -53,8 +54,6 @@ The C8 Viewpoint is concerned with identification and description of assumptions
 
 ## Cr - Capability Roadmap
 The Cr Viewpont supports the Capability Audit process by providing a method to identify gaps or duplications in capability provision. Cr indicates capability increments, which are derived from delivery milestones within acquisition projects.
-
-## Business Process
 
 ## L1 - Node Types
 The L1 Viewpoint defines all of the Nodes that will appear in a Logical Architecture. Nodes are elements of capability assembled and orchestrated in the Logical Architecture (see L2 - Logical Scenario and L4 - Logical Activities views). The levels of capability provided by each node are expressed as

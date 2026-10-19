@@ -11,12 +11,12 @@ Jede Beziehung = EA-Metatyp + Stereotyp. Der Stereotyp MUSS auf diesen Metatyp a
 
 | EA-Metatyp | Häufigste Stereotype |
 |-----------|---------------------|
-| **Dependency** (101) | `AchievedEffect`, `ActivityPerformableUnderCondition`, `ActsUpon`, `ActualConditionToActualResource`, `ActualMeasurementSetAppliesFor`, `AlignsWithGoal` +95 |
-| **Class** (70) | `Architecture`, `Asset`, `Capability`, `CapabilityConfiguration`, `Classification` +65 |
+| **Dependency** (100) | `AchievedEffect`, `ActivityPerformableUnderCondition`, `ActsUpon`, `ActualConditionToActualResource`, `ActualMeasurementSetAppliesFor`, `AlignsWithGoal` +94 |
+| **Class** (68) | `Architecture`, `Asset`, `Capability`, `CapabilityConfiguration`, `Classification` +63 |
 | **Object** (21) | `Achiever`, `ActualCondition`, `ActualEnduringTask`, `ActualEnterprisePhase`, `ActualEnvironment` +16 |
 | **Part** (20) | `AssetRole`, `CapabilityRole`, `ConceptRole`, `DataRole`, `InformationRole` +15 |
 | **Abstraction** (10) | `CapabilityForTask`, `Consumes`, `Exhibits`, `Implements`, `IsCapableToPerform` +5 |
-| **Activity** (7) | `BusinessProcess`, `Function`, `OperationalActivity`, `OperationalActivityAction`, `SecurityProcess` +2 |
+| **Activity** (6) | `BusinessProcess`, `Function`, `OperationalActivity`, `OperationalActivityAction`, `SecurityProcess` +1 |
 | **Slot** (6) | `ActualMeasurement`, `ActualOrganizationRole`, `ActualProjectMilestoneRole`, `ActualResourceRole`, `ActualServiceSpecificationRole` +1 |
 | **InformationFlow** (6) | `ActualResourceRelationship`, `Command`, `Control`, `OperationalExchange`, `ResourceExchange` +1 |
 | **Note** (5) | `Alias`, `ArchitectureMetadata`, `Definition`, `Information`, `Metadata` |
@@ -33,12 +33,12 @@ Jede Beziehung = EA-Metatyp + Stereotyp. Der Stereotyp MUSS auf diesen Metatyp a
 | **Port** (3) | `OperationalPort`, `ResourcePort`, `ServicePort` |
 | **StateMachine** (3) | `ResourceStateDescription`, `ServiceStateDescription`, `StateDescription` |
 | **ObjectFlow** (2) | `FunctionObjectFlow`, `OperationalObjectFlow` |
-| **Connector** (2) | `OperationalConnector`, `ResourceConnector` |
+| **Connector** (3) | `OperationalConnector`, `ResourceConnector`, `ServiceConnector` |
 | **Signal** (2) | `OperationalSignal`, `ResourceSignal` |
 | **Aggregation** (2) | `PartOfCatalogue`, `PartOfCategory` |
 | **Constraint** (2) | `Rule`, `SecurityConstraint` |
 
-## Vollständige Viewpoint-Liste (53 Viewpoints, 6 Kategorien)
+## Vollständige Viewpoint-Liste (52 Viewpoints, 6 Kategorien)
 
 ### 🏛️ Concept Viewpoints (C)
 | Kürzel | Name | Fokus |

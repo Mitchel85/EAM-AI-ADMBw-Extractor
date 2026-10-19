@@ -32,29 +32,29 @@ Vier Knowledge-Dateien, erzeugt vom [EAM-ADMBw-MDG-Parser](https://github.com/Mi
 
 | Datei | Inhalt |
 |-------|--------|
-| `ADMBw-Knowledge-Stereotypes.md` | **443 eindeutige Stereotype** mit AppliesTo |
-| `ADMBw-Knowledge-Viewpoints.md` | **53 Viewpoints** mit Properties |
-| `ADMBw-Knowledge-Topology.md` | **203 Beziehungsregeln** (Source → Connector → Target) |
+| `ADMBw-Knowledge-Stereotypes.md` | **318 Katalog-Stereotype** (293 nutzbar · 25 abstrakt 🔒) + 124 ToolboxPage-Einträge (Navigation) + 1 Parser-Artefakt |
+| `ADMBw-Knowledge-Viewpoints.md` | **52 Viewpoints** (Properties/erlaubte Elemente: Parser-Nachlieferung ausstehend) |
+| `ADMBw-Knowledge-Topology.md` | **114 vollständige Kanten-Regeln** (client = Quelle, supplier = Ziel) + 89 reine Rollen-Beschränkungen |
 | `ADMBw-Knowledge-Connectors.md` | EA-Metatypen + Connector-Übersicht (kuratiert) |
 
 > Bei einem MDG-Update der Bundeswehr werden diese Dateien neu generiert — nicht von Hand gepflegt.
+>
+> **KB-Sync-Status (2026-10-19): PENDING.** Die vier Dateien entsprechen dem Parser-Stand vom 2026-10-18, ergänzt um drei dokumentierte Handkorrekturen (Topologie-Lesart „client = Quelle, supplier = Ziel", 🔒-Markierung der 25 abstrakten Basisklassen, Entfernen des „Business Process"-Artefakts). Sobald der überarbeitete `eam-mdg-parser` regeneriert, werden die Dateien ersetzt; Byte-Identität mit dem Batch-Repo ist via `checks/verify.py` nachweisbar (Hashes in `checks/deterministic-checks.json`).
 
 ---
 
-## ✅ Validierung (8-fach)
+## ✅ Validierung (maschinenprüfbar)
 
-Jeder Output wird gegen alle vier Knowledge-Dateien geprüft:
+Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt pauschaler Selbstbehauptung:
 
-| # | Check | Quelle |
-|---|-------|--------|
-| 1 | AppliesTo: Stereotype auf korrekte Metaklasse? | Stereotypes |
-| 2 | Viewpoint-Konformität: Nur erlaubte Elemente? | Viewpoints |
-| 3 | Konnektor-Metatyp korrekt? | Connectors |
-| 4 | Metaconstraint: Source→Target erlaubt? | Topology |
-| 5 | Vollständigkeit: Alle Prosa-Entitäten erfasst? | Prosa-Dokument |
-| 6 | Namenskonsistenz über alle Artefakte | — |
-| 7 | Metamodell: ALLE Typen + Beziehungen im Diagramm? | Viewpoints + Topology |
-| 8 | Topologie-Richtung: Jede Kante Source→Connector→Target? | Topology |
+| Kante | source_stereotype | connector | target_stereotype | Topologie-Regel (client→supplier) | Metaklasse | PASS/FAIL |
+|---|---|---|---|---|---|---|
+| … | OperationalActivity | ActivitySupportsService | ServiceSpecification | OperationalActivity→ServiceSpecification | Realisation | PASS |
+
+- PASS nur bei exaktem Namens-Match gegen eine Regel mit beiden Enden (client = Quelle, supplier = Ziel)
+- Abschlusszeile: „Topologie-Prüfung: X/Y Kanten PASS" — nur nach Einzelprüfung jeder Kante
+- Element-Checks: Stereotype nutzbar (kein 🔒), Metaklasse = AppliesTo, keine erfundenen Namen
+- Viewpoint-Konformität wird **nicht behauptet**, solange die KB keine erlaubten Elemente je Viewpoint enthält (Parser-Nachlieferung ausstehend)
 
 **Eiserne Regeln:**
 - ❌ Keine eigenen Stereotype erfinden
@@ -70,7 +70,17 @@ Jeder Output wird gegen alle vier Knowledge-Dateien geprüft:
 4. **Option wählen:** Auf die eine Einstiegsfrage antworten (Viewpoints / ADMBw-Modell / Metamodell / Stakeholder-Concern).
 5. **Ergebnis prüfen:** Mermaid-Diagramme + Mapping-Tabellen auf Vollständigkeit und Korrektheit gegenprüfen, dann in Sparx EA nachmodellieren.
 
-> 💡 Die beiliegende PDF-Dokumentation **nicht** in Knowledge laden — die MD-Dateien sind token-effizienter und inhaltlich identisch.
+> 💡 Die beiliegende PDF-Dokumentation **nicht** in Knowledge laden — die MD-Dateien sind token-effizienter. Achtung Versionsstände: Die PDF ist **Version 2025.10** (523 Seiten, Referenz), die Knowledge-Dateien stammen aus der **MDG 2026.05** — die Inhalte sind verwandt, aber **nicht** inhaltsgleich.
+
+---
+
+## ✅ Deterministische Prüfung
+
+`python3 checks/verify.py` prüft ohne LLM:
+
+- KB-Statistiken (318/293/25/114/89/52) und SHA-256-Hashes der vier KB-Dateien
+- Topologie-Lesart („client = Quelle") und 🔒-Markierungen vorhanden
+- Prompt/README enthalten die korrigierten Zahlen (keine 443/203/53-Reste)
 
 ---
 
@@ -78,12 +88,13 @@ Jeder Output wird gegen alle vier Knowledge-Dateien geprüft:
 
 | Datei | Zweck |
 |-------|-------|
-| `system_prompt.md` | System-Prompt (Kernlogik, 4 Modi + 8 Validierungs-Checks) |
+| `system_prompt.md` | System-Prompt (Kernlogik, 4 Modi + Kanten-Validierung + Few-Shot) |
 | `ADMBw-Knowledge-Stereotypes.md` | Stereotyp-Katalog (MDG-generiert) |
 | `ADMBw-Knowledge-Viewpoints.md` | Viewpoint-Regeln (MDG-generiert) |
 | `ADMBw-Knowledge-Topology.md` | Topologie-Regeln (MDG-generiert) |
 | `ADMBw-Knowledge-Connectors.md` | Konnektor-Regeln (kuratiert) |
-| `Dokumentation-ADMBw-v2025.10.pdf` | Offizielle Bw-Dokumentation (Referenz) |
+| `checks/verify.py` | Deterministische Prüfungen (ohne LLM) |
+| `Dokumentation-ADMBw-v2025.10.pdf` | Offizielle Bw-Dokumentation, Version 2025.10 (Referenz) |
 
 ---
 

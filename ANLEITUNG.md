@@ -31,9 +31,10 @@ Architekturtext eingeben. Der Extraktor stellt genau **eine** Frage — wähle:
 
 ## Schritt 4 — Ergebnis prüfen (1 Minute)
 
-- Stimmen die Stereotype (keine erfunden)?
+- Stimmen die Stereotype (keine erfunden, keine 🔒-abstrakten)?
 - Sind alle Prosa-Entitäten erfasst?
-- Zeigen alle Kanten in die richtige Richtung?
+- Steht in der **Topologie-Validierungstabelle** für jede Kante eine Regelzeile mit PASS (client = Quelle, supplier = Ziel)?
+- Stimmt die Zählung („Topologie-Prüfung: X/Y Kanten PASS")?
 
 Dann in **Sparx EA** nachmodellieren.
 
@@ -43,7 +44,7 @@ Dann in **Sparx EA** nachmodellieren.
 Nein — er liefert Modellierungs-Vorlagen (Diagramme + Tabellen). Die Umsetzung im Modell übernimmst du manuell (oder automatisiert mit dem [EAM-AI-ADMBw-Script-Maker](https://github.com/Mitchel85/EAM-AI-ADMBw-Script-Maker)).
 
 **Woher kommen die Regeln?**
-Aus der offiziellen ADMBw-MDG der Bundeswehr, extrahiert vom [EAM-ADMBw-MDG-Parser](https://github.com/Mitchel85/EAM-ADMBw-MDG-Parser) (Stand 2026.05: 443 Stereotype, 203 Topologie-Regeln, 53 Viewpoints).
+Aus der offiziellen ADMBw-MDG der Bundeswehr, extrahiert vom [EAM-ADMBw-MDG-Parser](https://github.com/Mitchel85/EAM-ADMBw-MDG-Parser) (Stand 2026.05: 318 Katalog-Stereotype — davon 293 nutzbar und 25 abstrakt —, 114 vollständige Topologie-Regeln, 52 Viewpoints).
 
 **Was ist die PDF?**
 Die offizielle Bw-Dokumentation — nur als Referenz, nicht für Knowledge nötig.

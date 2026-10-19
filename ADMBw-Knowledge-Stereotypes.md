@@ -1,7 +1,9 @@
 # ADMBw-Stereotype (MDG-extrahiert)
 
 > Quelle: `/tmp/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-18 22:15 UTC
-> 443 Stereotype · Version: NAFv4-ADMBw-MDG-2026.05.xml
+> 443 Zeilen = **318 Katalog-Stereotype** (293 nutzbar · 25 abstrakt 🔒) + 124 ToolboxPage-Einträge (Navigation, keine Stereotype) + 1 Nicht-Stereotyp (L2-Operational Constraints)
+> ⚠️ Handkorrektur 2026-10-19: abstrakte Basisklassen mit 🔒 markiert. Neugenerierung durch eam-mdg-parser steht aus (KB-Sync pending).
+> Version: NAFv4-ADMBw-MDG-2026.05.xml
 
 | Stereotype | Metatype | Vererbung | AppliesTo | Beschreibung |
 |---|---|---|---|---|
@@ -64,7 +66,7 @@
 | CapabilityGeneralization | CapabilityGeneralization | PropertySetGeneralization | Generalization | A CapabilityGeneralization is a taxonomic relationship between a more general Capability and a more specific Capability. |
 | CapabilityRole | CapabilityRole | Desirer | Part | A high level specification of the enterprise's ability to execute a specified course of action. |
 | CapabilityRoleDependency | CapabilityRoleDependency | MeasurableElement | Dependency | A tuple that asserts that one CapabilityRole is dependent from another. |
-| CapableElement | CapableElement | UAFElement |  | An abstract type that represents a structural element that can perform behaviors (i.e. OperationalActivity). |
+| CapableElement | CapableElement | UAFElement |  | An abstract type that represents a structural element that can perform behaviors (i.e. OperationalActivity).  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | Checks | Checks |  | Dependency | Relation that shows that an acceptance criterion (FitCriterion) is valid for a functional or non-functional requirement. |
 | Classification | Classification |  | Class | Classification according to STANAG 1059. |
 | Classified | Classified |  | Dependency | Relationship that indicates which classification an element has. |
@@ -72,7 +74,7 @@
 | Competence | Competence | PropertySet | Class | A specific set of abilities defined by knowledge, skills and aptitude. |
 | CompetenceForRole | CompetenceForRole |  | Dependency | A tuple used to associate an organizational role with a specific set of required competencies. |
 | CompliesViewpoint | CompliesViewpoint |  | Dependency | Relationship that expresses that a view has been created according to the specifications of a viewpoint. |
-| ConceptItem | ConceptItem | UAFElement |  | Abstract, an item which may feature in a HighLevelOperationalConcept. |
+| ConceptItem | ConceptItem | UAFElement |  | Abstract, an item which may feature in a HighLevelOperationalConcept.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | ConceptRole | ConceptRole | MeasurableElement | Part | Usage of a ConceptItem in the context of a HighLevelOperationalConcept. |
 | Concern | Concern | PropertySet | Class | Interest in an EnterprisePhase (EnterprisePhase is synonym for System in ISO 42010) relevant to one or more of its stakeholders. |
 | ConcernForActualEnterprisePhase | ConcernForActualEnterprisePhase |  | Dependency | A relationship that expresses which concerns are covered by an actual enterprise phase. |
@@ -92,7 +94,7 @@
 | DerivedFrom | DerivedFrom |  | Dependency | Relation that shows that a functional or non-functional requirement is based on a process, role and task carrier, information element or other element. |
 | DescribedBy | DescribedBy |  | Dependency | A relationship that expresses that an architectural description describes an architecture. |
 | DesiredEffect | DesiredEffect | MeasurableElement | Dependency | A tuple relating the Desirer (a Capability or OrganizationalResource) to an ActualState. |
-| Desirer | Desirer | UAFElement |  | Abstract type used to group architecture elements that might desire a particular effect. |
+| Desirer | Desirer | UAFElement |  | Abstract type used to group architecture elements that might desire a particular effect.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | DocumentReference | DocumentReference | Reference | Class | The element describes a regulation, instruction or a general document. |
 | ElementCatalogue |  |  | Package |  |
 | EnduringTask | EnduringTask | PropertySet | Class | A type of template behavior recognized by an enterprise as being essential to achieving its goals - i.e. a template for a strategic specification of what the en |
@@ -105,8 +107,8 @@
 | EnvironmentalContext | EnvironmentalContext |  | Dependency | Relationship that indicates under which condition an measurement counts. |
 | EnvironmentProperty | EnvironmentProperty | MeasurableElement | Class | A property of an Environment that is typed by a Condition. The kinds of Condition that can be represented are Location, GeoPoliticalExtentType and Environment. |
 | Evaluates | Evaluates |  | Realisation | This relation states that an evaluation criterion (FulfilmentCriterion) can be assigned to a specific acceptance criterion (FitCriterion). |
-| Exchange | Exchange | BPMN2.0::MessageFlow |  | Abstract tuple, grouping OperationalExchanges and ResourceExchanges that exchange Resources. |
-| ExchangeItem | ExchangeItem |  |  | An abstract grouping for elements that defines the types of elements that can be exchanged between Assets and conveyed by an Exchange. |
+| Exchange | Exchange | BPMN2.0::MessageFlow |  | Abstract tuple, grouping OperationalExchanges and ResourceExchanges that exchange Resources.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
+| ExchangeItem | ExchangeItem |  |  | An abstract grouping for elements that defines the types of elements that can be exchanged between Assets and conveyed by an Exchange.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | Exhibits | Exhibits | MeasurableElement | Abstraction | A tuple that exists between a CapableElement and a Capability that it meets under specific environmental conditions. |
 | Expresses | Expresses |  | Dependency | A relationship that expresses that an architectural description includes the following architectures. |
 | FieldedCapability | FieldedCapability | ActualResource | Object | An individual, fully-realized capability. |
@@ -121,7 +123,7 @@
 | FunctionAction | FunctionAction | ProcessUsage | Action | A call of a Function indicating that the Function is performed by a ResourceRole in a specific context. |
 | FunctionalRequirement | FunctionalRequirement | BWRequirement | Requirement | The element represents a functional requirement (what should the system / software be able to do?). |
 | FunctionControlFlow | FunctionControlFlow | FunctionEdge | ControlFlow | An ActivityEdge that shows the flow of control between FunctionActions. |
-| FunctionEdge | FunctionEdge | ProcessEdge |  | A tuple that shows the flow of Resources (objects/data) between FunctionActions. |
+| FunctionEdge | FunctionEdge | ProcessEdge |  | A tuple that shows the flow of Resources (objects/data) between FunctionActions.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | FunctionObjectFlow | FunctionObjectFlow | FunctionEdge | ObjectFlow | An ActivityEdge that shows the flow of Resources (objects/data) between FunctionActions. |
 | FunctionSubject | FunctionSubject |  | Dependency | A relationship that expresses that a function uses certain resources. |
 | GeoPoliticalExtentType | GeoPoliticalExtentType | Condition | DataType | A geospatial extent whose boundaries are defined by declaration or agreement by political parties. |
@@ -143,10 +145,10 @@
 | JustifiedBy | JustifiedBy |  | Dependency | Relation states that an Constraint is derived from a reference (Reference, DocumentReference, SMEReference). |
 | KnownResource | KnownResource | OperationalPerformer | Class | Asserts that a known ResourcePerformer constrains the implementation of the OperationalPerformer that plays the role in the LogicalArchitecture. |
 | Location | Location | ConceptItem | Class, DataType | A specification of the generic area in which a LocationHolder is required to be located. |
-| LocationHolder | LocationHolder | UAFElement |  | Abstract type, used to group elements that are allowed to be associated with a Location. |
+| LocationHolder | LocationHolder | UAFElement |  | Abstract type, used to group elements that are allowed to be associated with a Location.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | LocationType | LocationType |  | Dependency | A relationship that expresses which location is assigned to a location holder. |
 | MapsToCapability | MapsToCapability | MeasurableElement | Abstraction | A tuple denoting that an Activity contributes to providing a Capability. |
-| MeasurableElement | MeasurableElement | UAFElement |  | Abstract type, grouping elements that can be measured by applying MeasurementSets to them. |
+| MeasurableElement | MeasurableElement | UAFElement |  | Abstract type, grouping elements that can be measured by applying MeasurementSets to them.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | Measurement | Measurement | MeasurableElement | Part | A property of an element representing something in the physical world, expressed in amounts of a unit of measure. |
 | MeasurementType | MeasurementType |  | Class | A type of a property representing something in the physical world, expressed in amounts of a unit of measure. |
 | Metadata | Metadata | MeasurableElement | Note | A comment that can be applied to any element in the architecture. The attributes associated with this element details the relationship between the element and i |
@@ -158,7 +160,7 @@
 | NonfunctionalRequirement | NonfunctionalRequirement | BWRequirement | Requirement | The element represents a non-functional requirement (how should the system / software be able to do something?). |
 | OperationalActivity | OperationalActivity | BusinessProcess | Activity | An Activity that captures a logical process, specified independently of how the process is carried out. |
 | OperationalActivityAction | OperationalActivityAction | MeasurableElement | Action | A call of an OperationalActivity in the context of another OperationalActivity. |
-| OperationalActivityEdge | OperationalActivityEdge | ProcessEdge |  | A tuple that shows the flow of Resources (objects/information) between OperationalActivityActions. |
+| OperationalActivityEdge | OperationalActivityEdge | ProcessEdge |  | A tuple that shows the flow of Resources (objects/information) between OperationalActivityActions.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | OperationalAgent | OperationalAgent | CapableElement | Class | An abstract type grouping Operational Architecture and Operational Performer. |
 | OperationalArchitecture | OperationalArchitecture | Architecture | Class | A type used to denote a model of the Architecture, described from the Operational perspective. |
 | OperationalArchitectureOfEnterprisePhase | OperationalArchitectureOfEnterprisePhase |  | Dependency | Relationship that says that in a actual enterprisephase an operational architecture is valid. |
@@ -167,7 +169,7 @@
 | OperationalConstraint | OperationalConstraint | Rule | Class | A Rule governing a logical architectural element i.e. OperationalPerformer, OperationalActivity, InformationElement etc. |
 | OperationalControlFlow | OperationalControlFlow | OperationalActivityEdge | ControlFlow | An ActivityEdge that shows the flow of control between OperationalActivityActions. |
 | OperationalExchange | OperationalExchange | Exchange | InformationFlow | Asserts that a flow can exist between OperationalPerformers (i.e. flows of information, people, materiel, or energy). |
-| OperationalExchangeItem | OperationalExchangeItem | ExchangeItem |  | An abstract grouping for elements that defines the types of elements that can be exchanged between OperationalPerformers and conveyed by an OperationalExchange. |
+| OperationalExchangeItem | OperationalExchangeItem | ExchangeItem |  | An abstract grouping for elements that defines the types of elements that can be exchanged between OperationalPerformers and conveyed by an OperationalExchange.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | OperationalInterface | OperationalInterface | PropertySet | Class | A declaration that specifies a contract between the OperationalPerformer it is related to, and any other OperationalPerformers it can interact with. |
 | OperationalMessage | OperationalMessage | InteractionMessage | Message | Message for use in an Operational Event-Trace which carries any of the subtypes of OperationalExchange. |
 | OperationalMessageFlow | OperationalMessageFlow | BPMN2.0::MessageFlow | ControlFlow | A ProcessMessageFlow that shows the flow of message between OperationalActivityActions of different ActivityPartitions like Pools. |
@@ -198,12 +200,12 @@
 | Post | Post | OrganizationalResource | Class | A type of job title or position that a person can fill (e.g. Lawyer, Solution Architect, Machine Operator or Chief Executive Officer). |
 | PostRole | PostRole | ResourceRole | Part | A usage of a post in the context of another OrganizationalResource. Creates a whole-part relationship. |
 | ProblemDomain | ProblemDomain | OperationalRole | Part | A property associated with a logical architecture, used to specify the scope of the problem. |
-| ProcessEdge | ProcessEdge | BPMN2.0::SequenceFlow |  | An abstract type that represents a behavior or process (i.e. a Function or OperationalActivity) that can be performed by a Performer. |
+| ProcessEdge | ProcessEdge | BPMN2.0::SequenceFlow |  | An abstract type that represents a behavior or process (i.e. a Function or OperationalActivity) that can be performed by a Performer.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | ProcessGeneralization | ProcessGeneralization | MeasurableElement | Generalization | A ProcessGeneralization is a taxonomic relationship between a more general Process and a more specific Process. |
-| ProcessMessageFlow | ProcessMessageFlow | BPMN2.0::MessageFlow |  | A tuple that shows the flow of message between different ActivityPartitions like Pools. |
-| ProcessOperation | ProcessOperation | MeasurableElement |  | An abstract type that represents a behavior or process (i.e. a Function or OperationalActivity) that can be performed by a Performer. |
-| ProcessParameter | ProcessParameter | MeasurableElement |  | An abstract type that represents a behavior or process (i.e. a Function or OperationalActivity) that can be performed by a Performer. |
-| ProcessUsage | ProcessUsage | BPMN2.0::Activity |  | An abstract type that represents a behavior or process (i.e. a Function or OperationalActivity) that can be performed by a Performer or Role. |
+| ProcessMessageFlow | ProcessMessageFlow | BPMN2.0::MessageFlow |  | A tuple that shows the flow of message between different ActivityPartitions like Pools.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
+| ProcessOperation | ProcessOperation | MeasurableElement |  | An abstract type that represents a behavior or process (i.e. a Function or OperationalActivity) that can be performed by a Performer.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
+| ProcessParameter | ProcessParameter | MeasurableElement |  | An abstract type that represents a behavior or process (i.e. a Function or OperationalActivity) that can be performed by a Performer.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
+| ProcessUsage | ProcessUsage | BPMN2.0::Activity |  | An abstract type that represents a behavior or process (i.e. a Function or OperationalActivity) that can be performed by a Performer or Role.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | Project | Project | OrganizationalResource | Class | A type that describes types of time-limited endeavours that are required to meet one or more Capability needs. |
 | ProjectMilestone | ProjectMilestone | PropertySet | Class | A type of event in a Project by which progress is measured. |
 | ProjectMilestoneRole | ProjectMilestoneRole | MeasurableElement | Part | The role played by a ProjectMilestone in the context of a Project. |
@@ -214,10 +216,10 @@
 | ProjectStatus | ProjectStatus | ActualState | Slot | The status (i.e. level of progress) of a ProjectTheme for an ActualProject at the time of the ActualProjectMilestone. |
 | ProjectSupportActivity | ProjectSupportActivity |  | Dependency | Relation stats that a project supports an activity. |
 | ProjectTheme | ProjectTheme | MeasurableElement | Part | A property of a ProjectMilestone that captures an aspect by which the progress of ActualProjects may be measured. |
-| PropertySet | PropertySet | MeasurableElement |  | An abstract type grouping architectural elements that can own Measurements. |
+| PropertySet | PropertySet | MeasurableElement |  | An abstract type grouping architectural elements that can own Measurements.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | PropertySetGeneralization | PropertySetGeneralisation | MeasurableElement | Generalization | A PropertySetGeneralization is a taxonomic relationship between a more general PropertySet and a more specific PropertySet. |
 | Protocol | Protocol | Standard | Class | A Standard for communication over a network. Protocols may be composite, represented as a ProtocolStack made up of ProtocolLayers. |
-| ProtocolImplementation | ProtocolImplementation | UAFElement |  | An abstract type grouping architectural elements that can implement Protocols. |
+| ProtocolImplementation | ProtocolImplementation | UAFElement |  | An abstract type grouping architectural elements that can implement Protocols.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | ProtocolLayer | ProtocolLayer | MeasurableElement | Part | Usage of a Protocol in the context of another Protocol. Creates a whole-part relationship. |
 | Protocolstack | Protocolstack | Protocol | Class | A sub type of Protocol that contains the ProtocolLayers, defining a complete stack. |
 | ProvidedServiceLevel | ProviededServiceLevel | ActualService | Object | A sub type of ActualService that details a specific service level delivered by the provider. |
@@ -242,7 +244,7 @@
 | RequirementCategory | RequirementCategory |  | Class | Element represents a category of a catalog of requirements. |
 | Requires | Requires |  | Dependency | Relation that represents that a requirement assumes another requirement. |
 | RequiresCompetence | RequiresCompetence | MeasurableElement | Abstraction | A tuple that asserts that an ActualOrganizationalResource is required to have a specific set of Competencies. |
-| Resource | Resource | PropertySet |  | Abstract element grouping for all elements that can be conveyed by an Exchange. |
+| Resource | Resource | PropertySet |  | Abstract element grouping for all elements that can be conveyed by an Exchange.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | ResourceArchitecture | ResourceArchitecture | Architecture | Class | A type used to denote a model of the Architecture, described from the ResourcePerformer perspective. |
 | ResourceArtifact | ResourceArtifact | PhysicalResource | Class | A type of man-made object that contains no human beings (i.e. satellite, radio, petrol, gasoline, etc.). |
 | ResourceAsset | ResourceAsset | Asset | Class | An abstract element used to group the elements of ResourcePerformer and DataElement allowing them to own DataRoles |
@@ -250,7 +252,7 @@
 | ResourceConstraint | ResourceConstraint | Rule | Class | A rule governing the structural or functional aspects of an implementation. |
 | ResourceDependency | ResourceDependency |  | Dependency | Relationship that is a dependency of a resource on a resource. |
 | ResourceExchange | ResourceExchange | Exchange | InformationFlow | Asserts that a flow can exist between ResourcePerformers (i.e. flows of data, people, material, or energy). |
-| ResourceExchangeItem | ResourceExchangeItem | ExchangeItem |  | An abstract type grouping elements that defines the types of elements that can be exchanged between ResourcePerformers and conveyed by a ResourceExchange. |
+| ResourceExchangeItem | ResourceExchangeItem | ExchangeItem |  | An abstract type grouping elements that defines the types of elements that can be exchanged between ResourcePerformers and conveyed by a ResourceExchange.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | ResourceInterface | ResourceInterface | PropertySet | Class | A declaration that specifies a contract between the ResourcePerformers it is related to and any other ResourcePerformers it can interact with. It is also intend |
 | ResourceMessage | ResourceMessage | InteractionMessage | Message | Message for use in an Resource Event-Trace which carries any of the subtypes of ResourceExchange. |
 | ResourceMethod | ResourceMethod | ProcessOperation | Operation | A behavioral feature of a ResourcePerformer whose behavior is specified in a Function. |
@@ -290,7 +292,7 @@
 | ServiceStateDescription | ServiceStateDescription | MeasurableElement | StateMachine | A state machine descripting the behavior of a ServiceSpecification, depicting how the ServiceSpecification responds to various events and the actions. |
 | SMEReference | SMEReference | Reference | Class | Element stands for a result of a workshop or expert knowledge. |
 | Software | Software | ResourceArtifact | Class | A sub-type of ResourceArtifact that specifies an executable computer program. |
-| Stakeholder | Stakeholder | UAFElement |  | individual, team, organization, or classes thereof, having an interest in an EnterprisePhase [ISO/IEC/IEEE 42010:2011]. |
+| Stakeholder | Stakeholder | UAFElement |  | individual, team, organization, or classes thereof, having an interest in an EnterprisePhase [ISO/IEC/IEEE 42010:2011].  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | StakeholderConcern | StakeholderConcern |  | Dependency | A relationship that expresses which concern a stakeholder has. |
 | Standard | Standard | PropertySet | Class | A ratified and peer-reviewed specification that is used to guide or constrain the architecture. A Standard may be applied to any element in the architecture. |
 | StandardOperationalActivity | StandardOperationalActivity | Achiever | Activity | A sub-type of OperationalActivity that is a standard operating procedure. |
@@ -300,17 +302,17 @@
 | StoredIn | StoredIn |  | Dependency | Relation states that a digital form or data is stored in software. |
 | StrategicConstraint | StrategicConstraint | Rule | Class | A Rule governing a capability. |
 | SubjectOfForecast | SubjectOfForecast | UAFElement | Class | An abstract type grouping elements that can be the subject of a Forecast. |
-| SubjectOfOperationalConstraint | SubjectOfOperationalConstraint | UAFElement |  | An abstract type grouping elements that can be the subject of an OperationalConstraint. |
-| SubjectOfResourceConstraint | SubjectOfResourceConstraint | UAFElement |  | An abstract type grouping elements that can be the subject of a ResourceConstraint. |
-| SubjectOfSecurityConstraint | SubjectOfSecurityConstraint | UAFElement |  | An abstract grouping of elements that can be the subject of a SecurityConstraint. Element is not used in the current version of the framework and reserved for f |
+| SubjectOfOperationalConstraint | SubjectOfOperationalConstraint | UAFElement |  | An abstract type grouping elements that can be the subject of an OperationalConstraint.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
+| SubjectOfResourceConstraint | SubjectOfResourceConstraint | UAFElement |  | An abstract type grouping elements that can be the subject of a ResourceConstraint.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
+| SubjectOfSecurityConstraint | SubjectOfSecurityConstraint | UAFElement |  | An abstract grouping of elements that can be the subject of a SecurityConstraint. Element is not used in the current version of the framework and reserved for f  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | SubOrganization | SubOrganization | ResourceRole | Part | A type of a human being used to define the characteristics that need to be described for ActualPersons (e.g. properties such as address, telephone number, natio |
 | SuccessorOf |  |  | Dependency | A relationship between two elements that indicates that one element is the successor of the other. |
 | System | System | ResourceArchitecture | Class | An integrated set of elements, subsystems, or assemblies that accomplish a defined objective. These elements include products (hardware, software, firmware), pr |
 | Technology | Technology | ResourceArtifact | Class | A sub type of ResourceArtifact that indicates a technology domain, i.e. nuclear, mechanical, electronic, mobile telephony etc. |
 | TemporalPart | TemporalPart | MeasurableElement | Part | A current or future state of the wholeLifeEnterprise or another EnterprisePhase. |
 | ToBeRealizedBy | ToBeRealizedBy |  | Dependency | Relation states that a functional or non-functional requirement should be realized through this element. |
-| UAFElement | UAFElement |  |  | Abstract super type for all of the UAF elements. It provides a way for all of the UAF elements to have a common set of properties. |
-| VersionedElement | VersionedElement | UAFElement |  | An abstract type grouping ResourcePerformer and ServiceSpecification that allows VersionOfConfiguration to be related to ActualProjectMilestones. |
+| UAFElement | UAFElement |  |  | Abstract super type for all of the UAF elements. It provides a way for all of the UAF elements to have a common set of properties.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
+| VersionedElement | VersionedElement | UAFElement |  | An abstract type grouping ResourcePerformer and ServiceSpecification that allows VersionOfConfiguration to be related to ActualProjectMilestones.  🔒 Abstrakt — nicht direkt als Instanz-Stereotype verwenden.
 | VersionOfConfiguration | VersionOfConfiguration | MeasurableElement | Part | A property of a WholeLifeConfiguration, used in version control of a VersionedElement. It asserts that a VersionedElement is a version of a WholeLifeConfigurati |
 | VersionReleased | VersionReleased |  | Dependency | A relationship that expresses that an actual project milestone releases an versioned element. |
 | VersionSuccession | VersionSucession | MeasurableElement | Dependency | A tuple between two VersionOfConfigurations that denotes that one VersionOfConfiguration follows from another. |
@@ -373,7 +375,7 @@
 | L2-Relationships |  |  | ToolboxPage |  |
 | Condition, Environment && Location |  |  | ToolboxPage |  |
 | L2-Operational Exchange Items |  |  | ToolboxPage |  |
-| L2-Operational Constraints |  |  |  |  |
+| L2-Operational Constraints |  |  |  |   ⚠️ Kein Stereotype (DiagramProfile-Notation, Parser-Artefakt).
 | L3-Nodes |  |  | ToolboxPage |  |
 | L3-Node Relationships |  |  | ToolboxPage |  |
 | L3-Activities |  |  | ToolboxPage |  |

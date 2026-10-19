@@ -1,15 +1,16 @@
 # ADMBw-Topologie-Regeln (MDG-Metaconstraints)
 
 > Quelle: `/tmp/NAFv4-ADMBw-MDG-2026.05.xml` — automatisch erzeugt am 2026-10-18 22:15 UTC
-> 203 Stereotype mit Beziehungsregeln (Metaconstraints)
+> ⚠️ Handkorrektur 2026-10-19: Lesart/Spalten korrigiert (client = Quelle, supplier = Ziel). Neugenerierung durch eam-mdg-parser steht aus (KB-Sync pending).
+> 114 vollständige Kanten-Regeln (client + supplier) · 89 Zeilen nur mit Rollen-Beschränkungen (keine Kanten-Regeln)
 
 ## Lesart
 
-- **Erlaubte Ziele (client):** Der Stereotype darf nur als Quelle einer Beziehung zu den gelisteten Ziel-Stereotypen stehen.
-- **Erlaubte Quellen (supplier):** Nur die gelisteten Stereotype dürfen als Ziel auf diesen Stereotype zeigen.
-- **Weitere Rollen:** zusätzliche Metamodell-Beschränkungen (Rollennamen direkt aus der MDG).
+- **client = Quelle (Source), supplier = Ziel (Target)** — UML-Konvention. Der Stereotype (Spalte 1) darf nur als Connector einer Kante **von** einem Stereotyp der client-Spalte **zu** einem Stereotyp der supplier-Spalte stehen.
+- **Nur Zeilen mit beiden Enden sind Kanten-Regeln.** Zeilen mit leeren client/supplier-Spalten enthalten ausschließlich Rollen-/Metamodell-Beschränkungen — sie definieren KEINE erlaubte Kante und dürfen nicht als Kanten-Nachweis dienen.
+- **Exakter Namens-Match:** Source- und Target-Stereotype müssen stringgleich mit client/supplier übereinstimmen. Abstrakte Basisklassen (🔒, s. Stereotypes) gelten nicht als konkreter Nachweis — die Kante ist dann FAIL.
 
-| Stereotype | Erlaubte Ziele (client) | Erlaubte Quellen (supplier) | Weitere Rollen |
+| Stereotype | Erlaubte Quellen (client) | Erlaubte Ziele (supplier) | Weitere Rollen |
 |---|---|---|---|
 | AchievedEffect | Achiever | ActualState |  |
 | ActivityPerformableUnderCondition | BusinessProcess | ActualCondition |  |

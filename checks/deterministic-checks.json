@@ -1,0 +1,193 @@
+{
+  "kb": {
+    "stereotypes": {
+      "rows": 443,
+      "toolbox": 124,
+      "abstract": 25,
+      "usable": 293,
+      "junk": 1
+    },
+    "topology": {
+      "rows": 203,
+      "complete_rules": 114,
+      "roles_only": 89
+    },
+    "viewpoints": 52,
+    "hashes": {
+      "ADMBw-Knowledge-Stereotypes.md": {
+        "sha256": "5dc4ff0a12e01f2cf458fd1edd92599140d2708558b23fbf930d59fb9ec2a7d9",
+        "bytes": 60879
+      },
+      "ADMBw-Knowledge-Topology.md": {
+        "sha256": "d3c91d3fdf536ab701b6162e7244e6ac021153f22fd08037fb2538b008b9d716",
+        "bytes": 16165
+      },
+      "ADMBw-Knowledge-Viewpoints.md": {
+        "sha256": "c2ba33db45a9b98ba030806967076e4f8b396b981eba4d511a9c85300664cda5",
+        "bytes": 13497
+      },
+      "ADMBw-Knowledge-Connectors.md": {
+        "sha256": "4699343e8079315cb029ccd532287de9093c9ac3ee92dd6be3053dd72b7fa749",
+        "bytes": 6680
+      }
+    }
+  },
+  "checks": [
+    {
+      "name": "Stereotypes: 443 Tabellenzeilen",
+      "ok": true,
+      "detail": "ist 443"
+    },
+    {
+      "name": "Stereotypes: 124 ToolboxPage-Einträge",
+      "ok": true,
+      "detail": "ist 124"
+    },
+    {
+      "name": "Stereotypes: 25 abstrakte Basisklassen (🔒)",
+      "ok": true,
+      "detail": "ist 25"
+    },
+    {
+      "name": "Stereotypes: 1 Nicht-Stereotyp (L2-Operational Constraints)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Stereotypes: 293 nutzbare",
+      "ok": true,
+      "detail": "ist 293"
+    },
+    {
+      "name": "Stereotypes: Header nennt 318 Katalog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Topology: 203 Zeilen",
+      "ok": true,
+      "detail": "ist 203"
+    },
+    {
+      "name": "Topology: 114 Regeln mit beiden Enden",
+      "ok": true,
+      "detail": "ist 114"
+    },
+    {
+      "name": "Topology: 89 reine Rollen-Zeilen",
+      "ok": true,
+      "detail": "ist 89"
+    },
+    {
+      "name": "Topology: Lesart 'client = Quelle (Source), supplier = Ziel (Target)'",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Topology: Spaltenköpfe korrigiert (Quellen(client)/Ziele(supplier))",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Viewpoints: 52 Überschriften",
+      "ok": true,
+      "detail": "ist 52"
+    },
+    {
+      "name": "Viewpoints: 'Business Process'-Artefakt entfernt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Connectors: Dependency (100)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Connectors: Class (68)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Connectors: Activity (6)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Connectors: Connector (3)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Hashes: vier KB-Dateien berechnet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Doku: keine Alt-Behauptung '443 eindeutige'",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Doku: keine Alt-Behauptung '203 Beziehungsregeln'",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Doku: keine Alt-Behauptung '53 Viewpoints'",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Doku: '8/8 ✓' entfernt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Prompt: Topologie-Lesart dokumentiert",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Prompt: Kanten-Validierungstabelle (source_stereotype/connector/target_stereotype/PASS/FAIL)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Prompt: Zählung 'X/Y Kanten PASS' statt Pauschal-Claim",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Prompt: Few-Shot enthalten",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Prompt: Leerinput-Regel enthalten",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "README: korrigierte Zahlen (318/293/114/52)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ANLEITUNG: korrigierte Zahlen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "README: PDF-Version von MDG getrennt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "README: KB-Sync als PENDING dokumentiert",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "all_pass": true
+}
