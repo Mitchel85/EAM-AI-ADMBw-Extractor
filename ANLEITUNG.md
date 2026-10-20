@@ -51,8 +51,8 @@ Nein — er liefert Modellierungs-Vorlagen (Diagramme + Tabellen). Die Umsetzung
 **Woher kommen die Regeln?**
 Aus der offiziellen ADMBw-MDG der Bundeswehr, extrahiert vom [EAM-ADMBw-MDG-Parser](https://github.com/Mitchel85/EAM-ADMBw-MDG-Parser) (Stand 2026.05: 318 Katalog-Stereotype — davon 293 nutzbar und 44 abstrakt —, 133 vollständige Topologie-Regeln, 52 Viewpoints).
 
-**Was ist die PDF?**
-Die beiliegende Bw-Dokumentation (Version 2025.10) ist nur Referenz. Für die Arbeit reichen die MD-Dateien — sie stammen aus der MDG 2026.05 und sind nicht inhaltsgleich mit der PDF.
+**Gibt es die Bw-Dokumentation als PDF dazu?**
+Nein. Bundeswehr-Dokumente liegen bewusst nicht im Repository — die Quelle der Wahrheit ist die Seite „Methode Architektur“ beim BMVg. Die Knowledge-Dateien sind aus der MDG 2026.05 erzeugt.
 
 **Kostet das etwas?**
 Nein. Die Dateien sind lokal und Open Source; du brauchst nur ein LLM deiner Wahl.

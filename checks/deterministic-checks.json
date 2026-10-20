@@ -274,7 +274,17 @@
       "detail": ""
     },
     {
-      "name": "README: PDF-Version von MDG getrennt",
+      "name": "Keine Bw-PDF im Repository",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "README: keine PDF-Referenz mehr",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "README: Quelle der Wahrheit benannt",
       "ok": true,
       "detail": ""
     },

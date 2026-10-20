@@ -74,7 +74,7 @@ Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt p
 4. **Option wählen:** Auf die eine Einstiegsfrage antworten (Viewpoints / ADMBw-Modell / Metamodell / Stakeholder-Concern).
 5. **Ergebnis prüfen:** Mermaid-Diagramme + Mapping-Tabellen auf Vollständigkeit und Korrektheit gegenprüfen, dann in Sparx EA nachmodellieren.
 
-> 💡 Die beiliegende PDF-Dokumentation **nicht** in Knowledge laden — die MD-Dateien sind token-effizienter. Achtung Versionsstände: Die PDF ist **Version 2025.10** (523 Seiten, Referenz), die Knowledge-Dateien stammen aus der **MDG 2026.05** — die Inhalte sind verwandt, aber **nicht** inhaltsgleich.
+> 💡 Die Knowledge-Dateien stammen aus der **MDG 2026.05**. Bundeswehr-Dokumente werden bewusst **nicht** mitgeliefert — die Quelle der Wahrheit ist die Seite „Methode Architektur“ beim BMVg.
 
 ---
 
@@ -102,7 +102,6 @@ Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt p
 | `ADMBw-Stereotypes.json` | Maschinenlesbarer Katalog inkl. `concreteDescendants` |
 | `ADMBw-Aliases.json` | Alt-Schreibweisen → kanonischer Name |
 | `checks/verify.py` | Deterministische Prüfungen (ohne LLM) |
-| `Dokumentation-ADMBw-v2025.10.pdf` | Offizielle Bw-Dokumentation, Version 2025.10 (Referenz) |
 
 ---
 

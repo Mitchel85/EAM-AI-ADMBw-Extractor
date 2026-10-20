@@ -163,8 +163,9 @@ def main():
     check("README: korrigierte Zahlen (318/293/133/52)",
           all(k in readme for k in ["318 Katalog-Stereotype", "293 nutzbar", "133 vollständige", "52 Viewpoints"]))
     check("ANLEITUNG: korrigierte Zahlen", "133 vollständige Topologie-Regeln, 52 Viewpoints" in anleitung)
-    check("README: PDF-Version von MDG getrennt",
-          ("Version 2025.10" in readme) and ("MDG 2026.05" in readme) and ("nicht** inhaltsgleich" in readme))
+    check("Keine Bw-PDF im Repository", not list(ROOT.glob("*.pdf")))
+    check("README: keine PDF-Referenz mehr", "Dokumentation-ADMBw" not in readme and ".pdf" not in readme.lower())
+    check("README: Quelle der Wahrheit benannt", "Methode Architektur" in readme)
     check("README: KB-Sync auf Parserstand 2026-10-19", "KB-Sync-Status (2026-10-19): PENDING" not in readme)
     check("README: keine PENDING-Formulierung", "Parser-Nachlieferung ausstehend" not in (readme + anleitung + prompt))
 
