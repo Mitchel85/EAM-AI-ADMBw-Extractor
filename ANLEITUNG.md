@@ -44,7 +44,7 @@ Dann in **Sparx EA** nachmodellieren.
 Nein — er liefert Modellierungs-Vorlagen (Diagramme + Tabellen). Die Umsetzung im Modell übernimmst du manuell (oder automatisiert mit dem [EAM-AI-ADMBw-Script-Maker](https://github.com/Mitchel85/EAM-AI-ADMBw-Script-Maker)).
 
 **Woher kommen die Regeln?**
-Aus der offiziellen ADMBw-MDG der Bundeswehr, extrahiert vom [EAM-ADMBw-MDG-Parser](https://github.com/Mitchel85/EAM-ADMBw-MDG-Parser) (Stand 2026.05: 318 Katalog-Stereotype — davon 293 nutzbar und 25 abstrakt —, 133 vollständige Topologie-Regeln, 52 Viewpoints).
+Aus der offiziellen ADMBw-MDG der Bundeswehr, extrahiert vom [EAM-ADMBw-MDG-Parser](https://github.com/Mitchel85/EAM-ADMBw-MDG-Parser) (Stand 2026.05: 318 Katalog-Stereotype — davon 293 nutzbar und 44 abstrakt —, 133 vollständige Topologie-Regeln, 52 Viewpoints).
 
 **Was ist die PDF?**
 Die offizielle Bw-Dokumentation — nur als Referenz, nicht für Knowledge nötig.

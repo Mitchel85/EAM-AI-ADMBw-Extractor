@@ -32,7 +32,7 @@ Vier MDG-generierte Knowledge-Dateien, erzeugt vom [EAM-ADMBw-MDG-Parser](https:
 
 | Datei | Inhalt |
 |-------|--------|
-| `ADMBw-Knowledge-Stereotypes.md` | **318 Katalog-Stereotype** (293 nutzbar · 25 abstrakt 🔒); Toolboxen/Artefakte sind nicht enthalten |
+| `ADMBw-Knowledge-Stereotypes.md` | **318 Katalog-Stereotype** (293 nutzbar · 44 abstrakt 🔒); Toolboxen/Artefakte sind nicht enthalten |
 | `ADMBw-Knowledge-Viewpoints.md` | **52 Viewpoints** mit MDG-Beschreibung (keine erfundenen Properties) |
 | `ADMBw-Knowledge-Topology.md` | **133 vollständige Kanten-Regeln** (Quelle/Ziel über client/source/end[0] bzw. supplier/target/end[1]) + 70 reine Rollen-Beschränkungen |
 | `ADMBw-Knowledge-TagTypes.md` | **27 Property-Typen** (Tagged-Value-Definitionen) |

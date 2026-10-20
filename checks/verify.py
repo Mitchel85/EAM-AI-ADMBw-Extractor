@@ -5,7 +5,7 @@ Prüft ohne LLM-Aufruf:
  1. KB-Statistiken (Stereotypes/Topology/Viewpoints/Connectors) gegen die dokumentierten Zahlen
  2. SHA-256-Hashes der vier MDG-KB-Dateien (Stereotypes, Topology, Viewpoints, TagTypes)
  3. Topologie-Lesart korrigiert (client = Quelle, supplier = Ziel)
- 4. 🔒-Markierungen der 25 abstrakten Basisklassen vorhanden
+ 4. 🔒-Markierungen der 44 abstrakten Stereotype vorhanden
  5. Prompt/README/ANLEITUNG enthalten die korrigierten Zahlen; keine 443/203/53-Altbehauptungen
  6. Prompt: maschinenprüfbare Kanten-Validierungstabelle + Few-Shot + Leerinput-Regel
 
@@ -65,10 +65,10 @@ def main():
     usable = [r for r in st if r[3] not in ("", "ToolboxPage")]
     check("Stereotypes: 318 Tabellenzeilen", len(st) == 318, f"ist {len(st)}")
     check("Stereotypes: 0 ToolboxPage-Einträge", len(toolbox) == 0, f"ist {len(toolbox)}")
-    check("Stereotypes: 25 abstrakte Basisklassen (🔒)", len(abstract) == 25, f"ist {len(abstract)}")
+    check("Stereotypes: 44 abstrakte Stereotype (🔒)", len(abstract) == 44, f"ist {len(abstract)}")
     check("Stereotypes: 0 Nicht-Stereotype/Artefakte", len(junk) == 0, f"ist {len(junk)}")
     check("Stereotypes: 293 nutzbare", len(usable) == 293, f"ist {len(usable)}")
-    check("Stereotypes: Header nennt 318 Katalog", "318 Katalog-Stereotype" in st_text)
+    check("Stereotypes: Header nennt 318 und 44 abstrakt", "318 Stereotype" in st_text and "44 abstrakt" in st_text)
 
     tp = parse_topology(tp_text)
     complete = [r for r in tp if r[1] and r[2]]

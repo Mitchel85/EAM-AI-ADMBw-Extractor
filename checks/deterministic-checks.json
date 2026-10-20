@@ -3,7 +3,7 @@
     "stereotypes": {
       "rows": 318,
       "toolbox": 0,
-      "abstract": 25,
+      "abstract": 44,
       "usable": 293,
       "junk": 0
     },
@@ -15,16 +15,16 @@
     "viewpoints": 52,
     "hashes": {
       "ADMBw-Knowledge-Stereotypes.md": {
-        "sha256": "3ede09ba833dcd4567d37066d3986a80a547d157e28ef0df813c6d28d93ea413",
-        "bytes": 56812
+        "sha256": "9de722f7817491e31c6c4c7e5b2822dbed18f5904831dacd44e5d7a66aa37904",
+        "bytes": 57985
       },
       "ADMBw-Knowledge-Topology.md": {
-        "sha256": "e02a48d70b8d61f0a7198bfd893e855b4bff67591a08b19de4cd2cfe16d65862",
-        "bytes": 18919
+        "sha256": "475fb8a99c73d1b031d22c0b1bfae62216f919de650e16a6cc09bfe7f019c048",
+        "bytes": 30766
       },
       "ADMBw-Knowledge-Viewpoints.md": {
-        "sha256": "a662c656c41002c5d86fa245355f48d4cf950d956b40d0f11e873c25bef24b8b",
-        "bytes": 13355
+        "sha256": "af908c30e7f9deab7d0b01a2246fa8659cbe50bc05f171cf130a5afec10db27f",
+        "bytes": 13251
       },
       "ADMBw-Knowledge-TagTypes.md": {
         "sha256": "7826980a405f1790a63c7d5e983db8011cfd47acc5dbe212343aad6503b4721f",
@@ -44,9 +44,9 @@
       "detail": "ist 0"
     },
     {
-      "name": "Stereotypes: 25 abstrakte Basisklassen (🔒)",
+      "name": "Stereotypes: 44 abstrakte Stereotype (🔒)",
       "ok": true,
-      "detail": "ist 25"
+      "detail": "ist 44"
     },
     {
       "name": "Stereotypes: 0 Nicht-Stereotype/Artefakte",
@@ -59,7 +59,7 @@
       "detail": "ist 293"
     },
     {
-      "name": "Stereotypes: Header nennt 318 Katalog",
+      "name": "Stereotypes: Header nennt 318 und 44 abstrakt",
       "ok": true,
       "detail": ""
     },
