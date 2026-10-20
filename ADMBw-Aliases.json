@@ -1,0 +1,7 @@
+{
+ "note": "Alt-Schreibweisen aus Modellen oder älteren MDG-Ständen. Prüfprogramme sollen vor dem Namensvergleich umschreiben.",
+ "aliases": {
+  "PropertySetGeneralisation": "PropertySetGeneralization",
+  "ServiceSpecificationGeneralization": "ServiceGeneralization"
+ }
+}

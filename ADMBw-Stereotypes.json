@@ -1,0 +1,4651 @@
+{
+ "release": "NAFv4-ADMBw-MDG-2026.05.xml",
+ "source": "NAFv4-ADMBw-MDG-2026.05.xml",
+ "counts": {
+  "stereotypes": 318,
+  "abstract": 44,
+  "abstractWithoutAppliesTo": 25,
+  "abstractWithAppliesTo": 19
+ },
+ "stereotypes": [
+  {
+   "name": "AchievedEffect",
+   "metatype": "AchievedEffect",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Achiever",
+   "metatype": "Achiever",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": [
+    "ActualEnterprisePhase",
+    "ActualOrganization",
+    "ActualPerson",
+    "ActualPost",
+    "ActualProject",
+    "ActualResource",
+    "FieldedCapability",
+    "Function",
+    "OperationalActivity",
+    "SecurityProcess",
+    "ServiceFunction",
+    "ServiceSpecification",
+    "StandardOperationalActivity"
+   ]
+  },
+  {
+   "name": "ActivityPerformableUnderCondition",
+   "metatype": "ActivityPerformableUnderCondition",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActivitySupportsService",
+   "metatype": "ActivitySupportsService",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Realisation"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActsUpon",
+   "metatype": "ActsUpon",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualCondition",
+   "metatype": "ActualCondition",
+   "abstract": false,
+   "parents": [
+    "ActualPropertySet"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": [
+    "ActualEnvironment",
+    "ActualLocation"
+   ]
+  },
+  {
+   "name": "ActualConditionToActualResource",
+   "metatype": "ActualConditionToActualResource",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualEnduringTask",
+   "metatype": "ActualEnduringTask",
+   "abstract": false,
+   "parents": [
+    "ActualPropertySet",
+    "CapableElement"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualEnterprisePhase",
+   "metatype": "ActualEnterprisePhase",
+   "abstract": false,
+   "parents": [
+    "Achiever",
+    "ActualPropertySet",
+    "CapableElement",
+    "UAFElement"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualEnvironment",
+   "metatype": "ActualEnvironment",
+   "abstract": false,
+   "parents": [
+    "ActualCondition"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualLocation",
+   "metatype": "ActualLocation",
+   "abstract": false,
+   "parents": [
+    "ActualCondition"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualMeasurement",
+   "metatype": "ActualMeasurement",
+   "abstract": false,
+   "parents": [
+    "ActualState"
+   ],
+   "appliesTo": [
+    "Slot"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualMeasurementSet",
+   "metatype": "ActualMeasurementSet",
+   "abstract": false,
+   "parents": [
+    "ActualPropertySet"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": [
+    "ActualService",
+    "ProvidedServiceLevel",
+    "RequiredServiceLevel"
+   ]
+  },
+  {
+   "name": "ActualMeasurementSetAppliesFor",
+   "metatype": "ActualMeasurementSetAppiesFor",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualOrganization",
+   "metatype": "ActualOrganization",
+   "abstract": false,
+   "parents": [
+    "ActualResponsibleResource"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualOrganizationalResource",
+   "metatype": "ActualOrganizationalResource",
+   "abstract": true,
+   "parents": [
+    "ActualResource",
+    "Stakeholder"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": [
+    "ActualOrganization",
+    "ActualPerson",
+    "ActualPost",
+    "ActualProject"
+   ]
+  },
+  {
+   "name": "ActualOrganizationRole",
+   "metatype": "ActualOrganizationRole",
+   "abstract": false,
+   "parents": [
+    "ActualResourceRole"
+   ],
+   "appliesTo": [
+    "Slot"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualPerson",
+   "metatype": "ActualPerson",
+   "abstract": false,
+   "parents": [
+    "ActualResponsibleResource"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualPost",
+   "metatype": "ActualPost",
+   "abstract": false,
+   "parents": [
+    "ActualResponsibleResource"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualProject",
+   "metatype": "ActualProject",
+   "abstract": false,
+   "parents": [
+    "Achiever",
+    "ActualOrganizationalResource"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualProjectConsults",
+   "metatype": "ActualProjectConsults",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualProjectDependency",
+   "metatype": "ActualProjectDependency",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualProjectInforms",
+   "metatype": "ActualProjectInforms",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualProjectMilestone",
+   "metatype": "ActualProjectMilestone",
+   "abstract": false,
+   "parents": [
+    "ActualPropertySet"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualProjectMilestoneRole",
+   "metatype": "ActualProjectMilestoneRole",
+   "abstract": false,
+   "parents": [
+    "ActualState"
+   ],
+   "appliesTo": [
+    "Slot"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualPropertySet",
+   "metatype": "ActualPropertySet",
+   "abstract": false,
+   "parents": [
+    "ActualState"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": [
+    "ActualCondition",
+    "ActualEnduringTask",
+    "ActualEnterprisePhase",
+    "ActualEnvironment",
+    "ActualLocation",
+    "ActualMeasurementSet",
+    "ActualOrganization",
+    "ActualPerson",
+    "ActualPost",
+    "ActualProject",
+    "ActualProjectMilestone",
+    "ActualResource",
+    "ActualService",
+    "FieldedCapability",
+    "ProvidedServiceLevel",
+    "RequiredServiceLevel"
+   ]
+  },
+  {
+   "name": "ActualResource",
+   "metatype": "ActualResource",
+   "abstract": false,
+   "parents": [
+    "Achiever",
+    "ActualPropertySet",
+    "CapableElement",
+    "SubjectOfResourceConstraint"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": [
+    "ActualOrganization",
+    "ActualPerson",
+    "ActualPost",
+    "ActualProject",
+    "FieldedCapability"
+   ]
+  },
+  {
+   "name": "ActualResourceNeededByActualProjectMilestone",
+   "metatype": "ActualResourceNeededByActualProjectMilestone",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualResourceRelationship",
+   "metatype": "ActualResourceRelationship",
+   "abstract": false,
+   "parents": [
+    "SysML1.4::itemFlow",
+    "UAFElement"
+   ],
+   "appliesTo": [
+    "InformationFlow"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualResourceRole",
+   "metatype": "ActualResourceRole",
+   "abstract": false,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [
+    "Slot"
+   ],
+   "concreteDescendants": [
+    "ActualOrganizationRole"
+   ]
+  },
+  {
+   "name": "ActualResourceToActualProjectMilestone",
+   "metatype": "ActualResourceToActualProjectMilestone",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualResponsibleResource",
+   "metatype": "ActualResponsibleResource",
+   "abstract": true,
+   "parents": [
+    "ActualOrganizationalResource"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": [
+    "ActualOrganization",
+    "ActualPerson",
+    "ActualPost"
+   ]
+  },
+  {
+   "name": "ActualService",
+   "metatype": "ActualService",
+   "abstract": false,
+   "parents": [
+    "ActualMeasurementSet",
+    "CapableElement"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": [
+    "ProvidedServiceLevel",
+    "RequiredServiceLevel"
+   ]
+  },
+  {
+   "name": "ActualServiceSpecificationRole",
+   "metatype": "",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Slot"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ActualState",
+   "metatype": "ActualState",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": [
+    "ActualCondition",
+    "ActualEnduringTask",
+    "ActualEnterprisePhase",
+    "ActualEnvironment",
+    "ActualLocation",
+    "ActualMeasurement",
+    "ActualMeasurementSet",
+    "ActualOrganization",
+    "ActualPerson",
+    "ActualPost",
+    "ActualProject",
+    "ActualProjectMilestone",
+    "ActualProjectMilestoneRole",
+    "ActualPropertySet",
+    "ActualResource",
+    "ActualService",
+    "FieldedCapability",
+    "ProjectStatus",
+    "ProvidedServiceLevel",
+    "RequiredServiceLevel"
+   ]
+  },
+  {
+   "name": "AffectedActivity",
+   "metatype": "AffectedActivity",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "AffectedFunctions",
+   "metatype": "AffectedFunctions",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "AffectedResource",
+   "metatype": "AffectedResource",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Alias",
+   "metatype": "Alias",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Note"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "AlignsWithGoal",
+   "metatype": "AlignsWithGoal",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ArbitraryConnector",
+   "metatype": "ArbitraryConnector",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ArchitecturalDescription",
+   "metatype": "ArchitecturalDescription",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Package"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ArchitecturalReference",
+   "metatype": "ArchitecturalReference",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ArchitecturalSequence",
+   "metatype": "ArchitecturalSequence",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Architecture",
+   "metatype": "Architecture",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "OperationalArchitecture",
+    "ResourceArchitecture",
+    "ResourceMitigation",
+    "SecurityEnclave",
+    "System"
+   ]
+  },
+  {
+   "name": "ArchitectureForProject",
+   "metatype": "ArchitectureForProject",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ArchitectureMetadata",
+   "metatype": "ArchitectureMetadata",
+   "abstract": false,
+   "parents": [
+    "Metadata"
+   ],
+   "appliesTo": [
+    "Note"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Asset",
+   "metatype": "Asset",
+   "abstract": true,
+   "parents": [
+    "ConceptItem",
+    "LocationHolder",
+    "PropertySet",
+    "SubjectOfForecast",
+    "SubjectOfSecurityConstraint",
+    "SysML1.4::block"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "DataElement",
+    "Energy",
+    "InformationElement",
+    "KnownResource",
+    "NaturalResource",
+    "OperationalArchitecture",
+    "OperationalPerformer",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "Responsibility",
+    "SecurityEnclave",
+    "Software",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "AssetRole",
+   "metatype": "AssetRole",
+   "abstract": true,
+   "parents": [
+    "BPMN2.0::ResourceRole",
+    "MeasurableElement",
+    "SubjectOfOperationalConstraint",
+    "SubjectOfSecurityConstraint"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": [
+    "DataRole",
+    "InformationRole",
+    "OperationalRole",
+    "PostRole",
+    "ProblemDomain",
+    "ProjectRole",
+    "ResourceRole",
+    "SubOrganization"
+   ]
+  },
+  {
+   "name": "BoundaryCondition",
+   "metatype": "BoundaryCondition",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "BusinessProcess",
+   "metatype": "BusinessProcess",
+   "abstract": true,
+   "parents": [
+    "Achiever",
+    "BPMN2.0::BusinessProcess",
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Activity"
+   ],
+   "concreteDescendants": [
+    "Function",
+    "OperationalActivity",
+    "SecurityProcess",
+    "ServiceFunction",
+    "StandardOperationalActivity"
+   ]
+  },
+  {
+   "name": "BWRequirement",
+   "metatype": "",
+   "abstract": true,
+   "parents": [],
+   "appliesTo": [
+    "Requirement"
+   ],
+   "concreteDescendants": [
+    "FunctionalRequirement",
+    "NonfunctionalRequirement"
+   ]
+  },
+  {
+   "name": "Capability",
+   "metatype": "Capability",
+   "abstract": false,
+   "parents": [
+    "Desirer",
+    "PropertySet"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "CapabilityConfiguration",
+   "metatype": "CapabilityConfiguration",
+   "abstract": false,
+   "parents": [
+    "ResourceArchitecture"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "CapabilityDependency",
+   "metatype": "CapabilityDependency",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "CapabilityForTask",
+   "metatype": "CapabilityForTask",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "SysML1.4::allocate"
+   ],
+   "appliesTo": [
+    "Abstraction"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "CapabilityGeneralization",
+   "metatype": "CapabilityGeneralization",
+   "abstract": false,
+   "parents": [
+    "PropertySetGeneralization"
+   ],
+   "appliesTo": [
+    "Generalization"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "CapabilityRole",
+   "metatype": "CapabilityRole",
+   "abstract": false,
+   "parents": [
+    "Desirer",
+    "PropertySet"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "CapabilityRoleDependency",
+   "metatype": "CapabilityRoleDependency",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "CapableElement",
+   "metatype": "CapableElement",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "ActualEnduringTask",
+    "ActualEnterprisePhase",
+    "ActualOrganization",
+    "ActualPerson",
+    "ActualPost",
+    "ActualProject",
+    "ActualResource",
+    "ActualService",
+    "CapabilityConfiguration",
+    "Energy",
+    "FieldedCapability",
+    "KnownResource",
+    "NaturalResource",
+    "OperationalArchitecture",
+    "OperationalPerformer",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "ProvidedServiceLevel",
+    "RequiredServiceLevel",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "Responsibility",
+    "SecurityEnclave",
+    "ServiceSpecification",
+    "Software",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "Checks",
+   "metatype": "Checks",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Classification",
+   "metatype": "Classification",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Classified",
+   "metatype": "Classified",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Command",
+   "metatype": "Command",
+   "abstract": false,
+   "parents": [
+    "ResourceExchange"
+   ],
+   "appliesTo": [
+    "InformationFlow"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Competence",
+   "metatype": "Competence",
+   "abstract": false,
+   "parents": [
+    "PropertySet",
+    "SubjectOfForecast",
+    "SysML1.4::block"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "CompetenceForRole",
+   "metatype": "CompetenceForRole",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "CompliesViewpoint",
+   "metatype": "CompliesViewpoint",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ConceptItem",
+   "metatype": "ConceptItem",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "DataElement",
+    "Energy",
+    "InformationElement",
+    "KnownResource",
+    "Location",
+    "NaturalResource",
+    "OperationalArchitecture",
+    "OperationalPerformer",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "Responsibility",
+    "SecurityEnclave",
+    "Software",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "ConceptRole",
+   "metatype": "ConceptRole",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Concern",
+   "metatype": "Concern",
+   "abstract": false,
+   "parents": [
+    "PropertySet",
+    "SysML1.4::block"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ConcernForActualEnterprisePhase",
+   "metatype": "ConcernForActualEnterprisePhase",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ConcernForView",
+   "metatype": "ConcernForView",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ConcernForViewpoint",
+   "metatype": "ConcernForViewpoint",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Condition",
+   "metatype": "Condition",
+   "abstract": false,
+   "parents": [
+    "PropertySet",
+    "SysML1.4::ValueType"
+   ],
+   "appliesTo": [
+    "Class",
+    "DataType"
+   ],
+   "concreteDescendants": [
+    "Environment",
+    "GeoPoliticalExtentType",
+    "Location"
+   ]
+  },
+  {
+   "name": "ConflictsWith",
+   "metatype": "ConflictsWith",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ConformsTo",
+   "metatype": "ConformsTo",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ConsumedBy",
+   "metatype": "ConsumedBy",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Consumes",
+   "metatype": "Consumes",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "SysML1.4::allocate"
+   ],
+   "appliesTo": [
+    "Abstraction"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Control",
+   "metatype": "Control",
+   "abstract": false,
+   "parents": [
+    "ResourceExchange"
+   ],
+   "appliesTo": [
+    "InformationFlow"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "DataElement",
+   "metatype": "DataElement",
+   "abstract": false,
+   "parents": [
+    "ResourceAsset",
+    "ResourceExchangeItem",
+    "SubjectOfResourceConstraint"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "DataElementStoredIn",
+   "metatype": "DataElementStoredIn",
+   "abstract": false,
+   "parents": [
+    "StoredIn"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "DataModel",
+   "metatype": "DataModel",
+   "abstract": false,
+   "parents": [
+    "SubjectOfOperationalConstraint",
+    "SubjectOfResourceConstraint"
+   ],
+   "appliesTo": [
+    "Package"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "DataRole",
+   "metatype": "DataRole",
+   "abstract": false,
+   "parents": [
+    "AssetRole",
+    "ResourceExchangeItem"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Definition",
+   "metatype": "Definition",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Note"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "DerivedFrom",
+   "metatype": "DerivedFrom",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "DescribedBy",
+   "metatype": "DescribedBy",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "DesiredEffect",
+   "metatype": "DesiredEffect",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Desirer",
+   "metatype": "Desirer",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "Capability",
+    "CapabilityConfiguration",
+    "CapabilityRole",
+    "Energy",
+    "KnownResource",
+    "NaturalResource",
+    "OperationalArchitecture",
+    "OperationalPerformer",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "Responsibility",
+    "SecurityEnclave",
+    "Software",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "DocumentReference",
+   "metatype": "DocumentReference",
+   "abstract": false,
+   "parents": [
+    "Reference"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ElementCatalogue",
+   "metatype": "",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Package"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "EnduringTask",
+   "metatype": "EnduringTask",
+   "abstract": false,
+   "parents": [
+    "PropertySet"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Energy",
+   "metatype": "Energy",
+   "abstract": false,
+   "parents": [
+    "PhysicalResource"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "EnterpriseGoal",
+   "metatype": "EnterpriseGoal",
+   "abstract": false,
+   "parents": [
+    "PropertySet",
+    "SysML1.4::requirement"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "EnterprisePhase",
+   "metatype": "EnterprisePhase",
+   "abstract": false,
+   "parents": [
+    "PropertySet"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "WholeLifeEnterprise"
+   ]
+  },
+  {
+   "name": "EnterpriseVision",
+   "metatype": "EnterpriseVision",
+   "abstract": false,
+   "parents": [
+    "PropertySet"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Environment",
+   "metatype": "Environment",
+   "abstract": false,
+   "parents": [
+    "Condition"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "EnvironmentalCondition",
+   "metatype": "EnvironmentalCondition",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "EnvironmentalContext",
+   "metatype": "EnvironmentalContext",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "EnvironmentProperty",
+   "metatype": "EnvironmentProperty",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Evaluates",
+   "metatype": "Evaluates",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Realisation"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Exchange",
+   "metatype": "Exchange",
+   "abstract": true,
+   "parents": [
+    "BPMN2.0::MessageFlow",
+    "MeasurableElement",
+    "SubjectOfSecurityConstraint",
+    "SysML1.4::itemFlow"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "Command",
+    "Control",
+    "OperationalExchange",
+    "ResourceExchange",
+    "ServiceExchange"
+   ]
+  },
+  {
+   "name": "ExchangeItem",
+   "metatype": "ExchangeItem",
+   "abstract": true,
+   "parents": [],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "DataElement",
+    "DataRole",
+    "Energy",
+    "GeoPoliticalExtentType",
+    "InformationElement",
+    "InformationRole",
+    "KnownResource",
+    "NaturalResource",
+    "OperationalSignal",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "ResourceSignal",
+    "Responsibility",
+    "SecurityEnclave",
+    "Software",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "Exhibits",
+   "metatype": "Exhibits",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "SysML1.4::allocate"
+   ],
+   "appliesTo": [
+    "Abstraction"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Expresses",
+   "metatype": "Expresses",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "FieldedCapability",
+   "metatype": "FieldedCapability",
+   "abstract": false,
+   "parents": [
+    "ActualResource"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "FillsPost",
+   "metatype": "FillsPost",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Finding",
+   "metatype": "Finding",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "FitCriterion",
+   "metatype": "FitCriterion",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Forecast",
+   "metatype": "Forecast",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ForecastPeriod",
+   "metatype": "ForecastPeriod",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "FormStoredIn",
+   "metatype": "FormStoredIn",
+   "abstract": false,
+   "parents": [
+    "StoredIn"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "FulfilmentCriterion",
+   "metatype": "FulfilmentCriterion",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Function",
+   "metatype": "Function",
+   "abstract": false,
+   "parents": [
+    "BusinessProcess",
+    "SubjectOfResourceConstraint"
+   ],
+   "appliesTo": [
+    "Activity"
+   ],
+   "concreteDescendants": [
+    "SecurityProcess"
+   ]
+  },
+  {
+   "name": "FunctionAction",
+   "metatype": "FunctionAction",
+   "abstract": false,
+   "parents": [
+    "ProcessUsage"
+   ],
+   "appliesTo": [
+    "Action"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "FunctionalRequirement",
+   "metatype": "FunctionalRequirement",
+   "abstract": false,
+   "parents": [
+    "BWRequirement"
+   ],
+   "appliesTo": [
+    "Requirement"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "FunctionControlFlow",
+   "metatype": "FunctionControlFlow",
+   "abstract": false,
+   "parents": [
+    "FunctionEdge"
+   ],
+   "appliesTo": [
+    "ControlFlow"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "FunctionEdge",
+   "metatype": "FunctionEdge",
+   "abstract": true,
+   "parents": [
+    "ProcessEdge"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "FunctionControlFlow",
+    "FunctionObjectFlow"
+   ]
+  },
+  {
+   "name": "FunctionObjectFlow",
+   "metatype": "FunctionObjectFlow",
+   "abstract": false,
+   "parents": [
+    "FunctionEdge"
+   ],
+   "appliesTo": [
+    "ObjectFlow"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "FunctionSubject",
+   "metatype": "FunctionSubject",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "GeoPoliticalExtentType",
+   "metatype": "GeoPoliticalExtentType",
+   "abstract": false,
+   "parents": [
+    "Condition",
+    "OperationalExchangeItem",
+    "ResourceExchangeItem"
+   ],
+   "appliesTo": [
+    "DataType"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "GoalForActualEnterprisePhase",
+   "metatype": "GoalForActualEnterprisePhase",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "HighLevelOperationalConcept",
+   "metatype": "HighLevelOperationalConcept",
+   "abstract": false,
+   "parents": [
+    "PropertySet",
+    "SysML1.4::block"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "HostedOn",
+   "metatype": "HostedOn",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Implements",
+   "metatype": "Implements",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "SysML1.4::allocate"
+   ],
+   "appliesTo": [
+    "Abstraction"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ImplementsProtocol",
+   "metatype": "ImplementsProtocol",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Information",
+   "metatype": "Information",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Note"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "InformationElement",
+   "metatype": "InformationElement",
+   "abstract": false,
+   "parents": [
+    "OperationalAsset",
+    "OperationalExchangeItem",
+    "SubjectOfOperationalConstraint"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "InformationRole",
+   "metatype": "InformationRole",
+   "abstract": false,
+   "parents": [
+    "AssetRole",
+    "OperationalExchangeItem"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "InteractionMessage",
+   "metatype": "InteractionMessage",
+   "abstract": true,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Message"
+   ],
+   "concreteDescendants": [
+    "OperationalMessage",
+    "ResourceMessage",
+    "ServiceMessage"
+   ]
+  },
+  {
+   "name": "InteractionRole",
+   "metatype": "InteractionRole",
+   "abstract": true,
+   "parents": [],
+   "appliesTo": [
+    "Lifeline"
+   ],
+   "concreteDescendants": [
+    "OperationalRole",
+    "PostRole",
+    "ProblemDomain",
+    "ProjectRole",
+    "ResourceRole",
+    "ServiceSpecificationRole",
+    "SubOrganization"
+   ]
+  },
+  {
+   "name": "IsAccountableFor",
+   "metatype": "IsAccountableFor",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "IsCapableToPerform",
+   "metatype": "IsCapableToPerform",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "SysML1.4::allocate"
+   ],
+   "appliesTo": [
+    "Abstraction"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "IsDuplicateOf",
+   "metatype": "IsDuplicateOf",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "IsEquivalentToStandardElement",
+   "metatype": "IsEquivalentToStandardElement",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "IsResponsibleFor",
+   "metatype": "IsResponsibleFor",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "JustifiedBy",
+   "metatype": "JustifiedBy",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "KnownResource",
+   "metatype": "KnownResource",
+   "abstract": false,
+   "parents": [
+    "OperationalPerformer",
+    "ResourcePerformer"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Location",
+   "metatype": "Location",
+   "abstract": false,
+   "parents": [
+    "ConceptItem",
+    "Condition"
+   ],
+   "appliesTo": [
+    "Class",
+    "DataType"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "LocationHolder",
+   "metatype": "LocationHolder",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "DataElement",
+    "Energy",
+    "InformationElement",
+    "KnownResource",
+    "NaturalResource",
+    "OperationalArchitecture",
+    "OperationalPerformer",
+    "OperationalRole",
+    "Organization",
+    "Person",
+    "Post",
+    "PostRole",
+    "ProblemDomain",
+    "Project",
+    "ProjectRole",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "ResourceRole",
+    "Responsibility",
+    "SecurityEnclave",
+    "Software",
+    "SubOrganization",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "LocationType",
+   "metatype": "LocationType",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "MapsToCapability",
+   "metatype": "MapsToCapability",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "SysML1.4::allocate"
+   ],
+   "appliesTo": [
+    "Abstraction"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "MeasurableElement",
+   "metatype": "MeasurableElement",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "AchievedEffect",
+    "ActivityPerformableUnderCondition",
+    "Alias",
+    "ArbitraryConnector",
+    "ArchitecturalDescription",
+    "ArchitecturalReference",
+    "ArchitecturalSequence",
+    "ArchitectureMetadata",
+    "Capability",
+    "CapabilityConfiguration",
+    "CapabilityDependency",
+    "CapabilityForTask",
+    "CapabilityGeneralization",
+    "CapabilityRole",
+    "CapabilityRoleDependency",
+    "Command",
+    "Competence",
+    "ConceptRole",
+    "Concern",
+    "Condition",
+    "Consumes",
+    "Control",
+    "DataElement",
+    "DataRole",
+    "Definition",
+    "DesiredEffect",
+    "EnduringTask",
+    "Energy",
+    "EnterpriseGoal",
+    "EnterprisePhase",
+    "EnterpriseVision",
+    "Environment",
+    "EnvironmentProperty",
+    "Exhibits",
+    "FillsPost",
+    "Forecast",
+    "Function",
+    "FunctionAction",
+    "FunctionControlFlow",
+    "FunctionObjectFlow",
+    "GeoPoliticalExtentType",
+    "HighLevelOperationalConcept",
+    "Implements",
+    "Information",
+    "InformationElement",
+    "InformationRole",
+    "IsCapableToPerform",
+    "KnownResource",
+    "Location",
+    "MapsToCapability",
+    "Measurement",
+    "Metadata",
+    "MilestoneDependency",
+    "NaturalResource",
+    "OperationalActivity",
+    "OperationalActivityAction",
+    "OperationalArchitecture",
+    "OperationalConnector",
+    "OperationalConstraint",
+    "OperationalControlFlow",
+    "OperationalExchange",
+    "OperationalInterface",
+    "OperationalMessage",
+    "OperationalMethod",
+    "OperationalObjectFlow",
+    "OperationalParameter",
+    "OperationalPerformer",
+    "OperationalPort",
+    "OperationalRole",
+    "OperationalSignal",
+    "OperationalSignalProperty",
+    "OperationalStateDescription",
+    "Organization",
+    "OwnsProcess",
+    "PerformsInContext",
+    "Person",
+    "Post",
+    "PostRole",
+    "ProblemDomain",
+    "ProcessGeneralization",
+    "Project",
+    "ProjectMilestone",
+    "ProjectMilestoneRole",
+    "ProjectRole",
+    "ProjectSequence",
+    "ProjectTheme",
+    "PropertySetGeneralization",
+    "Protocol",
+    "ProtocolLayer",
+    "Protocolstack",
+    "ProvidesCompetence",
+    "RequiresCompetence",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceConnector",
+    "ResourceConstraint",
+    "ResourceExchange",
+    "ResourceInterface",
+    "ResourceMessage",
+    "ResourceMethod",
+    "ResourceMitigation",
+    "ResourceParameter",
+    "ResourcePort",
+    "ResourceRole",
+    "ResourceSignal",
+    "ResourceSignalProperty",
+    "ResourceStateDescription",
+    "Responsibility",
+    "SameAs",
+    "SecurityConstraint",
+    "SecurityEnclave",
+    "SecurityProcess",
+    "ServiceConnector",
+    "ServiceExchange",
+    "ServiceFunction",
+    "ServiceFunctionAction",
+    "ServiceGeneralization",
+    "ServiceInterface",
+    "ServiceMessage",
+    "ServiceMethod",
+    "ServiceParameter",
+    "ServicePolicy",
+    "ServicePort",
+    "ServiceProvision",
+    "ServiceSpecification",
+    "ServiceSpecificationRole",
+    "ServiceStateDescription",
+    "Software",
+    "Standard",
+    "StandardOperationalActivity",
+    "StrategicConstraint",
+    "SubOrganization",
+    "System",
+    "Technology",
+    "TemporalPart",
+    "VersionOfConfiguration",
+    "VersionSuccession",
+    "View",
+    "Viewpoint",
+    "WholeLifeConfiguration",
+    "WholeLifeEnterprise"
+   ]
+  },
+  {
+   "name": "Measurement",
+   "metatype": "Measurement",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "MeasurementType",
+   "metatype": "MeasurementType",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Metadata",
+   "metatype": "Metadata",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Note"
+   ],
+   "concreteDescendants": [
+    "ArchitectureMetadata"
+   ]
+  },
+  {
+   "name": "MilestoneDependency",
+   "metatype": "MilestoneDependency",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "NaturalResource",
+   "metatype": "NaturalResource",
+   "abstract": false,
+   "parents": [
+    "PhysicalResource"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "NeedsModificationOf",
+   "metatype": "NeedsModificationOf",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "NeedsResource",
+   "metatype": "NeedsResource",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "NeedsService",
+   "metatype": "NeedsService",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "NonfunctionalRequirement",
+   "metatype": "NonfunctionalRequirement",
+   "abstract": false,
+   "parents": [
+    "BWRequirement"
+   ],
+   "appliesTo": [
+    "Requirement"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalActivity",
+   "metatype": "OperationalActivity",
+   "abstract": false,
+   "parents": [
+    "BusinessProcess",
+    "SubjectOfOperationalConstraint"
+   ],
+   "appliesTo": [
+    "Activity"
+   ],
+   "concreteDescendants": [
+    "SecurityProcess",
+    "StandardOperationalActivity"
+   ]
+  },
+  {
+   "name": "OperationalActivityAction",
+   "metatype": "OperationalActivityAction",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "ProcessUsage"
+   ],
+   "appliesTo": [
+    "Action"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalActivityEdge",
+   "metatype": "OperationalActivityEdge",
+   "abstract": true,
+   "parents": [
+    "ProcessEdge"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "OperationalControlFlow",
+    "OperationalObjectFlow"
+   ]
+  },
+  {
+   "name": "OperationalAgent",
+   "metatype": "OperationalAgent",
+   "abstract": true,
+   "parents": [
+    "CapableElement",
+    "Desirer",
+    "OperationalAsset",
+    "SubjectOfOperationalConstraint"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "KnownResource",
+    "OperationalArchitecture",
+    "OperationalPerformer"
+   ]
+  },
+  {
+   "name": "OperationalArchitecture",
+   "metatype": "OperationalArchitecture",
+   "abstract": false,
+   "parents": [
+    "Architecture",
+    "OperationalAgent"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalArchitectureOfEnterprisePhase",
+   "metatype": "OperationalArchitectureOfEnterprisePhase",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalAsset",
+   "metatype": "OperationalAsset",
+   "abstract": true,
+   "parents": [
+    "Asset"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "InformationElement",
+    "KnownResource",
+    "OperationalArchitecture",
+    "OperationalPerformer"
+   ]
+  },
+  {
+   "name": "OperationalConnector",
+   "metatype": "OperationalConnector",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Connector"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalConstraint",
+   "metatype": "OperationalConstraint",
+   "abstract": false,
+   "parents": [
+    "Rule"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalControlFlow",
+   "metatype": "OperationalControlFlow",
+   "abstract": false,
+   "parents": [
+    "OperationalActivityEdge"
+   ],
+   "appliesTo": [
+    "ControlFlow"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalExchange",
+   "metatype": "OperationalExchange",
+   "abstract": false,
+   "parents": [
+    "Exchange",
+    "SubjectOfOperationalConstraint"
+   ],
+   "appliesTo": [
+    "InformationFlow"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalExchangeItem",
+   "metatype": "OperationalExchangeItem",
+   "abstract": true,
+   "parents": [
+    "ExchangeItem",
+    "Resource"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "Energy",
+    "GeoPoliticalExtentType",
+    "InformationElement",
+    "InformationRole",
+    "KnownResource",
+    "NaturalResource",
+    "OperationalSignal",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "Responsibility",
+    "SecurityEnclave",
+    "Software",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "OperationalInterface",
+   "metatype": "OperationalInterface",
+   "abstract": false,
+   "parents": [
+    "PropertySet",
+    "SysML1.4::InterfaceBlock"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalMessage",
+   "metatype": "OperationalMessage",
+   "abstract": false,
+   "parents": [
+    "InteractionMessage"
+   ],
+   "appliesTo": [
+    "Message"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalMessageFlow",
+   "metatype": "OperationalMessageFlow",
+   "abstract": false,
+   "parents": [
+    "BPMN2.0::MessageFlow",
+    "ProcessMessageFlow"
+   ],
+   "appliesTo": [
+    "ControlFlow"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalMethod",
+   "metatype": "OperationalMethod",
+   "abstract": false,
+   "parents": [
+    "ProcessOperation"
+   ],
+   "appliesTo": [
+    "Operation"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalObjectFlow",
+   "metatype": "OperationalObjectFlow",
+   "abstract": false,
+   "parents": [
+    "OperationalActivityEdge"
+   ],
+   "appliesTo": [
+    "ObjectFlow"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalParameter",
+   "metatype": "OperationalParameter",
+   "abstract": false,
+   "parents": [
+    "ProcessParameter"
+   ],
+   "appliesTo": [
+    "Parameter"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalPerformer",
+   "metatype": "OperationalPerformer",
+   "abstract": false,
+   "parents": [
+    "OperationalAgent"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "KnownResource"
+   ]
+  },
+  {
+   "name": "OperationalPort",
+   "metatype": "OperationalPort",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Port"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalRole",
+   "metatype": "OperationalRole",
+   "abstract": false,
+   "parents": [
+    "AssetRole",
+    "InteractionRole",
+    "LocationHolder",
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": [
+    "ProblemDomain"
+   ]
+  },
+  {
+   "name": "OperationalSignal",
+   "metatype": "OperationalSignal",
+   "abstract": false,
+   "parents": [
+    "OperationalExchangeItem",
+    "SubjectOfOperationalConstraint"
+   ],
+   "appliesTo": [
+    "Signal"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalSignalProperty",
+   "metatype": "OperationalSignalProperty",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OperationalStateDescription",
+   "metatype": "OperationalStateDescription",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "StateDescription"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Organization",
+   "metatype": "Organization",
+   "abstract": false,
+   "parents": [
+    "OrganizationalResource"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OrganizationalResource",
+   "metatype": "OrganizationalResource",
+   "abstract": true,
+   "parents": [
+    "PhysicalResource",
+    "Stakeholder"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "Responsibility"
+   ]
+  },
+  {
+   "name": "OriginatesFrom",
+   "metatype": "OriginatesFrom",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OwnedMilestone",
+   "metatype": "OwnedMilestone",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OwnsActualMeasurementSet",
+   "metatype": "OwnsActualMeasurementSet",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OwnsMeasurement",
+   "metatype": "OwnsMeasurement",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "OwnsProcess",
+   "metatype": "OwnsProcess",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "SysML1.4::allocate"
+   ],
+   "appliesTo": [
+    "Abstraction"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "PaperForm",
+   "metatype": "PaperForm",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "PartOfCatalogue",
+   "metatype": "PartOfCatalogue",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Aggregation"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "PartOfCategory",
+   "metatype": "PartOfCategory",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Aggregation"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "PerformsInContext",
+   "metatype": "PerformsInContext",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "SysML1.4::allocate"
+   ],
+   "appliesTo": [
+    "Abstraction"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Person",
+   "metatype": "Person",
+   "abstract": false,
+   "parents": [
+    "OrganizationalResource"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "PhysicalArchitectureOfEnterprisePhase",
+   "metatype": "PhysicalArchitectureOfEnterprisePhase",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "PhysicalLocation",
+   "metatype": "PhysicalLocation",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "PhysicalResource",
+   "metatype": "PhysicalResource",
+   "abstract": true,
+   "parents": [
+    "ResourcePerformer"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "Energy",
+    "NaturalResource",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "ResourceArtifact",
+    "Responsibility",
+    "Software",
+    "Technology"
+   ]
+  },
+  {
+   "name": "Post",
+   "metatype": "Post",
+   "abstract": false,
+   "parents": [
+    "OrganizationalResource"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "PostRole",
+   "metatype": "PostRole",
+   "abstract": false,
+   "parents": [
+    "ResourceRole"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProblemDomain",
+   "metatype": "ProblemDomain",
+   "abstract": false,
+   "parents": [
+    "OperationalRole"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProcessEdge",
+   "metatype": "ProcessEdge",
+   "abstract": true,
+   "parents": [
+    "BPMN2.0::SequenceFlow",
+    "MeasurableElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "FunctionControlFlow",
+    "FunctionObjectFlow",
+    "OperationalControlFlow",
+    "OperationalObjectFlow"
+   ]
+  },
+  {
+   "name": "ProcessGeneralization",
+   "metatype": "ProcessGeneralization",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Generalization"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProcessMessageFlow",
+   "metatype": "ProcessMessageFlow",
+   "abstract": true,
+   "parents": [
+    "BPMN2.0::MessageFlow"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "OperationalMessageFlow"
+   ]
+  },
+  {
+   "name": "ProcessOperation",
+   "metatype": "ProcessOperation",
+   "abstract": true,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "OperationalMethod",
+    "ResourceMethod",
+    "ServiceMethod"
+   ]
+  },
+  {
+   "name": "ProcessParameter",
+   "metatype": "ProcessParameter",
+   "abstract": true,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "OperationalParameter",
+    "ResourceParameter",
+    "ServiceParameter"
+   ]
+  },
+  {
+   "name": "ProcessUsage",
+   "metatype": "ProcessUsage",
+   "abstract": true,
+   "parents": [
+    "BPMN2.0::Activity",
+    "MeasurableElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "FunctionAction",
+    "OperationalActivityAction",
+    "ServiceFunctionAction"
+   ]
+  },
+  {
+   "name": "Project",
+   "metatype": "Project",
+   "abstract": false,
+   "parents": [
+    "OrganizationalResource",
+    "SysML1.4::block"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProjectMilestone",
+   "metatype": "ProjectMilestone",
+   "abstract": false,
+   "parents": [
+    "PropertySet",
+    "SysML1.4::block"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProjectMilestoneRole",
+   "metatype": "ProjectMilestoneRole",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProjectMilestoneToProjectTheme",
+   "metatype": "ProjectMilestoneToProjectTheme",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProjectProvidesFunction",
+   "metatype": "ProjectProvidesFunction",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProjectRole",
+   "metatype": "ProjectRole",
+   "abstract": false,
+   "parents": [
+    "ResourceRole"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProjectSequence",
+   "metatype": "ProjectSequence",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProjectStatus",
+   "metatype": "ProjectStatus",
+   "abstract": false,
+   "parents": [
+    "ActualState"
+   ],
+   "appliesTo": [
+    "Slot"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProjectSupportActivity",
+   "metatype": "ProjectSupportActivity",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProjectTheme",
+   "metatype": "ProjectTheme",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "PropertySet",
+   "metatype": "PropertySet",
+   "abstract": true,
+   "parents": [
+    "MeasurableElement",
+    "UAFElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "Capability",
+    "CapabilityConfiguration",
+    "CapabilityRole",
+    "Competence",
+    "Concern",
+    "Condition",
+    "DataElement",
+    "DataRole",
+    "EnduringTask",
+    "Energy",
+    "EnterpriseGoal",
+    "EnterprisePhase",
+    "EnterpriseVision",
+    "Environment",
+    "GeoPoliticalExtentType",
+    "HighLevelOperationalConcept",
+    "InformationElement",
+    "InformationRole",
+    "KnownResource",
+    "Location",
+    "NaturalResource",
+    "OperationalArchitecture",
+    "OperationalInterface",
+    "OperationalPerformer",
+    "OperationalSignal",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "ProjectMilestone",
+    "Protocol",
+    "Protocolstack",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceInterface",
+    "ResourceMitigation",
+    "ResourceSignal",
+    "Responsibility",
+    "SecurityEnclave",
+    "ServiceInterface",
+    "ServiceSpecification",
+    "Software",
+    "Standard",
+    "System",
+    "Technology",
+    "TemporalPart",
+    "View",
+    "Viewpoint",
+    "WholeLifeConfiguration",
+    "WholeLifeEnterprise"
+   ]
+  },
+  {
+   "name": "PropertySetGeneralization",
+   "metatype": "PropertySetGeneralisation",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Generalization"
+   ],
+   "concreteDescendants": [
+    "CapabilityGeneralization",
+    "ServiceGeneralization"
+   ]
+  },
+  {
+   "name": "Protocol",
+   "metatype": "Protocol",
+   "abstract": false,
+   "parents": [
+    "Standard"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "Protocolstack"
+   ]
+  },
+  {
+   "name": "ProtocolImplementation",
+   "metatype": "ProtocolImplementation",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "ResourceConnector",
+    "ResourcePort"
+   ]
+  },
+  {
+   "name": "ProtocolLayer",
+   "metatype": "ProtocolLayer",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Protocolstack",
+   "metatype": "Protocolstack",
+   "abstract": false,
+   "parents": [
+    "Protocol"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProvidedServiceLevel",
+   "metatype": "ProviededServiceLevel",
+   "abstract": false,
+   "parents": [
+    "ActualService"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Provides",
+   "metatype": "Provides",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProvidesCompetence",
+   "metatype": "ProvidesCompetence",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ProvidesServiceFunction",
+   "metatype": "ProvidesServiceFunction",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "RatifiedStandards",
+   "metatype": "RatifiedStandards",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "RealiseRequirement",
+   "metatype": "RealiseRequirement",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Realisation"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "RealizedDesiredEffect",
+   "metatype": "RealizedDesiredEffect",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "RealizesRecommendation",
+   "metatype": "RealizesRecommendation",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Realisation"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "RealizingAchievedEffect",
+   "metatype": "RealizingAchievedEffect",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Recommendation",
+   "metatype": "Recommendation",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Reference",
+   "metatype": "Reference",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "DocumentReference",
+    "SMEReference"
+   ]
+  },
+  {
+   "name": "RefersTo",
+   "metatype": "RefersTo",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Refines",
+   "metatype": "Refines",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Replaces",
+   "metatype": "Replaces",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ReplaceStandardElement",
+   "metatype": "ReplaceStandardElement",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "RequiredEnvironment",
+   "metatype": "RequiredEnvironment",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "RequiredResource",
+   "metatype": "RequiredResource",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "RequiredServiceLevel",
+   "metatype": "RequiredServiceLevel",
+   "abstract": false,
+   "parents": [
+    "ActualService"
+   ],
+   "appliesTo": [
+    "Object"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "RequirementCatalogue",
+   "metatype": "RequirementCatalogue",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "RequirementCategory",
+   "metatype": "RequirementCategory",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Requires",
+   "metatype": "Requires",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "RequiresCompetence",
+   "metatype": "RequiresCompetence",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "SysML1.4::allocate"
+   ],
+   "appliesTo": [
+    "Abstraction"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Resource",
+   "metatype": "Resource",
+   "abstract": true,
+   "parents": [
+    "PropertySet"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "DataElement",
+    "DataRole",
+    "Energy",
+    "GeoPoliticalExtentType",
+    "InformationElement",
+    "InformationRole",
+    "KnownResource",
+    "NaturalResource",
+    "OperationalSignal",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "ResourceSignal",
+    "Responsibility",
+    "SecurityEnclave",
+    "Software",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "ResourceArchitecture",
+   "metatype": "ResourceArchitecture",
+   "abstract": false,
+   "parents": [
+    "Architecture",
+    "ResourcePerformer"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "ResourceMitigation",
+    "SecurityEnclave",
+    "System"
+   ]
+  },
+  {
+   "name": "ResourceArtifact",
+   "metatype": "ResourceArtifact",
+   "abstract": false,
+   "parents": [
+    "PhysicalResource"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "Software",
+    "Technology"
+   ]
+  },
+  {
+   "name": "ResourceAsset",
+   "metatype": "ResourceAsset",
+   "abstract": true,
+   "parents": [
+    "Asset"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "DataElement",
+    "Energy",
+    "KnownResource",
+    "NaturalResource",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "Responsibility",
+    "SecurityEnclave",
+    "Software",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "ResourceConnector",
+   "metatype": "ResourceConnector",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "ProtocolImplementation"
+   ],
+   "appliesTo": [
+    "Connector"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ResourceConstraint",
+   "metatype": "ResourceConstraint",
+   "abstract": false,
+   "parents": [
+    "Rule"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ResourceDependency",
+   "metatype": "ResourceDependency",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ResourceExchange",
+   "metatype": "ResourceExchange",
+   "abstract": false,
+   "parents": [
+    "Exchange"
+   ],
+   "appliesTo": [
+    "InformationFlow"
+   ],
+   "concreteDescendants": [
+    "Command",
+    "Control"
+   ]
+  },
+  {
+   "name": "ResourceExchangeItem",
+   "metatype": "ResourceExchangeItem",
+   "abstract": true,
+   "parents": [
+    "ExchangeItem",
+    "Resource"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "DataElement",
+    "DataRole",
+    "Energy",
+    "GeoPoliticalExtentType",
+    "KnownResource",
+    "NaturalResource",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "ResourceSignal",
+    "Responsibility",
+    "SecurityEnclave",
+    "Software",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "ResourceInterface",
+   "metatype": "ResourceInterface",
+   "abstract": false,
+   "parents": [
+    "PropertySet",
+    "SysML1.4::InterfaceBlock"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ResourceMessage",
+   "metatype": "ResourceMessage",
+   "abstract": false,
+   "parents": [
+    "InteractionMessage"
+   ],
+   "appliesTo": [
+    "Message"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ResourceMethod",
+   "metatype": "ResourceMethod",
+   "abstract": false,
+   "parents": [
+    "ProcessOperation"
+   ],
+   "appliesTo": [
+    "Operation"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ResourceMitigation",
+   "metatype": "ResourceMitigation",
+   "abstract": false,
+   "parents": [
+    "ResourceArchitecture"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ResourceParameter",
+   "metatype": "ResourceParameter",
+   "abstract": false,
+   "parents": [
+    "ProcessParameter"
+   ],
+   "appliesTo": [
+    "Parameter"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ResourcePerformer",
+   "metatype": "ResourcePerformer",
+   "abstract": true,
+   "parents": [
+    "CapableElement",
+    "Desirer",
+    "OperationalExchangeItem",
+    "ResourceAsset",
+    "ResourceExchangeItem",
+    "SubjectOfForecast",
+    "SubjectOfResourceConstraint",
+    "VersionedElement"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "Energy",
+    "KnownResource",
+    "NaturalResource",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "Responsibility",
+    "SecurityEnclave",
+    "Software",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "ResourcePort",
+   "metatype": "ResourcePort",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "ProtocolImplementation",
+    "SubjectOfResourceConstraint"
+   ],
+   "appliesTo": [
+    "Port"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ResourceRole",
+   "metatype": "ResourceRole",
+   "abstract": false,
+   "parents": [
+    "AssetRole",
+    "InteractionRole",
+    "LocationHolder",
+    "SubjectOfResourceConstraint"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": [
+    "PostRole",
+    "ProjectRole",
+    "SubOrganization"
+   ]
+  },
+  {
+   "name": "ResourceSignal",
+   "metatype": "ResourceSignal",
+   "abstract": false,
+   "parents": [
+    "ResourceExchangeItem"
+   ],
+   "appliesTo": [
+    "Signal"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ResourceSignalProperty",
+   "metatype": "ResourceSignalProperty",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ResourceStateDescription",
+   "metatype": "ResourceStateDescription",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "StateDescription"
+   ],
+   "appliesTo": [
+    "StateMachine"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ResourceToServiceDependency",
+   "metatype": "ResourceToServiceDependency",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Responsibility",
+   "metatype": "Responsibility",
+   "abstract": false,
+   "parents": [
+    "OrganizationalResource"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Responsible",
+   "metatype": "Responsible",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ResultsFrom",
+   "metatype": "ResultsFrom",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Rule",
+   "metatype": "Rule",
+   "abstract": true,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Constraint"
+   ],
+   "concreteDescendants": [
+    "OperationalConstraint",
+    "ResourceConstraint",
+    "SecurityConstraint",
+    "ServicePolicy",
+    "StrategicConstraint"
+   ]
+  },
+  {
+   "name": "SameAs",
+   "metatype": "SameAs",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Satisfy",
+   "metatype": "Satisfy",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "SecurityConstraint",
+   "metatype": "SecurityConstraint",
+   "abstract": false,
+   "parents": [
+    "Rule"
+   ],
+   "appliesTo": [
+    "Constraint"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "SecurityEnclave",
+   "metatype": "SecurityEnclave",
+   "abstract": false,
+   "parents": [
+    "ResourceArchitecture"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "SecurityProcess",
+   "metatype": "SecurityProcess",
+   "abstract": false,
+   "parents": [
+    "Function",
+    "OperationalActivity",
+    "SubjectOfSecurityConstraint"
+   ],
+   "appliesTo": [
+    "Activity"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceConnector",
+   "metatype": "ServiceConnector",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Connector"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceDependency",
+   "metatype": "ServiceDependency",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceExchange",
+   "metatype": "",
+   "abstract": false,
+   "parents": [
+    "Exchange"
+   ],
+   "appliesTo": [
+    "InformationFlow"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceFunction",
+   "metatype": "ServiceFunction",
+   "abstract": false,
+   "parents": [
+    "BusinessProcess"
+   ],
+   "appliesTo": [
+    "Activity"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceFunctionAction",
+   "metatype": "ServiceFunctionAction",
+   "abstract": false,
+   "parents": [
+    "ProcessUsage"
+   ],
+   "appliesTo": [
+    "Action"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceGeneralization",
+   "metatype": "ServiceGeneralization",
+   "abstract": false,
+   "parents": [
+    "PropertySetGeneralization"
+   ],
+   "appliesTo": [
+    "Generalization"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceInterface",
+   "metatype": "ServiceInterface",
+   "abstract": false,
+   "parents": [
+    "PropertySet"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceMessage",
+   "metatype": "ServiceMessage",
+   "abstract": false,
+   "parents": [
+    "InteractionMessage"
+   ],
+   "appliesTo": [
+    "Message"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceMethod",
+   "metatype": "ServiceMethod",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "ProcessOperation"
+   ],
+   "appliesTo": [
+    "Operation"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceParameter",
+   "metatype": "ServiceParameter",
+   "abstract": false,
+   "parents": [
+    "ProcessParameter"
+   ],
+   "appliesTo": [
+    "Parameter"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServicePolicy",
+   "metatype": "ServicePolicy",
+   "abstract": false,
+   "parents": [
+    "Rule"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServicePort",
+   "metatype": "ServicePort",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Port"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceProvision",
+   "metatype": "ServiceProvision",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Abstraction"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceSpecification",
+   "metatype": "ServiceSpecification",
+   "abstract": false,
+   "parents": [
+    "Achiever",
+    "CapableElement",
+    "PropertySet",
+    "SysML1.4::block",
+    "VersionedElement"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceSpecificationRole",
+   "metatype": "ServiceSpecificationRole",
+   "abstract": false,
+   "parents": [
+    "InteractionRole",
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ServiceStateDescription",
+   "metatype": "ServiceStateDescription",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "StateDescription"
+   ],
+   "appliesTo": [
+    "StateMachine"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "SMEReference",
+   "metatype": "SMEReference",
+   "abstract": false,
+   "parents": [
+    "Reference"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Software",
+   "metatype": "Software",
+   "abstract": false,
+   "parents": [
+    "ResourceArtifact"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Stakeholder",
+   "metatype": "Stakeholder",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "ActualOrganization",
+    "ActualPerson",
+    "ActualPost",
+    "ActualProject",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "Responsibility"
+   ]
+  },
+  {
+   "name": "StakeholderConcern",
+   "metatype": "StakeholderConcern",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Standard",
+   "metatype": "Standard",
+   "abstract": false,
+   "parents": [
+    "PropertySet",
+    "SubjectOfForecast",
+    "SysML1.4::block"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "Protocol",
+    "Protocolstack"
+   ]
+  },
+  {
+   "name": "StandardOperationalActivity",
+   "metatype": "StandardOperationalActivity",
+   "abstract": false,
+   "parents": [
+    "Achiever",
+    "OperationalActivity"
+   ],
+   "appliesTo": [
+    "Activity"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "StateDescription",
+   "metatype": "StateDescription",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "StateMachine"
+   ],
+   "concreteDescendants": [
+    "OperationalStateDescription",
+    "ResourceStateDescription",
+    "ServiceStateDescription"
+   ]
+  },
+  {
+   "name": "StatementTask",
+   "metatype": "StatementTask",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "StemsFrom",
+   "metatype": "StemsFrom",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "StoredIn",
+   "metatype": "StoredIn",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": [
+    "DataElementStoredIn",
+    "FormStoredIn"
+   ]
+  },
+  {
+   "name": "StrategicConstraint",
+   "metatype": "StrategicConstraint",
+   "abstract": false,
+   "parents": [
+    "Rule"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "SubjectOfForecast",
+   "metatype": "SubjectOfForecast",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "Competence",
+    "DataElement",
+    "Energy",
+    "InformationElement",
+    "KnownResource",
+    "NaturalResource",
+    "OperationalArchitecture",
+    "OperationalPerformer",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "Protocol",
+    "Protocolstack",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "Responsibility",
+    "SecurityEnclave",
+    "Software",
+    "Standard",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "SubjectOfOperationalConstraint",
+   "metatype": "SubjectOfOperationalConstraint",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "DataModel",
+    "DataRole",
+    "InformationElement",
+    "InformationRole",
+    "KnownResource",
+    "OperationalActivity",
+    "OperationalArchitecture",
+    "OperationalExchange",
+    "OperationalPerformer",
+    "OperationalRole",
+    "OperationalSignal",
+    "PostRole",
+    "ProblemDomain",
+    "ProjectRole",
+    "ResourceRole",
+    "SecurityProcess",
+    "StandardOperationalActivity",
+    "SubOrganization"
+   ]
+  },
+  {
+   "name": "SubjectOfResourceConstraint",
+   "metatype": "SubjectOfResourceConstraint",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "ActualOrganization",
+    "ActualPerson",
+    "ActualPost",
+    "ActualProject",
+    "ActualResource",
+    "CapabilityConfiguration",
+    "DataElement",
+    "DataModel",
+    "Energy",
+    "FieldedCapability",
+    "Function",
+    "KnownResource",
+    "NaturalResource",
+    "Organization",
+    "Person",
+    "Post",
+    "PostRole",
+    "Project",
+    "ProjectRole",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "ResourcePort",
+    "ResourceRole",
+    "Responsibility",
+    "SecurityEnclave",
+    "SecurityProcess",
+    "Software",
+    "SubOrganization",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "SubjectOfSecurityConstraint",
+   "metatype": "SubjectOfSecurityConstraint",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "Command",
+    "Control",
+    "DataElement",
+    "DataRole",
+    "Energy",
+    "InformationElement",
+    "InformationRole",
+    "KnownResource",
+    "NaturalResource",
+    "OperationalArchitecture",
+    "OperationalExchange",
+    "OperationalPerformer",
+    "OperationalRole",
+    "Organization",
+    "Person",
+    "Post",
+    "PostRole",
+    "ProblemDomain",
+    "Project",
+    "ProjectRole",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceExchange",
+    "ResourceMitigation",
+    "ResourceRole",
+    "Responsibility",
+    "SecurityEnclave",
+    "SecurityProcess",
+    "ServiceExchange",
+    "Software",
+    "SubOrganization",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "SubOrganization",
+   "metatype": "SubOrganization",
+   "abstract": false,
+   "parents": [
+    "ResourceRole"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "SuccessorOf",
+   "metatype": "",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "System",
+   "metatype": "System",
+   "abstract": false,
+   "parents": [
+    "ResourceArchitecture"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Technology",
+   "metatype": "Technology",
+   "abstract": false,
+   "parents": [
+    "ResourceArtifact"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "TemporalPart",
+   "metatype": "TemporalPart",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement",
+    "PropertySet"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ToBeRealizedBy",
+   "metatype": "ToBeRealizedBy",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "UAFElement",
+   "metatype": "UAFElement",
+   "abstract": true,
+   "parents": [],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "AchievedEffect",
+    "ActivityPerformableUnderCondition",
+    "ActualCondition",
+    "ActualEnduringTask",
+    "ActualEnterprisePhase",
+    "ActualEnvironment",
+    "ActualLocation",
+    "ActualMeasurement",
+    "ActualMeasurementSet",
+    "ActualOrganization",
+    "ActualOrganizationRole",
+    "ActualPerson",
+    "ActualPost",
+    "ActualProject",
+    "ActualProjectMilestone",
+    "ActualProjectMilestoneRole",
+    "ActualPropertySet",
+    "ActualResource",
+    "ActualResourceRelationship",
+    "ActualResourceRole",
+    "ActualService",
+    "Alias",
+    "ArbitraryConnector",
+    "ArchitecturalDescription",
+    "ArchitecturalReference",
+    "ArchitecturalSequence",
+    "ArchitectureMetadata",
+    "Capability",
+    "CapabilityConfiguration",
+    "CapabilityDependency",
+    "CapabilityForTask",
+    "CapabilityGeneralization",
+    "CapabilityRole",
+    "CapabilityRoleDependency",
+    "Command",
+    "Competence",
+    "ConceptRole",
+    "Concern",
+    "Condition",
+    "Consumes",
+    "Control",
+    "DataElement",
+    "DataModel",
+    "DataRole",
+    "Definition",
+    "DesiredEffect",
+    "EnduringTask",
+    "Energy",
+    "EnterpriseGoal",
+    "EnterprisePhase",
+    "EnterpriseVision",
+    "Environment",
+    "EnvironmentProperty",
+    "Exhibits",
+    "FieldedCapability",
+    "FillsPost",
+    "Forecast",
+    "Function",
+    "FunctionAction",
+    "FunctionControlFlow",
+    "FunctionObjectFlow",
+    "GeoPoliticalExtentType",
+    "HighLevelOperationalConcept",
+    "Implements",
+    "Information",
+    "InformationElement",
+    "InformationRole",
+    "IsCapableToPerform",
+    "KnownResource",
+    "Location",
+    "MapsToCapability",
+    "Measurement",
+    "Metadata",
+    "MilestoneDependency",
+    "NaturalResource",
+    "OperationalActivity",
+    "OperationalActivityAction",
+    "OperationalArchitecture",
+    "OperationalConnector",
+    "OperationalConstraint",
+    "OperationalControlFlow",
+    "OperationalExchange",
+    "OperationalInterface",
+    "OperationalMessage",
+    "OperationalMethod",
+    "OperationalObjectFlow",
+    "OperationalParameter",
+    "OperationalPerformer",
+    "OperationalPort",
+    "OperationalRole",
+    "OperationalSignal",
+    "OperationalSignalProperty",
+    "OperationalStateDescription",
+    "Organization",
+    "OwnsProcess",
+    "PerformsInContext",
+    "Person",
+    "Post",
+    "PostRole",
+    "ProblemDomain",
+    "ProcessGeneralization",
+    "Project",
+    "ProjectMilestone",
+    "ProjectMilestoneRole",
+    "ProjectRole",
+    "ProjectSequence",
+    "ProjectStatus",
+    "ProjectTheme",
+    "PropertySetGeneralization",
+    "Protocol",
+    "ProtocolLayer",
+    "Protocolstack",
+    "ProvidedServiceLevel",
+    "ProvidesCompetence",
+    "RequiredServiceLevel",
+    "RequiresCompetence",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceConnector",
+    "ResourceConstraint",
+    "ResourceExchange",
+    "ResourceInterface",
+    "ResourceMessage",
+    "ResourceMethod",
+    "ResourceMitigation",
+    "ResourceParameter",
+    "ResourcePort",
+    "ResourceRole",
+    "ResourceSignal",
+    "ResourceSignalProperty",
+    "ResourceStateDescription",
+    "Responsibility",
+    "SameAs",
+    "SecurityConstraint",
+    "SecurityEnclave",
+    "SecurityProcess",
+    "ServiceConnector",
+    "ServiceExchange",
+    "ServiceFunction",
+    "ServiceFunctionAction",
+    "ServiceGeneralization",
+    "ServiceInterface",
+    "ServiceMessage",
+    "ServiceMethod",
+    "ServiceParameter",
+    "ServicePolicy",
+    "ServicePort",
+    "ServiceProvision",
+    "ServiceSpecification",
+    "ServiceSpecificationRole",
+    "ServiceStateDescription",
+    "Software",
+    "Standard",
+    "StandardOperationalActivity",
+    "StrategicConstraint",
+    "SubOrganization",
+    "System",
+    "Technology",
+    "TemporalPart",
+    "VersionOfConfiguration",
+    "VersionSuccession",
+    "View",
+    "Viewpoint",
+    "WholeLifeConfiguration",
+    "WholeLifeEnterprise"
+   ]
+  },
+  {
+   "name": "VersionedElement",
+   "metatype": "VersionedElement",
+   "abstract": true,
+   "parents": [
+    "UAFElement"
+   ],
+   "appliesTo": [],
+   "concreteDescendants": [
+    "CapabilityConfiguration",
+    "Energy",
+    "KnownResource",
+    "NaturalResource",
+    "Organization",
+    "Person",
+    "Post",
+    "Project",
+    "ResourceArchitecture",
+    "ResourceArtifact",
+    "ResourceMitigation",
+    "Responsibility",
+    "SecurityEnclave",
+    "ServiceSpecification",
+    "Software",
+    "System",
+    "Technology"
+   ]
+  },
+  {
+   "name": "VersionOfConfiguration",
+   "metatype": "VersionOfConfiguration",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Part"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "VersionReleased",
+   "metatype": "VersionReleased",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "VersionSuccession",
+   "metatype": "VersionSucession",
+   "abstract": false,
+   "parents": [
+    "MeasurableElement"
+   ],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "VersionWithdrawn",
+   "metatype": "VersionWithdrawn",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "View",
+   "metatype": "View",
+   "abstract": false,
+   "parents": [
+    "PropertySet"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "Viewpoint",
+   "metatype": "Viewpoint",
+   "abstract": false,
+   "parents": [
+    "PropertySet"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ViewpointsInArchitecturalDescription",
+   "metatype": "ViewpointsInArchitecturalDescription",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ViewpointToStakeholder",
+   "metatype": "ViewpointToStakeholder",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "ViewsInArchitecturalDescription",
+   "metatype": "ViewsInArchitecturalDescription",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "VisionForActualEnterprisePhase",
+   "metatype": "VisionForActualEnterprisePhase",
+   "abstract": false,
+   "parents": [],
+   "appliesTo": [
+    "Dependency"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "WholeLifeConfiguration",
+   "metatype": "WholeLifeConfiguration",
+   "abstract": false,
+   "parents": [
+    "PropertySet",
+    "SysML1.4::block"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  },
+  {
+   "name": "WholeLifeEnterprise",
+   "metatype": "WholeLifeEnterprise",
+   "abstract": false,
+   "parents": [
+    "EnterprisePhase",
+    "PropertySet"
+   ],
+   "appliesTo": [
+    "Class"
+   ],
+   "concreteDescendants": []
+  }
+ ]
+}

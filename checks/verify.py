@@ -4,8 +4,9 @@
 Prüft ohne LLM-Aufruf:
  1. KB-Statistiken (Stereotypes/Topology/Viewpoints/Connectors) gegen die dokumentierten Zahlen
  2. SHA-256-Hashes der vier MDG-KB-Dateien (Stereotypes, Topology, Viewpoints, TagTypes)
+ 2b. Maschinenlesbarer Katalog (ADMBw-Stereotypes.json) und Aliases (ADMBw-Aliases.json)
  3. Topologie-Lesart korrigiert (client = Quelle, supplier = Ziel)
- 4. 🔒-Markierungen der 44 abstrakten Stereotype vorhanden
+ 4. 🔒-Markierungen der 44 abstrakten Stereotype, Subtyp-Auflösung und Alias-Tabelle
  5. Prompt/README/ANLEITUNG enthalten die korrigierten Zahlen; keine 443/203/53-Altbehauptungen
  6. Prompt: maschinenprüfbare Kanten-Validierungstabelle + Few-Shot + Leerinput-Regel
 
@@ -69,6 +70,36 @@ def main():
     check("Stereotypes: 0 Nicht-Stereotype/Artefakte", len(junk) == 0, f"ist {len(junk)}")
     check("Stereotypes: 293 nutzbare", len(usable) == 293, f"ist {len(usable)}")
     check("Stereotypes: Header nennt 318 und 44 abstrakt", "318 Stereotype" in st_text and "44 abstrakt" in st_text)
+    check("Stereotypes: KI-Hinweis zu abstrakten Typen vorhanden", "## Hinweis für KI-Werkzeuge" in st_text)
+    check("Stereotypes: Eltern-Spalte vorhanden", "| Stereotype | Metatype | Eltern | AppliesTo | Abstrakt | Beschreibung |" in st_text)
+
+    # ---------- 1b. Maschinenlesbarer Katalog & Auflösung ----------
+    cat_path = ROOT / "ADMBw-Stereotypes.json"
+    alias_path = ROOT / "ADMBw-Aliases.json"
+    check("JSON: Stereotypes-Datei vorhanden", cat_path.is_file())
+    check("JSON: Aliases-Datei vorhanden", alias_path.is_file())
+    if cat_path.is_file():
+        cat = json.loads(cat_path.read_text(encoding="utf-8"))
+        checks_ = {s["name"]: s for s in cat["stereotypes"]}
+        check("JSON: 318 Einträge", len(checks_) == 318, f"ist {len(checks_)}")
+        check("JSON: 44 abstrakt", sum(1 for s in checks_.values() if s["abstract"]) == 44,
+              f"ist {sum(1 for s in checks_.values() if s['abstract'])}")
+        rp = checks_.get("ResourcePerformer", {})
+        check("JSON: ResourcePerformer abstrakt mit konkreten Subtypen",
+              rp.get("abstract") is True and len(rp.get("concreteDescendants", [])) >= 10,
+              f"subtypen={len(rp.get('concreteDescendants', []))}")
+        bw = checks_.get("BWRequirement", {})
+        check("JSON: BWRequirement → FunctionalRequirement/NonfunctionalRequirement",
+              bw.get("abstract") is True and
+              {"FunctionalRequirement", "NonfunctionalRequirement"}.issubset(set(bw.get("concreteDescendants", []))))
+        check("JSON: CapabilityConfiguration ist Subtyp von ResourcePerformer",
+              "CapabilityConfiguration" in set(rp.get("concreteDescendants", [])))
+    if alias_path.is_file():
+        al = json.loads(alias_path.read_text(encoding="utf-8")).get("aliases", {})
+        check("Aliases: PropertySetGeneralisation abgebildet",
+              al.get("PropertySetGeneralisation") == "PropertySetGeneralization")
+        check("Aliases: ServiceSpecificationGeneralization abgebildet",
+              al.get("ServiceSpecificationGeneralization") == "ServiceGeneralization")
 
     tp = parse_topology(tp_text)
     complete = [r for r in tp if r[1] and r[2]]
@@ -80,6 +111,9 @@ def main():
           "client, source, end[0].role oder informationSource" in tp_text)
     check("Topology: Spaltenköpfe Quelle/Ziel normalisiert",
           "| Stereotype | Erlaubte Quellen (client/source/end[0]) | Erlaubte Ziele (supplier/target/end[1]) | Weitere Rollen |" in tp_text)
+    check("Topology: Abschnitt 'Abstrakte Endpunkte' vorhanden", "## Abstrakte Endpunkte" in tp_text)
+    check("Topology: ResourcePerformer-Auflösung dokumentiert",
+          "| 🔒 ResourcePerformer |" in tp_text and "CapabilityConfiguration" in tp_text)
 
     vp_headings = [l for l in vp_text.splitlines() if l.startswith("## ")]
     check("Viewpoints: 52 Überschriften", len(vp_headings) == 52, f"ist {len(vp_headings)}")
@@ -118,8 +152,14 @@ def main():
           all(k in prompt for k in ["source_stereotype", "connector", "target_stereotype", "PASS/FAIL"]))
     check("Prompt: Zählung 'X/Y Kanten PASS' statt Pauschal-Claim",
           "Topologie-Prüfung: **X/Y Kanten PASS**" in prompt)
-    check("Prompt: Few-Shot enthalten", "FEW-SHOT" in prompt and "Topologie-Prüfung: 3/3 Kanten PASS" in prompt)
+    check("Prompt: Few-Shot enthalten", "FEW-SHOT" in prompt and "Topologie-Prüfung: 4/4 Kanten PASS" in prompt)
     check("Prompt: Leerinput-Regel enthalten", "LEERER / UNLESBARER INPUT" in prompt)
+    check("Prompt: abstrakte Typen mit 44 und Subtyp-Auflösung",
+          "44" in prompt and "concreteDescendants" in prompt and "Subtyp" in prompt)
+    check("Prompt: Auflösungsspalte in der Validierungstabelle", "Auflösung (falls Subtyp)" in prompt)
+    check("Prompt: alte Fehlregel 'abstraktes Regel-Ende = FAIL' entfernt",
+          "Regel-Ende ist ein 🔒-abstrakter Stereotyp" not in prompt)
+    check("Prompt: Alias-Normalisierung dokumentiert", "ADMBw-Aliases.json" in prompt)
     check("README: korrigierte Zahlen (318/293/133/52)",
           all(k in readme for k in ["318 Katalog-Stereotype", "293 nutzbar", "133 vollständige", "52 Viewpoints"]))
     check("ANLEITUNG: korrigierte Zahlen", "133 vollständige Topologie-Regeln, 52 Viewpoints" in anleitung)

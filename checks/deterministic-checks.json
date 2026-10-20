@@ -64,6 +64,61 @@
       "detail": ""
     },
     {
+      "name": "Stereotypes: KI-Hinweis zu abstrakten Typen vorhanden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Stereotypes: Eltern-Spalte vorhanden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "JSON: Stereotypes-Datei vorhanden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "JSON: Aliases-Datei vorhanden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "JSON: 318 Einträge",
+      "ok": true,
+      "detail": "ist 318"
+    },
+    {
+      "name": "JSON: 44 abstrakt",
+      "ok": true,
+      "detail": "ist 44"
+    },
+    {
+      "name": "JSON: ResourcePerformer abstrakt mit konkreten Subtypen",
+      "ok": true,
+      "detail": "subtypen=16"
+    },
+    {
+      "name": "JSON: BWRequirement → FunctionalRequirement/NonfunctionalRequirement",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "JSON: CapabilityConfiguration ist Subtyp von ResourcePerformer",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Aliases: PropertySetGeneralisation abgebildet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Aliases: ServiceSpecificationGeneralization abgebildet",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "Topology: 203 Zeilen",
       "ok": true,
       "detail": "ist 203"
@@ -85,6 +140,16 @@
     },
     {
       "name": "Topology: Spaltenköpfe Quelle/Ziel normalisiert",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Topology: Abschnitt 'Abstrakte Endpunkte' vorhanden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Topology: ResourcePerformer-Auflösung dokumentiert",
       "ok": true,
       "detail": ""
     },
@@ -175,6 +240,26 @@
     },
     {
       "name": "Prompt: Leerinput-Regel enthalten",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Prompt: abstrakte Typen mit 44 und Subtyp-Auflösung",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Prompt: Auflösungsspalte in der Validierungstabelle",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Prompt: alte Fehlregel 'abstraktes Regel-Ende = FAIL' entfernt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Prompt: Alias-Normalisierung dokumentiert",
       "ok": true,
       "detail": ""
     },

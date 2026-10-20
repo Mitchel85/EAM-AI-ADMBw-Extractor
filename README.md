@@ -32,15 +32,17 @@ Vier MDG-generierte Knowledge-Dateien, erzeugt vom [EAM-ADMBw-MDG-Parser](https:
 
 | Datei | Inhalt |
 |-------|--------|
-| `ADMBw-Knowledge-Stereotypes.md` | **318 Katalog-Stereotype** (293 nutzbar · 44 abstrakt 🔒); Toolboxen/Artefakte sind nicht enthalten |
+| `ADMBw-Knowledge-Stereotypes.md` | **318 Katalog-Stereotype** (293 nutzbar · 44 abstrakt 🔒, davon 19 nur fachlich zu spezialisieren); Toolboxen/Artefakte sind nicht enthalten |
 | `ADMBw-Knowledge-Viewpoints.md` | **52 Viewpoints** mit MDG-Beschreibung (keine erfundenen Properties) |
 | `ADMBw-Knowledge-Topology.md` | **133 vollständige Kanten-Regeln** (Quelle/Ziel über client/source/end[0] bzw. supplier/target/end[1]) + 70 reine Rollen-Beschränkungen |
 | `ADMBw-Knowledge-TagTypes.md` | **27 Property-Typen** (Tagged-Value-Definitionen) |
 | `ADMBw-Knowledge-Connectors.md` | EA-Metatypen + Connector-Übersicht (kuratiert) |
+| `ADMBw-Stereotypes.json` | Derselbe Katalog maschinenlesbar: `abstract`, `parents`, `concreteDescendants` — Grundlage der Subtyp-Auflösung |
+| `ADMBw-Aliases.json` | Schreibvarianten (`PropertySetGeneralisation` → `PropertySetGeneralization`, `ServiceSpecificationGeneralization` → `ServiceGeneralization`) |
 
 > Bei einem MDG-Update der Bundeswehr werden diese Dateien neu generiert — nicht von Hand gepflegt.
 >
-> **KB-Sync-Status (2026-10-19): aktuell.** Vier MDG-Dateien neu erzeugt aus `eam-mdg-parser` (`9470931`), identisch in Extractor und Batch; Tag-Typen und Hashes in `checks/deterministic-checks.json`.
+> **KB-Sync-Status (2026-10-20): aktuell.** Vier MDG-Dateien neu erzeugt aus `eam-mdg-parser` (`ea0765f`) mit Abstrakt-Markierung und Subtyp-Auflösung; Tag-Typen und Hashes in `checks/deterministic-checks.json`.
 
 ---
 
@@ -52,14 +54,15 @@ Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt p
 |---|---|---|---|---|---|---|
 | … | OperationalActivity | ActivitySupportsService | ServiceSpecification | OperationalActivity→ServiceSpecification | Realisation | PASS |
 
-- PASS nur bei exaktem Namens-Match gegen eine Regel mit beiden Enden (client = Quelle, supplier = Ziel)
+- PASS bei exaktem Namens-Match **oder** wenn ein Ende ein konkreter Subtyp eines erlaubten abstrakten Endpunkts ist; die Auflösung wird ausgewiesen
+- Ein Element oder Konnektor mit 🔒-Stereotyp ist immer **FAIL**
 - Abschlusszeile: „Topologie-Prüfung: X/Y Kanten PASS" — nur nach Einzelprüfung jeder Kante
-- Element-Checks: Stereotype nutzbar (kein 🔒), Metaklasse = AppliesTo, keine erfundenen Namen
+- Element-Checks: Stereotype nutzbar (kein 🔒), Metaklasse = AppliesTo, keine erfundenen Namen, Subtyp-Auflösung belegt
 - Viewpoint-Konformität wird **nicht behauptet**, weil die MDG 2026.05 keine erlaubten Elemente je Viewpoint definiert
 
 **Eiserne Regeln:**
 - ❌ Keine eigenen Stereotype erfinden
-- ❌ Abstrakte Basisklassen (🔒) nie direkt verwenden
+- ❌ Abstrakte Stereotype (🔒) nie direkt verwenden — konkreten Subtyp wählen
 
 ---
 
@@ -79,8 +82,9 @@ Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt p
 
 `python3 checks/verify.py` prüft ohne LLM:
 
-- KB-Statistiken (318/293/25/133/70/52/27) und SHA-256-Hashes der vier MDG-KB-Dateien
+- KB-Statistiken (318/293/44/133/70/52/27) und SHA-256-Hashes der vier MDG-KB-Dateien
 - Topologie-Lesart („client = Quelle") und 🔒-Markierungen vorhanden
+- Abstrakt-Auflösung: `concreteDescendants` im JSON, Abschnitt „Abstrakte Endpunkte“ in der Topologie
 - Prompt/README enthalten die korrigierten Zahlen (keine 443/203/53-Reste)
 
 ---
@@ -95,6 +99,8 @@ Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt p
 | `ADMBw-Knowledge-Topology.md` | Topologie-Regeln (MDG-generiert) |
 | `ADMBw-Knowledge-TagTypes.md` | Property-Typen (MDG-generiert) |
 | `ADMBw-Knowledge-Connectors.md` | Konnektor-Regeln (kuratiert) |
+| `ADMBw-Stereotypes.json` | Maschinenlesbarer Katalog inkl. `concreteDescendants` |
+| `ADMBw-Aliases.json` | Alt-Schreibweisen → kanonischer Name |
 | `checks/verify.py` | Deterministische Prüfungen (ohne LLM) |
 | `Dokumentation-ADMBw-v2025.10.pdf` | Offizielle Bw-Dokumentation, Version 2025.10 (Referenz) |
 
