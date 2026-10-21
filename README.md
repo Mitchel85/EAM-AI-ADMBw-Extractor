@@ -112,3 +112,10 @@ Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt p
 Der EAM-AI-ADMBw-Extractor ist ein unabhängiges Drittanbieter-Produkt. Es ist nicht mit der Sparx Systems Pty Ltd verbunden, wird von dieser nicht unterstützt und nicht gesponsert. „Sparx Systems“ und „Enterprise Architect“ sind Marken oder eingetragene Marken der Sparx Systems Pty Ltd.
 
 **Autor:** Michael Estel (mit KI-Agent) · Teil der **EAM-Toolfamilie** — [github.com/Mitchel85](https://github.com/Mitchel85)
+
+## Rechtliches
+
+EAM Extractor ist ein unabhängiges Drittanbieter-Werkzeug. Es ist nicht mit der Sparx Systems Pty Ltd
+verbunden, wird von dieser nicht unterstützt und nicht gesponsert. „Sparx Systems" und
+„Enterprise Architect" sind Marken oder eingetragene Marken der Sparx Systems Pty Ltd.
+Alle weiteren Marken sind Eigentum ihrer jeweiligen Inhaber.
