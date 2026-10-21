@@ -5,9 +5,9 @@
 ![MDG](https://img.shields.io/badge/Regelbasis-MDG%202026.05-orange)
 ![Plattform](https://img.shields.io/badge/Platform-OpenWebUI%20%2F%20jedes%20LLM-purple)
 
-**KI-gestützter Assistent, der aus natürlichsprachlichen Architekturtexten ADMBw-konforme Stereotype, Beziehungen und Viewpoints extrahiert** — als Mermaid-Diagramme und Mapping-Tabellen zum Nachmodellieren in Sparx EA.
+**KI-gestützter Assistent, der aus natürlichsprachlichen Architekturtexten ADMBw-konforme Stereotype, Beziehungen und Viewpoints extrahiert** — als Mermaid-Diagramme und Mapping-Tabellen zum Nachmodellieren in Sparx Systems Enterprise Architect.
 
-> ⚠️ **Keine importierbaren Dateien.** Der Output ist eine Modellierungshilfe für das manuelle Nachmodellieren in Sparx EA.
+> ⚠️ **Keine importierbaren Dateien.** Der Output ist eine Modellierungshilfe für das manuelle Nachmodellieren in Enterprise Architect.
 
 ---
 
@@ -72,7 +72,7 @@ Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt p
 2. **Knowledge einbinden:** Die vier MDG-generierten `ADMBw-Knowledge-*.md`-Dateien plus `ADMBw-Knowledge-Connectors.md` hochladen und mit dem Modell verknüpfen.
 3. **Prosa eingeben:** Deinen Architekturtext (z. B. Dokument, Textauszug, Stichpunkte) an das Modell schicken.
 4. **Option wählen:** Auf die eine Einstiegsfrage antworten (Viewpoints / ADMBw-Modell / Metamodell / Stakeholder-Concern).
-5. **Ergebnis prüfen:** Mermaid-Diagramme + Mapping-Tabellen auf Vollständigkeit und Korrektheit gegenprüfen, dann in Sparx EA nachmodellieren.
+5. **Ergebnis prüfen:** Mermaid-Diagramme + Mapping-Tabellen auf Vollständigkeit und Korrektheit gegenprüfen, dann in Enterprise Architect nachmodellieren.
 
 > 💡 Die Knowledge-Dateien stammen aus der **MDG 2026.05**. Bundeswehr-Dokumente werden bewusst **nicht** mitgeliefert — die Quelle der Wahrheit ist die Seite „Methode Architektur“ beim BMVg.
 
@@ -104,5 +104,11 @@ Jeder Output weist **jede Kante einzeln** gegen die Topologie-KB aus — statt p
 | `checks/verify.py` | Deterministische Prüfungen (ohne LLM) |
 
 ---
+
+---
+
+## Rechtliches
+
+Der EAM-AI-ADMBw-Extractor ist ein unabhängiges Drittanbieter-Produkt. Es ist nicht mit der Sparx Systems Pty Ltd verbunden, wird von dieser nicht unterstützt und nicht gesponsert. „Sparx Systems“ und „Enterprise Architect“ sind Marken oder eingetragene Marken der Sparx Systems Pty Ltd.
 
 **Autor:** Michael Estel (mit KI-Agent) · Teil der **EAM-Toolfamilie** — [github.com/Mitchel85](https://github.com/Mitchel85)

@@ -38,11 +38,11 @@ Architekturtext eingeben. Der Extraktor stellt genau **eine** Frage — wähle:
 - Steht in der **Topologie-Validierungstabelle** für jede Kante eine Regelzeile mit PASS (client = Quelle, supplier = Ziel)?
 - Stimmt die Zählung („Topologie-Prüfung: X/Y Kanten PASS")?
 
-Dann in **Sparx EA** nachmodellieren.
+Dann in Enterprise Architect nachmodellieren.
 
 ## Häufige Fragen
 
-**Kann der Extraktor direkt in Sparx EA importieren?**
+**Kann der Extraktor direkt in Enterprise Architect importieren?**
 Nein — er liefert Modellierungs-Vorlagen (Diagramme + Tabellen). Die Umsetzung im Modell übernimmst du manuell (oder automatisiert mit dem [EAM-AI-ADMBw-Script-Maker](https://github.com/Mitchel85/EAM-AI-ADMBw-Script-Maker)).
 
 **Was sind abstrakte Stereotype?**
